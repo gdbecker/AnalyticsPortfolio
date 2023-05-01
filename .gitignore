@@ -4,6 +4,12 @@
 **/.pbix
 **/.xlsx
 
+*.pbix
+*.xlsx
+
+.pbix
+.xlsx
+
 # misc
 .DS_Store
 .env.local
