@@ -2,14 +2,26 @@
 
 These are a set of Power BI demos intended to go to market for existing Elliott Davis healthcare clients. My director had experience in Tableau so some of the functionality has was used to was not natively built-in with this app, so this was a great challenge to push myself with what Power BI is capable of technically in order to provide a better solution. I also tested this project with a bit of Python scripting, and there are two V2 versions, depending on if the client wanted to see hygiene broken out or not.
 
-## Details
-- [Project Details](#project-details)
+## Project Details
+- [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
-## Project Details
+## Details
+
+Current Elliott Davis teams engaged with healthcare clients wanted to see what Power BI was capable of and what data analytics could offer to them to add greater value, so my team stepped in to help. We focused first on a couple of clients and using their financial and production data to discover what insights could be drawn from what they have. My director at the time was more familiar with Tableau and the native functionalities it has. As he requested specific items I realized I needed to test myself in finding clever solutions, since Power BI is a bit more manual than other BI tools out there. The intent was to move these demo dashboards to market and provide clients an additional offering of great value.
+
+Files included for view in this project:
+- Healthcare Private Practice V1.pdf
+  - First dashboard version that was not planned for use, but to show the incremented process for these demos
+- Healthcare Private Practice V2 - adding python.pdf
+  - Second and final version with a bit of Python scripting I was testing
+- Healthcare Private Practice V2 (original).pdf
+  - Second and final version with hygiene as a category (see page 6 for main difference)
+- Healthcare Private Practice V2 (without hygiene).pdf
+  - Second and final version without hygiene broken out (see page 6 for main difference)
 
 ## By the Numbers
 
@@ -31,7 +43,6 @@ These are a set of Power BI demos intended to go to market for existing Elliott 
 
 Below are some code snippets I'm proud of from this project:
 
-
 Conditional formatting DAX measure based on a selected buffer percentage (controlling the threshold to seeing an indicator light)
 ```DAX
 SGA YTD/Target (Main Page) CF = 
@@ -39,7 +50,6 @@ SGA YTD/Target (Main Page) CF =
     IF([SGA YTD/Target (Main Page)] >= (-1 * [Selected Buffer]) && [SGA YTD/Target (Main Page)] <= [Selected Buffer], 2,
     IF([SGA YTD/Target (Main Page)] > [Selected Buffer], 3)))
 ```
-
 
 DAX measure for switching which data model relationship to use based on a selected category
 ```DAX
@@ -62,7 +72,6 @@ DAX measure for switching which data model relationship to use based on a select
         BLANK()
     )
 ```
-
 
 Making a custom union table with DAX to allow for users to select a category dynamically to slice by
 ```DAX
