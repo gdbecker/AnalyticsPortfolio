@@ -16,14 +16,11 @@ These are a set of Power BI demos intended to go to market for existing Elliott 
 
 ## Tools Used
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Excel
+- Power BI
+  - DAX
+  - Power Query
+- SharePoint (data source)
 
 ## What I learned
 
