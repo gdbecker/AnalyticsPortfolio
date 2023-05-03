@@ -44,23 +44,23 @@ After working through [01 Healthcare Practice Demos](#01-healthcare-practice-dem
 
 ### 06 Client Proposal Dashboard
 
-Fill in
+Coming soon!
 
 ### 07 Group Case Study Demo
 
-Fill in
+Coming soon!
 
 ### 08 Healthcare Proposal Dashboard
 
-Fill in
+Coming soon!
 
 ### 09 Internal Use Work Tracker
 
-Fill in
+Coming soon!
 
 ### 10 External Webinar Dashboards
 
-Fill in
+Coming soon!
 
 ## Other Related Work
 
