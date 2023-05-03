@@ -36,11 +36,11 @@ This was a great challenge with my manager to develop a solution for a client wh
 
 ### 04 Private Equity Financial Reporting Automation
 
-Fill in
+In a similar vein as [03 Automated Medical Financial Reporting](#03-automated-medical-financial-reporting), this one was another good challenge in transforming a client's existing financial reporting deck into a fully automated Power BI report. I took over this project half-way in and helped finish it up week by week, ensuring that the math and design matched what they needed. There were also some tricky formatting needs they had that was a good test to push myself in what I can develop in Power BI.
 
 ### 05 Current Client Analytics Demo
 
-Fill in
+After working through [01 Healthcare Practice Demos](#01-healthcare-practice-demos), I was able to borrow quite of a few of the new functionalities I developed to make a potential addendum dashboard series for an existing Elliott Davis client. The main interest was analyzing how loans were paid off over time, and being able to slice and dice categories by different measures. It was satisfying being able to test different visuals and how they would work best given the provided data and what needed to be seen.
 
 ### 06 Client Proposal Dashboard
 
