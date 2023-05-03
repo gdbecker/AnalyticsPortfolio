@@ -7,7 +7,6 @@ These are a set of Power BI demos intended to go to market for existing Elliott 
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
 - [What I learned](#what-i-learned)
-- [Continued development](#continued-development)
 - [Useful resources](#useful-resources)
 
 ## Project Details
@@ -24,30 +23,60 @@ These are a set of Power BI demos intended to go to market for existing Elliott 
 
 ## What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Below are some code snippets I'm proud of from this project:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+Conditional formatting DAX measure based on a selected buffer percentage (controlling the threshold to seeing an indicator light)
+```DAX
+SGA YTD/Target (Main Page) CF = 
+    IF([SGA YTD/Target (Main Page)] < (-1 * [Selected Buffer]),1,
+    IF([SGA YTD/Target (Main Page)] >= (-1 * [Selected Buffer]) && [SGA YTD/Target (Main Page)] <= [Selected Buffer], 2,
+    IF([SGA YTD/Target (Main Page)] > [Selected Buffer], 3)))
 ```
 
-## Continued Development
+DAX measure for switching which data model relationship to use based on a selected category
+```DAX
+# Unique Patients (Variable Category) = 
+    SWITCH(
+        TRUE(),
+        ----------- Clinic Category -----------
+        SELECTEDVALUE('Production Legend Categories'[Field]) = "Clinic",
+        CALCULATE(
+            'Measures - Production'[# Unique Patients],
+            USERELATIONSHIP('Production Legend Categories'[Category], 'Production Summary'[Clinic])
+        ),
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+        ----------- Provider Name Category -----------
+        SELECTEDVALUE('Production Legend Categories'[Field]) = "Provider",
+        CALCULATE(
+            'Measures - Production'[# Unique Patients],
+            USERELATIONSHIP('Production Legend Categories'[Category], 'Production Summary'[Provider])
+        ),
+        BLANK()
+    )
+```
+
+Making a custom union table with DAX to allow for users to select a category dynamically to slice by
+```DAX
+Production Legend Categories = 
+    UNION(
+        DISTINCT(SELECTCOLUMNS(
+            'Production Summary',
+            "Category", 'Production Summary'[Clinic],
+            "Field", "Clinic",
+            "Sort Order", RIGHT('Production Summary'[Clinic],1)
+        )),
+        DISTINCT(SELECTCOLUMNS(
+            'Production Summary',
+            "Category", 'Production Summary'[Provider],
+            "Field", "Provider",
+            "Sort Order", TRIM(RIGHT('Production Summary'[Provider],2)) + 10
+        )),
+        ROW("Category", "Multi", "Field", "Clinic", "Sort Order", 10)
+    )
+```
 
 ## Useful Resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Power BI: Filter by a measure in a slicer](https://www.youtube.com/watch?v=AZAL-QPn5Zc) - Filtering visuals by measure values is not natively supported in Power BI but this video helped me find a clever solution
+- [Power BI: Dynamic axes and legends](https://www.youtube.com/watch?v=8e8a3o1w51M) - Perfect for making visuals with dynamic axes so users can pick what category they want to view by
 
