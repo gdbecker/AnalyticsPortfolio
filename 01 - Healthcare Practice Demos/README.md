@@ -13,6 +13,12 @@ These are a set of Power BI demos intended to go to market for existing Elliott 
 
 ## By the Numbers
 
+- 2-3 months of development time
+- 5 colleagues collaborated with
+- 10 report pages
+- 1 data source
+- 18 queries connected to data source
+
 ## Tools Used
 
 - Excel
@@ -25,6 +31,7 @@ These are a set of Power BI demos intended to go to market for existing Elliott 
 
 Below are some code snippets I'm proud of from this project:
 
+
 Conditional formatting DAX measure based on a selected buffer percentage (controlling the threshold to seeing an indicator light)
 ```DAX
 SGA YTD/Target (Main Page) CF = 
@@ -32,6 +39,7 @@ SGA YTD/Target (Main Page) CF =
     IF([SGA YTD/Target (Main Page)] >= (-1 * [Selected Buffer]) && [SGA YTD/Target (Main Page)] <= [Selected Buffer], 2,
     IF([SGA YTD/Target (Main Page)] > [Selected Buffer], 3)))
 ```
+
 
 DAX measure for switching which data model relationship to use based on a selected category
 ```DAX
@@ -55,6 +63,7 @@ DAX measure for switching which data model relationship to use based on a select
     )
 ```
 
+
 Making a custom union table with DAX to allow for users to select a category dynamically to slice by
 ```DAX
 Production Legend Categories = 
@@ -77,6 +86,5 @@ Production Legend Categories =
 
 ## Useful Resources
 
-- [Power BI: Filter by a measure in a slicer](https://www.youtube.com/watch?v=AZAL-QPn5Zc) - Filtering visuals by measure values is not natively supported in Power BI but this video helped me find a clever solution
+- [Power BI: Filter by a measure in a slicer](https://www.youtube.com/watch?v=AZAL-QPn5Zc) - Filtering visuals by DAX measure values is not natively supported in Power BI but this video helped me find a clever solution
 - [Power BI: Dynamic axes and legends](https://www.youtube.com/watch?v=8e8a3o1w51M) - Perfect for making visuals with dynamic axes so users can pick what category they want to view by
-
