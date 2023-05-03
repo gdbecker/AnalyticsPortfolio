@@ -37,20 +37,84 @@ Files included for view in this project:
 
 Below are some code snippets I'm proud of from this project:
 
-Custom DAX table to allow users to adjust how they view the top CPT codes dynamically
+Selection of DAX measures used to automate the math and visuals in the report
 ```DAX
-Top N CPT = GENERATESERIES(1, [# Unique CPT], 1)
+Total Revenue Budget = 
+CALCULATE(
+    SUM('P&L Data Budget'[Adjusted Value]), 
+    'P&L Data Budget'[Account Name] = "Total Income"
+)
 ```
 
-Series of DAX measures connected to the above table for this functionality
 ```DAX
-Selected N = SELECTEDVALUE('Top N CPT'[Select N])
+7 - MTD Gross Margin = [1 - MTD PY Gross Margin] + [3 - Avg Ticket Price] + [4 - Materials] + [5 - Labor] + [6 - Other]
 ```
 
 ```DAX
-CPT Rank Within Selected N = IF([CPT - Rank - (Charges - Gross)] <= [Selected N],1,0)
+Color Formating - TTM = 
+SWITCH ( 
+    SELECTEDVALUE('TTM Appendix'[Calculation Category 1]),
+    "TTM Revenue", 
+        SWITCH(
+            SELECTEDVALUE('TTM Appendix'[Calculation Category 2]),
+            "Entity One", " #006400",
+            "Entity Two", "#118DFF",
+            "Entity Three", "#BB3385",
+            "Entity Four",
+                SWITCH(
+                    SELECTEDVALUE('TTM Appendix'[Calculation Category 3]),
+                    "TTM", "Red",
+                    "#AA6C39"
+                ),
+            "Blue"
+        ),
+    "TTM Gross Profit",
+        SWITCH(
+            SELECTEDVALUE('TTM Appendix'[Calculation Category 2]),
+            "Entity One"", " #006400",
+            "Entity Two", "#118DFF",
+            "Entity Three", "#BB3385",
+            "Entity Four",
+                SWITCH(
+                    SELECTEDVALUE('TTM Appendix'[Calculation Category 3]),
+                    "TTM", "Red",
+                    "#AA6C39"
+                ),
+            "Blue"
+        ),
+    "TTM Gross Margin",
+        SWITCH(
+            SELECTEDVALUE('TTM Appendix'[Calculation Category 2]),
+            "Entity One"", " #006400",
+            "Entity Two", "#118DFF",
+            "Entity Three", "#BB3385",
+            "Entity Four",
+                SWITCH(
+                    SELECTEDVALUE('TTM Appendix'[Calculation Category 3]),
+                    "TTM", "Red",
+                    "#AA6C39"
+                ),
+            "Blue"
+        ),
+    "TTM Adjusted EBITDA",
+        SWITCH(
+            SELECTEDVALUE('TTM Appendix'[Calculation Category 2]),
+            "Entity One"", " #006400",
+            "Entity Two", "#118DFF",
+            "Entity Three", "#BB3385",
+            "Entity Four",
+                SWITCH(
+                    SELECTEDVALUE('TTM Appendix'[Calculation Category 3]),
+                    "TTM", "Red",
+                    "#AA6C39"
+                ),
+            "Blue"
+        ),
+    "Blue"
+)
 ```
 
 ## Useful Resources
 
-- [Power BI: Change measures using slicers](https://www.youtube.com/watch?v=gYbGNeYD4OY) - Clever solution allows users to change a visual's measure value by clicking on a slicer
+- Tip/trick: You can easily connect to your organization's internal SharePoint site with this URL as a data source in Power BI: https://{organization_name}.sharepoint.com/sites/{site_name}/
+  - This has come in handy whenever I've needed SharePoint as a data source
