@@ -11,7 +11,7 @@ I was super encouraged when one of the first projects I worked on became a month
 
 ## Details
 
-Current Elliott Davis teams engaged with healthcare clients wanted to see what Power BI was capable of and what data analytics could offer to them to add greater value, so my team stepped in to help. We focused first on a couple of clients and using their financial and production data to discover what insights could be drawn from what they have. My director at the time was more familiar with Tableau and the native functionalities it has. As he requested specific items I realized I needed to test myself in finding clever solutions, since Power BI is a bit more manual than other BI tools out there. The intent was to move these demo dashboards to market and provide clients an additional offering of great value.
+One of the healthcare client teams approached my Data & Analytics group about potentially adding on a dashboard to help them understand and draw deeper insights from their data. As one of the first major projects I worked on at Elliott Davis, it was a delight to find out that this client wanted to subscribe for monthly updates upon completion! They were specifically curious about how their different providers were performing across clinic locations, and also wanted to see each one's service records broken down by patient severity, new/existing patients, and CPT codes. I am proud of the final result and am thankful this has aided them in caring for their patients well.
 
 Files included for view in this project:
 - Healthcare Ongoing Dashboard.pdf
@@ -19,11 +19,11 @@ Files included for view in this project:
 
 ## By the Numbers
 
-- 2-3 months of development time
-- 5 colleagues collaborated with
-- 10 report pages
+- 2 months of development time
+- 3 colleagues collaborated with
+- 6 report pages
 - 1 data source
-- 18 queries connected to data source
+- 7 queries connected to data source
 
 ## Tools Used
 
@@ -37,57 +37,20 @@ Files included for view in this project:
 
 Below are some code snippets I'm proud of from this project:
 
-Conditional formatting DAX measure based on a selected buffer percentage (controlling the threshold to seeing an indicator light)
+Custom DAX table to allow users to adjust how they view the top CPT codes dynamically
 ```DAX
-SGA YTD/Target (Main Page) CF = 
-    IF([SGA YTD/Target (Main Page)] < (-1 * [Selected Buffer]),1,
-    IF([SGA YTD/Target (Main Page)] >= (-1 * [Selected Buffer]) && [SGA YTD/Target (Main Page)] <= [Selected Buffer], 2,
-    IF([SGA YTD/Target (Main Page)] > [Selected Buffer], 3)))
+Top N CPT = GENERATESERIES(1, [# Unique CPT], 1)
 ```
 
-DAX measure for switching which data model relationship to use based on a selected category
+Series of DAX measures connected to the above table for this functionality
 ```DAX
-# Unique Patients (Variable Category) = 
-    SWITCH(
-        TRUE(),
-        ----------- Clinic Category -----------
-        SELECTEDVALUE('Production Legend Categories'[Field]) = "Clinic",
-        CALCULATE(
-            'Measures - Production'[# Unique Patients],
-            USERELATIONSHIP('Production Legend Categories'[Category], 'Production Summary'[Clinic])
-        ),
-
-        ----------- Provider Name Category -----------
-        SELECTEDVALUE('Production Legend Categories'[Field]) = "Provider",
-        CALCULATE(
-            'Measures - Production'[# Unique Patients],
-            USERELATIONSHIP('Production Legend Categories'[Category], 'Production Summary'[Provider])
-        ),
-        BLANK()
-    )
+Selected N = SELECTEDVALUE('Top N CPT'[Select N])
 ```
 
-Making a custom union table with DAX to allow for users to select a category dynamically to slice by
 ```DAX
-Production Legend Categories = 
-    UNION(
-        DISTINCT(SELECTCOLUMNS(
-            'Production Summary',
-            "Category", 'Production Summary'[Clinic],
-            "Field", "Clinic",
-            "Sort Order", RIGHT('Production Summary'[Clinic],1)
-        )),
-        DISTINCT(SELECTCOLUMNS(
-            'Production Summary',
-            "Category", 'Production Summary'[Provider],
-            "Field", "Provider",
-            "Sort Order", TRIM(RIGHT('Production Summary'[Provider],2)) + 10
-        )),
-        ROW("Category", "Multi", "Field", "Clinic", "Sort Order", 10)
-    )
+CPT Rank Within Selected N = IF([CPT - Rank - (Charges - Gross)] <= [Selected N],1,0)
 ```
 
 ## Useful Resources
 
-- [Power BI: Filter by a measure in a slicer](https://www.youtube.com/watch?v=AZAL-QPn5Zc) - Filtering visuals by DAX measure values is not natively supported in Power BI but this video helped me find a clever solution
-- [Power BI: Dynamic axes and legends](https://www.youtube.com/watch?v=8e8a3o1w51M) - Perfect for making visuals with dynamic axes so users can pick what category they want to view by
+- [Power BI: Change measures using slicers](https://www.youtube.com/watch?v=gYbGNeYD4OY) - Clever solution allows users to change a visual's measure value by clicking on a slicer
