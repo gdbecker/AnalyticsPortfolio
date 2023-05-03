@@ -32,7 +32,7 @@ I was super encouraged when one of the first projects I worked on became a month
 
 ### 03 Automated Medical Financial Reporting
 
-Fill in
+This was a great challenge with my manager to develop a solution for a client who had a manual and very time-consuming reporting process and needed something more efficient - not just for automating, but also making Power BI look less like a traditional dashboard and more like a printed report. We were able to help this client cut down their time from 1.5 weeks to about 1 day of making this report. This project was also featured in [10 External Webinar Dashboards](#10-external-webinar-dashboards) and [Case Study and Blog Posts](#case-study-and-blog-posts).
 
 ### 04 Private Equity Financial Reporting Automation
 
