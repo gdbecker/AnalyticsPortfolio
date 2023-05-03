@@ -15,6 +15,8 @@ This is a collection of selected projects I've worked on during my time as an an
   - [08 Healthcare Proposal Dashboard](#08-healthcare-proposal-dashboard)
   - [09 Internal Use Work Tracker](#09-internal-use-work-tracker)
   - [10 External Webinar Dashboards](#10-external-webinar-dashboards)
+- [Other Related Work](#other-related-work)
+  - [Case Study and Blog Posts](#case-study-and-blog-posts)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -59,6 +61,14 @@ Fill in
 ### 10 External Webinar Dashboards
 
 Fill in
+
+## Other Related Work
+
+### Case Study and Blog Posts
+
+Also check out a case study and a series of blog posts I contributed to Elliott Davis's Data & Analytics service line
+- [Case Study: Power BI Automated Reporting](https://www.elliottdavis.com/helping-a-global-healthcare-provider-automate-reporting-with-microsoft-power-bi/)
+- [Blog Series: Power BI Best Practices - Data Modeling and Sources](https://www.elliottdavis.com/microsoft-power-bi-best-practices-data-modeling-and-sources/)
 
 ## Author
 
