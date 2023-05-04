@@ -56,11 +56,11 @@ Instead of a generic demo dashboard, my manager needed a set of dashboard report
 
 ### 09 Internal Use Work Tracker
 
-Coming soon!
+This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
 
 ### 10 External Webinar Dashboards
 
-Coming soon!
+On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted about data analytics and how businesses could leverage data in their workplaces. The dashboards in this set are the ones I screenshared during the event, while three of my colleagues voiced-over and talked about the business cases, what we did to help solve, as well as deliver a quick demo of how Power BI works. It was a huge success and one of the firm's most popular webinars to date, and helped garner much more interest in analytics and discovering the power behind their data.
 
 ## Other Related Work
 

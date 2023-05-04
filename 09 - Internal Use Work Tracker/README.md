@@ -1,6 +1,6 @@
 # 09 - Internal Use Work Tracker
 
-Coming soon!
+This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
 
 ## Project Details
 - [Details](#details)
@@ -11,7 +11,7 @@ Coming soon!
 
 ## Details
 
-Coming soon!
+While on my portion the development time was about a month, this project was happening in iterative stages between the two colleagues who were on this before me. On each phase the solution was getting better and better, and most of my role was to combine different aspects of both previous dashboards and combine them into one, establishing a common look and feel across all pages. I worked with my director a few other upper level business leaders to discuss their feedback, what they wanted to see or have removed, and communicate what would be best to see across the firm. Many people would be using this new tool to track their work and engagements, and so the dashboards needed to be flexible enough for data views they are used to, but also specific to focus on only the data they need. Overall this was a great challenge to develop dashboards just for the firm's internal use which not only ultimately showed others the data views they needed to make decisions, but also the power behind data analytics and what could be offered to their clients.
 
 Files included for view in this project:
 - Internal Use Work Tracker.pdf
@@ -115,4 +115,4 @@ Legend Categories =
 
 ## Useful Resources
 
-- [Get a color pallette from photos](https://www.myonlinetraininghub.com/tips-for-using-the-power-query-advanced-editor) - I like making a .json file for each project I work on that has all of the theme's styles, based on a client's existing branding. Helps to make it personal and also let's me focus more on presenting info 
+- [Use Power BI Service Workspaces](https://learn.microsoft.com/en-us/power-bi/fundamentals/service-get-started) - My team and I have gotten into the practice of making online workspaces in Power BI Service which you can publish your .pbix files. Makes it super easy to quickly share work and findings, as well as give colleagues different levels of access depending on what they need
