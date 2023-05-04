@@ -79,4 +79,4 @@ Total without Tax =
 
 ## Useful Resources
 
-- [Get a color pallette from photos](https://www.myonlinetraininghub.com/tips-for-using-the-power-query-advanced-editor) - I like making a .json file for each project I work on that has all of the theme's styles, based on a client's existing branding. Helps to make it personal and also let's me focus more on presenting info
+- [Power BI: Python Data Source](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-python-scripts) - I discovered how easy it is to use Python as a data source directly in Power BI, it is indeed powerful. I've used it in the first file of this webinar set to pull data from AWS. 
