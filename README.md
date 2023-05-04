@@ -2,7 +2,7 @@
 
 This is a collection of selected projects I've worked on during my time as an analyst & consultant at Elliott Davis, from 2021-2023. Before joining I had no prior experience in Power BI or any business intelligence development, and it has been wonderful to aid clients in discovering more about their data while also building aesthetically pleasing frontend dashboards to present insights. All PDFs are exports of .pbix files I've worked on, and the data is scrubbed/modified to protect client identities. See below for brief project summaries and check out each folder's README for more details. Thank you!
 
-## Table of contents
+## Table of Contents
 
 - [Projects Overview](#projects-overview)
   - [01 Healthcare Practice Demos](#01-healthcare-practice-demos)
@@ -44,15 +44,15 @@ After working through [01 Healthcare Practice Demos](#01-healthcare-practice-dem
 
 ### 06 Client Proposal Dashboard
 
-Coming soon!
+As my director was planning for potential engagements, he was looking for a template demo dashboard we could have on hand which we could easily customize for proposals. One of my colleagues started this one and I helped fine-tune the data model and take it further visually to produce the result seen here. The key idea is not only to display how we could personalize Power BI reports towards a potential client, but also showcase the basic yet powerful capabilities in these reports - from filtering, to visual interactivity, and all the way to maps and time trends.
 
 ### 07 Group Case Study Demo
 
-Coming soon!
+Earlier on in my time at Elliott Davis my manager was looking for a dashboard pack we could showcase in a variety of settings to get the word out on the Data & Analytics service line at our firm, as well as provide a starter point of conversation for clients interested in adding on analytics for their engagements. A couple of colleagues and I first worked on our own files and individual dummy data models across different industries - and then from which I combined everything into one file we could post online to our Power BI Service Workspace. As with other demos/proposals I worked on this one was a great showcase of what my team and I could do as well as the significant functionality within Power BI.
 
 ### 08 Healthcare Proposal Dashboard
 
-Coming soon!
+Instead of a generic demo dashboard, my manager needed a set of dashboard reports to show to a healthcare client in an effort to set up an engagement. We borrowed from existing datasets given to us from this client in order to create what is seen here. From initial conversations they were interested in seeing how their different service lines performed by year across different categories, as well as find out if their current Excel reporting package could be automated in Power BI or be made more efficiently in general. I focused on these ideas when working on this one. 
 
 ### 09 Internal Use Work Tracker
 

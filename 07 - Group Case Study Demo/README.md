@@ -1,6 +1,6 @@
 # 07 - Group Case Study Demo
 
-Coming soon!
+Earlier on in my time at Elliott Davis my manager was looking for a dashboard pack we could showcase in a variety of settings to get the word out on the Data & Analytics service line at our firm, as well as provide a starter point of conversation for clients interested in adding on analytics for their engagements. A couple of colleagues and I first worked on our own files and individual dummy data models across different industries - and then from which I combined everything into one file we could post online to our Power BI Service Workspace. As with other demos/proposals I worked on this one was a great showcase of what my team and I could do as well as the significant functionality within Power BI.
 
 ## Project Details
 - [Details](#details)
@@ -11,7 +11,7 @@ Coming soon!
 
 ## Details
 
-Coming soon!
+The guidelines on this one were loose for the purpose of being able to show anything we had learned in the app up to this point, with the goal of showcasing Power BI's capabilities as best as possible. My manager wanted each of us to choose a different industry to form dummy data in and then create visuals from, so we picked construction, retail and e-commerce as our focal points. Each file had a different style, so when I combined them altogether I established a theme to match Elliott Davis's branding as close as possible. It was a great challenge to start figuring out the Advanced Editor in the Power Query backend in order to copy the data pipelines and sources from other files into one, as well as making sure the three data models were copied exactly.
 
 Files included for view in this project:
 - Case Study - Sales Forecasting.pdf

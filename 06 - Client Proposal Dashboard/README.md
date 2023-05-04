@@ -1,6 +1,6 @@
 # 06 - Client Proposal Dashboard
 
-Coming soon!
+As my director was planning for potential engagements, he was looking for a template demo dashboard we could have on hand which we could easily customize for proposals. One of my colleagues started this one and I helped fine-tune the data model and take it further visually to produce the result seen here. The key idea is not only to display how we could personalize Power BI reports towards a potential client, but also showcase the basic yet powerful capabilities in these reports - from filtering, to visual interactivity, and all the way to maps and time trends.
 
 ## Project Details
 - [Details](#details)
@@ -11,7 +11,7 @@ Coming soon!
 
 ## Details
 
-Coming soon!
+One of my colleagues started off working on this one and developed the initial dashboard view and backend data model, pulling from a SharePoint Excel file, and I took it further when my director asked me to customize the file for a new proposal. It's become a standard practice for me to make a .json style file with brand colors from a client's logo to import into Power BI as a theme, and then further customize the background and other features to help make it feel like theirs. This project also turned out to be a good Excel challenge in figuring out how to create a seasonality line trend but based on dummy data. I became more familiar with the INDEX Excel function along with making a column of cumulative weights on the data table to draw from randomly, so I could control the ratio of dates we needed to see in the model. This way we could make custom dummy seasonality trends dependent upon the client's industry. Attention to detail is key.
 
 Files included for view in this project:
 - Client Proposal Dashboard.pdf
@@ -21,7 +21,7 @@ Files included for view in this project:
 
 - < 1 month of development time
 - 2 colleagues collaborated with
-- 1 report pages
+- 1 report page
 - 1 data source
 - 5 queries connected to data source
 

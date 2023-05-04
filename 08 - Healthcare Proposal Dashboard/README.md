@@ -1,6 +1,6 @@
 # 08 - Healthcare Proposal Dashboard
 
-Coming soon!
+Instead of a generic demo dashboard, my manager needed a set of dashboard reports to show to a healthcare client in an effort to set up an engagement. We borrowed from existing datasets given to us from this client in order to create what is seen here. From initial conversations they were interested in seeing how their different service lines performed by year across different categories, as well as find out if their current Excel reporting package could be automated in Power BI or be made more efficiently in general. I focused on these ideas when working on this one. 
 
 ## Project Details
 - [Details](#details)
@@ -11,7 +11,7 @@ Coming soon!
 
 ## Details
 
-Coming soon!
+As one of the first client-related projects I worked on, this was a good test for me to base my dashboard work on what the client already had, but then push myself to think about what else could be helpful to show in order to draw more insights. My manager communictaed that although this client wanted to see how an existing reporting package could be made more efficiently, they were also curious about what else is within their data they may need to pay attention to. I worked to compile visuals into a topic per page, and thoughts about business questions that they could ask when they view a report and how the visuals help provide findings.
 
 Files included for view in this project:
 - Healthcare Proposal Dashboard.pdf
@@ -62,4 +62,4 @@ YTD Net Revenue =
 
 ## Useful Resources
 
-- [Get a color pallette from photos](https://www.myonlinetraininghub.com/tips-for-using-the-power-query-advanced-editor) - I like making a .json file for each project I work on that has all of the theme's styles, based on a client's existing branding. Helps to make it personal and also let's me focus more on presenting info than on colors 
+- [Get a color pallette from photos](https://www.myonlinetraininghub.com/tips-for-using-the-power-query-advanced-editor) - I like making a .json file for each project I work on that has all of the theme's styles, based on a client's existing branding. Helps to make it personal and also let's me focus more on presenting info

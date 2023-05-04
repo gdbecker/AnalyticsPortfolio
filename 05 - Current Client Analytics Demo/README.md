@@ -11,7 +11,7 @@ After working through 01 Healthcare Practice Demos, I was able to borrow quite o
 
 ## Details
 
-Coming soon!
+This one was a great encouragement for me to make sure I stay diligent in documenting and saving all the work I do because sometimes you never know when it might need to be dusted off again. I first worked on this project early on in my time at Elliott Davis, but the dashboard set didn't move past my creating and sharing it with our internal lead on the enagegment. About a year later interest was sparked once more, and I was able to pull this back out, get myself reacquainted with what I made and make further adjustments and updates. Now our internal leader wants to use this dashboard set as a monthly addendum to his existing client engagement, which not only adds greater value for them but also gets the word out on the significant insights that can be drawn from data analytics. 
 
 Files included for view in this project:
 - Demo Dashboard.pdf

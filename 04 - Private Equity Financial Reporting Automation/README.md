@@ -11,7 +11,7 @@ In a similar vein as 03 Automated Medical Financial Reporting, this one was anot
 
 ## Details
 
-Coming soon!
+One of my colleagues started on this engagement with my manager and about half-way in I took over after she moved to another project. There were many good challenges on this one to work through, from communicating clearly what the project scope should be with the client, to my learning and getting more familiar with basic financial statements - espeically P&L statements as well as their forecasting and trailing twelve months appendices. As with 03 Automated Medical Financial Reporting, this client needed to be able to quickly refresh any charts/math by simply updating the data source, as well have narrative text box sections to customize each month's findings to business leaders. It felt very satisfying to bring this one home and delivered to the client.
 
 Files included for view in this project:
 - Private Equity Financial Reporting Automation.pdf
