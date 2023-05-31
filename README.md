@@ -69,6 +69,7 @@ On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted 
 Also check out a case study and a series of blog posts I contributed to Elliott Davis's Data & Analytics service line
 - [Case Study: Power BI Automated Reporting](https://www.elliottdavis.com/helping-a-global-healthcare-provider-automate-reporting-with-microsoft-power-bi/)
 - [Blog Series: Power BI Best Practices - Data Modeling and Sources](https://www.elliottdavis.com/microsoft-power-bi-best-practices-data-modeling-and-sources/)
+- [Blog Series: Power BI Best Practices - Data Engineering and Data Analysis Expressions](https://www.elliottdavis.com/microsoft-power-bi-best-practices-part-2/?utm_content=250736005&utm_medium=social&utm_source=linkedin&hss_channel=lcp-63056)
 
 ## Author
 
