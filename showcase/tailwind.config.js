@@ -9,7 +9,8 @@ module.exports = {
     colors: { 
       "white": "hsl(0, 0%, 100%)",
       "gray": "#48494d",
-      "lightBlue": "#79d9ff",
+      "lightBlue": "hsl(197, 100%, 74%)",
+      "lightBlueTransparent": "hsla(197, 100%, 74%, 0.7)",
       "darkBlue": "#37bae8",
       "lightYellow": "hsl(49, 90%, 70%)",
       "lightYellowTransparent": "hsla(49, 90%, 70%, 0.7)",

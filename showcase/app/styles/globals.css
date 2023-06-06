@@ -19,29 +19,65 @@
 }
 
 /* Project backgrounds */
-.bg-3-column-card {
-  background-image: url(../../public/3-column-card-desktop.jpg);
+.bg-healthcare-private-practice-v1 {
+  background-image: url(../../public/Healthcare\ Private\ Practice\ V1.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Link Underline Animation */
+.bg-healthcare-private-practice-v2 {
+  background-image: url(../../public/Healthcare\ Private\ Practice\ V2.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.link-shadow::before {
-  box-shadow: inset 0 -0.4em 0 0 hsla(49, 90%, 70%, 0.7);
-	bottom: 10px;
+.bg-healthcare-ongoing-dashboard {
+  background-image: url(../../public/Healthcare\ Ongoing\ Dashboard.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-automated-medical {
+  background-image: url(../../public/Example\ Report\ Export.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Link Underline Animation */
+.link-shadow-pbi::before {
+  box-shadow: inset 0 -0.4em 0 0 hsla(44, 87%, 48%, 0.7);
+	bottom: 12px;
 	content: "";
 	display: block;
-	height: 0.4em;
+	height: 0.3em;
 	left: 0;
 	position: absolute;
 	transform: scaleX(0);
 	transition: transform 0.30s ease;
 	width: 100%;
-  z-index: 1;
 }
 
-.link-shadow:hover::before {
+.link-shadow-pbi:hover::before {
+  transform: scaleX(1);
+}
+
+.link-shadow-python::before {
+  box-shadow: inset 0 -0.4em 0 0 hsla(197, 100%, 74%, 0.7);
+	bottom: 12px;
+	content: "";
+	display: block;
+	height: 0.3em;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transition: transform 0.30s ease;
+	width: 100%;
+}
+
+.link-shadow-python:hover::before {
   transform: scaleX(1);
 }
