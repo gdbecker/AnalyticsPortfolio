@@ -36,6 +36,46 @@ import ProjectCard from './components/ProjectCard';
         type="pbi"
       />
 
+      <ProjectCard 
+        img_bg="bg-private-equity"
+        title="Private Equity Financial Reporting Automation"
+        demo_url="https://app.powerbi.com/view?r=eyJrIjoiZmNhNDg1NjctZGNiMy00YWI3LWEyN2YtOWY1NGY0MDZkYTNjIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9&embedImagePlaceholder=true"
+        code_url="https://github.com/gdbecker/AnalyticsPortfolio/tree/main/04%20-%20Private%20Equity%20Financial%20Reporting%20Automation"
+        type="pbi"
+      />
+
+      <ProjectCard 
+        img_bg="bg-current-client-demo"
+        title="Current Client Analytics Demo"
+        demo_url="https://app.powerbi.com/view?r=eyJrIjoiYWJhNTBhY2ItNzE4MS00YjEzLTliMWMtN2ViMDNhMTdlYmYxIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9&embedImagePlaceholder=true"
+        code_url="https://github.com/gdbecker/AnalyticsPortfolio/tree/main/05%20-%20Current%20Client%20Analytics%20Demo"
+        type="pbi"
+      />
+
+      <ProjectCard 
+        img_bg="bg-client-proposal"
+        title="Client Proposal Dashboard"
+        demo_url="https://app.powerbi.com/view?r=eyJrIjoiZWE0YjMwZWYtMGQ3My00YjNjLTkzNTctN2IxMDVkZjdkYjRmIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9&embedImagePlaceholder=true"
+        code_url="https://github.com/gdbecker/AnalyticsPortfolio/tree/main/06%20-%20Client%20Proposal%20Dashboard"
+        type="pbi"
+      />
+
+      <ProjectCard 
+        img_bg="bg-group-case-study"
+        title="Group Case Study Demo"
+        demo_url="https://app.powerbi.com/view?r=eyJrIjoiMWM5NWI0MjUtMmRhYy00ZDkzLWJiNjUtNzlmM2M3ZGE2MjZmIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9&embedImagePlaceholder=true"
+        code_url="https://github.com/gdbecker/AnalyticsPortfolio/tree/main/07%20-%20Group%20Case%20Study%20Demo"
+        type="pbi"
+      />
+
+      <ProjectCard 
+        img_bg="bg-healthcare-proposal"
+        title="Healthcare Proposal Dashboard"
+        demo_url="https://app.powerbi.com/view?r=eyJrIjoiMzNlMWYxZmYtZDAyMC00YjhhLTgxOGUtZWI0NWU1ZWE5OWUyIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9&embedImagePlaceholder=true"
+        code_url="https://github.com/gdbecker/AnalyticsPortfolio/tree/main/08%20-%20Healthcare%20Proposal%20Dashboard"
+        type="pbi"
+      />
+
     </main>
   )
 }

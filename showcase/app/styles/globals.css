@@ -47,6 +47,41 @@
   background-size: cover;
 }
 
+.bg-private-equity {
+  background-image: url(../../public/Private\ Equity\ Financial\ Reporting\ Automation.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-current-client-demo {
+  background-image: url(../../public/Demo\ Dashboard.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-client-proposal {
+  background-image: url(../../public/Client\ Proposal\ Dashboard.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-group-case-study {
+  background-image: url(../../public/Case\ Study\ Demo\ -\ Combined.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-healthcare-proposal {
+  background-image: url(../../public/Healthcare\ Proposal\ Dashboard.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Link Underline Animation */
 .link-shadow-pbi::before {
   box-shadow: inset 0 -0.4em 0 0 hsla(44, 87%, 48%, 0.7);

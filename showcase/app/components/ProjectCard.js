@@ -34,7 +34,7 @@ function ProjectCard({ img_bg, title, demo_url, code_url, type }) {
 
   function getHoverClass(type) {
     if (type == 'pbi') {
-      return "project-link text-lg hover:text-mediumYellow";
+      return "flex flex-row project-link text-lg hover:text-mediumYellow";
     } else if (type == 'python') {
       return "project-link text-lg hover:text-lightBlue";
     }
@@ -56,7 +56,7 @@ function ProjectCard({ img_bg, title, demo_url, code_url, type }) {
             className="py-2 text-xl font-interBold relative no-underline lg:text-md"><span className={getShadowClass(type)}>{title}</span></Link>
         </div>
         <div className="flex flex-row items-center justify-between py-3 font-interRegular text-md lg:text-sm">
-          <Link href={code_url} target="_blank" className={getHoverClass(type)}><FaGithub /></Link>
+          <Link href={code_url} target="_blank" className={getHoverClass(type)}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
           {getLabel(type)}
         </div>
       </div>
