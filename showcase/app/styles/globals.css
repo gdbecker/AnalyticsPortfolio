@@ -82,6 +82,27 @@
   background-size: cover;
 }
 
+.bg-internal-work {
+  background-image: url(../../public/Internal\ Use\ Work\ Tracker.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-external-webinar {
+  background-image: url(../../public/Webinar\ Part\ 1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-space-missions {
+  background-image: url(../../public/Space\ Missions\ Analysis.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Link Underline Animation */
 .link-shadow-pbi::before {
   box-shadow: inset 0 -0.4em 0 0 hsla(44, 87%, 48%, 0.7);

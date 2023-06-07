@@ -76,6 +76,30 @@ import ProjectCard from './components/ProjectCard';
         type="pbi"
       />
 
+      <ProjectCard 
+        img_bg="bg-internal-work"
+        title="Internal Use Work Tracker"
+        demo_url="https://app.powerbi.com/view?r=eyJrIjoiYjRmOGJiMDUtM2M3Mi00MTVhLWE3NzgtYzNiYWUwMzNjOWM5IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9&embedImagePlaceholder=true"
+        code_url="https://github.com/gdbecker/AnalyticsPortfolio/tree/main/09%20-%20Internal%20Use%20Work%20Tracker"
+        type="pbi"
+      />
+
+      <ProjectCard 
+        img_bg="bg-external-webinar"
+        title="External Webinar Dashboards"
+        demo_url="https://app.powerbi.com/view?r=eyJrIjoiODFiZmVhYzYtMDQyOC00YzI1LTg4MDYtYzM5ODgwOWZmMjIwIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9&embedImagePlaceholder=true"
+        code_url="https://github.com/gdbecker/AnalyticsPortfolio/tree/main/10%20-%20External%20Webinar%20Dashboards"
+        type="pbi"
+      />
+
+      <ProjectCard 
+        img_bg="bg-space-missions"
+        title="Space Missions Analysis"
+        demo_url="https://www.kaggle.com/code/garrettbecker/space-missions-analysis?kernelSessionId=132508838"
+        code_url=""
+        type="python"
+      />
+
     </main>
   )
 }
