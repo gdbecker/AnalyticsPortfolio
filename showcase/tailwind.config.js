@@ -18,6 +18,8 @@ module.exports = {
       "mediumYellowTransparent": "hsla(44, 87%, 48%, 0.7)",
       "darkYellow": "#b27c00",
       "lightGray": "hsl(0, 0%, 81%)",
+      "purple": "hsl(227, 37%, 79%)",
+      "purpleTransparent": "hsla(227, 37%, 79%, 0.7)",
     },
     extend: {
       fontFamily: {

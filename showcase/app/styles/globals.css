@@ -103,6 +103,90 @@
   background-size: cover;
 }
 
+.bg-fatal-force {
+  background-image: url(../../public/Fatal\ Force\ Analysis.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-determinants-earnings {
+  background-image: url(../../public/Determinants\ of\ Earnings\ Analysis.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-penguins-part-1 {
+  background-image: url(../../public/penguins-part-1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-penguins-part-2 {
+  background-image: url(../../public/penguins-part-2.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-penguins-part-3 {
+  background-image: url(../../public/penguins-part-3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-penguins-part-4 {
+  background-image: url(../../public/penguins-part-4.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-penguins-part-5 {
+  background-image: url(../../public/penguins-part-5.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-airlines-part-1 {
+  background-image: url(../../public/airlines-part-1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-airlines-part-2 {
+  background-image: url(../../public/airlines-part-2.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-airlines-part-3 {
+  background-image: url(../../public/airlines-part-3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-airlines-part-4 {
+  background-image: url(../../public/airlines-part-4.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-airlines-part-5 {
+  background-image: url(../../public/airlines-part-5.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Link Underline Animation */
 .link-shadow-pbi::before {
   box-shadow: inset 0 -0.4em 0 0 hsla(44, 87%, 48%, 0.7);
@@ -113,7 +197,7 @@
 	left: 0;
 	position: absolute;
 	transform: scaleX(0);
-	transition: transform 0.30s ease;
+	transition: transform 0.25s ease;
 	width: 100%;
 }
 
@@ -130,10 +214,27 @@
 	left: 0;
 	position: absolute;
 	transform: scaleX(0);
-	transition: transform 0.30s ease;
+	transition: transform 0.25s ease;
 	width: 100%;
 }
 
 .link-shadow-python:hover::before {
+  transform: scaleX(1);
+}
+
+.link-shadow-ml::before {
+  box-shadow: inset 0 -0.4em 0 0 hsla(227, 37%, 79%, 0.7);
+	bottom: 12px;
+	content: "";
+	display: block;
+	height: 0.3em;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transition: transform 0.25s ease;
+	width: 100%;
+}
+
+.link-shadow-ml:hover::before {
   transform: scaleX(1);
 }
