@@ -3,7 +3,7 @@ import ProjectCard from './components/ProjectCard';
 
  function Home() {
   return (
-    <main className="flex flex-col items-center justify-center w-full h-full p-10 bg-gray md:items-start">
+    <main className="flex flex-col items-center justify-center w-full h-full p-10 bg-gray md:items-start xl:px-52">
 
       <h1 className="px-2 h-full text-mediumYellow min-w-max ring-mediumYellow ring-2 rounded-sm font-interBold text-sm overflow-hidden">POWER BI</h1>
       

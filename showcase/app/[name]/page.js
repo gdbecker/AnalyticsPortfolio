@@ -24,7 +24,7 @@ import { IoChevronBack } from 'react-icons/io5';
   }
 
   return (
-    <main className="flex flex-col w-full min-h-screen p-10 justify-center bg-gray">
+    <main className="flex flex-col w-full min-h-screen p-10 justify-center bg-gray xl:px-52">
       <div className="grid grid-cols-2 pb-3 items-end justify-between text-white text-lg font-interRegular">
         <a href="/" className={getHoverClass(searchParams.type)}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
         <h1 className="font-interBold text-right">{searchParams.title}</h1>
