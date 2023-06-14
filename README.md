@@ -70,6 +70,7 @@ Also check out a case study and a series of blog posts I contributed to Elliott 
 - [Case Study: Power BI Automated Reporting](https://www.elliottdavis.com/helping-a-global-healthcare-provider-automate-reporting-with-microsoft-power-bi/)
 - [Blog Series: Power BI Best Practices - Data Modeling and Sources](https://www.elliottdavis.com/microsoft-power-bi-best-practices-data-modeling-and-sources/)
 - [Blog Series: Power BI Best Practices - Data Engineering and Data Analysis Expressions](https://www.elliottdavis.com/microsoft-power-bi-best-practices-part-2/)
+- [Blog Series: Power BI Best Practices - Reports and Deployment](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-reports-and-deployment/)
 
 ## Author
 
