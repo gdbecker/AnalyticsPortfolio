@@ -62,6 +62,34 @@ This was a great challenge because instead of creating dashboards for clients, n
 
 On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted about data analytics and how businesses could leverage data in their workplaces. The dashboards in this set are the ones I screenshared during the event, while three of my colleagues voiced-over and talked about the business cases, what we did to help solve, as well as deliver a quick demo of how Power BI works. It was a huge success and one of the firm's most popular webinars to date, and helped garner much more interest in analytics and discovering the power behind their data.
 
+### 11 Space Missions Analysis
+
+Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. The analysis digs into the [Space Missions Launches](https://www.kaggle.com/datasets/sefercanapaydn/mission-launches) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
+
+### 12 Fatal Force Analysis
+
+Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. 
+
+This analysis digs into the following datasets from Kaggle:
+- [Fatal Police Shootings in the US](https://www.kaggle.com/datasets/abhi8923shriv/fatalpoliceshootingsintheus)
+- [Percentage of People Below Poverty Level](https://www.kaggle.com/datasets/musti12/percentage-people-below-poverty-level) 
+- [Police Killings in the US](https://www.kaggle.com/datasets/azizozmen/police-killings-us) 
+- [Sharing Race by City](https://www.kaggle.com/datasets/musti12/sharing-race-by-city) 
+
+Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
+
+### 13 Determinants of Earnings Analysis
+
+Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. The analysis digs into the [Determinants of Earnings Datasets](https://www.kaggle.com/datasets/garrettbecker/determinants-of-earnings-datasets) from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
+
+### 14 Penguins Analysis
+
+Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Penguins](https://www.kaggle.com/datasets/larsen0966/penguins) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
+
+### 15 Airlines Delays Analysis
+
+Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Airlines Delays](https://www.kaggle.com/datasets/ulrikthygepedersen/airlines-delay) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
+
 ## Other Related Work
 
 ### Case Study and Blog Posts
