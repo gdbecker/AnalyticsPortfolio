@@ -10,17 +10,17 @@ Python data science project I came up with as a capstone to finish off Jose Port
 
 ## Details
 
-This is a five part analysis and series of machine learning models that dig into the [Penguins](https://www.kaggle.com/datasets/larsen0966/penguins) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook. Here's the overview of each part of the analysis:
+This is a five part analysis and series of machine learning models that dig into the [Penguins](https://www.kaggle.com/datasets/larsen0966/penguins) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
+
+## Link to Demo
+
+Links to each part of the analysis:
 
 - [Part 1: Exploration](https://www.kaggle.com/code/garrettbecker/penguins-analysis-part-1-exploration)
 - [Part 2: Linear and Logistic Machine Learning](https://www.kaggle.com/code/garrettbecker/penguins-analysis-part-2-linear-and-logistic-ml)
 - [Part 3: Decision Trees and Random Forests Machine Learning](https://www.kaggle.com/code/garrettbecker/penguins-analysis-part-3-dt-rf-ml)
 - [Part 4: K-Nearest Neighbors and K-Means Clustering Machine Learning](https://www.kaggle.com/code/garrettbecker/penguins-analysis-part-4-knn-k-means-ml)
 - [Part 5: Principal Component Analysis](https://www.kaggle.com/code/garrettbecker/penguins-analysis-part-5-pca-ml)
-
-## Link to Demo
-
-[Kaggle Notebook]()
 
 ## Tools Used
 
