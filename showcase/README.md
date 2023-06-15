@@ -2,6 +2,10 @@
 
 Showcase website to display my analytics work across Power BI, Python, and Machine Learning projects. Take a look and explore!
 
+## Links
+
+[Live URL](https://analytics-showcase-gdbecker.netlify.app/)
+
 ## Built with
 
 - [React](https://react.dev/) - JS library
