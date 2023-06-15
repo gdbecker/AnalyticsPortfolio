@@ -11,6 +11,10 @@ Python data science project from Anglea Yu's course [100 Days of Code: Python on
 
 This analysis digs into the [Space Missions Launches](https://www.kaggle.com/datasets/sefercanapaydn/mission-launches) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
 
+## Link to Demo
+
+[Kaggle Notebook](https://www.kaggle.com/code/garrettbecker/space-missions-analysis/notebook)
+
 ## Tools Used
 
 - Python
