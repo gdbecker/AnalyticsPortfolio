@@ -4,6 +4,7 @@ Python data science project from Anglea Yu's course [100 Days of Code: Python on
 
 ## Project Details
 - [Details](#details)
+- [Link to Demo](#link-to-demo)
 - [Tools Used](#tools-used)
 - [What I learned](#what-i-learned)
 
