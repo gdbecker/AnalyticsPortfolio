@@ -64,6 +64,7 @@ function ProjectCard({ img_bg, title, demo_url, code_url, type }) {
               query: {
                 demo_url: `${demo_url}`,
                 title: `${title}`,
+                code_url: `${code_url}`,
                 type: `${type}`,
               }
             }}

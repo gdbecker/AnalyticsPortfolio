@@ -3,9 +3,18 @@ import ProjectCard from './components/ProjectCard';
 
  function Home() {
   return (
-    <main className="flex flex-col items-center justify-center w-full h-full p-10 bg-gray md:items-start 2xl:px-36">
+    <main className="flex flex-col items-center justify-center w-full h-full p-10 bg-gray md:items-center 2xl:px-36">
 
-      <h1 className="px-2 h-full text-mediumYellow min-w-max ring-mediumYellow ring-2 rounded-sm font-interBold text-sm overflow-hidden">POWER BI</h1>
+      <h1 className="pb-9 font-interRegular text-justify text-white leading-7 md:w-[50vw]">
+        This is a collection of selected projects I've worked on during my time as an analyst & consultant at Elliott Davis, as well 
+        as a few Python data analysis projects. Before joining I had no prior experience in Power BI or any business intelligence 
+        development, and it has been wonderful to aid clients in discovering more about their data while also building aesthetically 
+        pleasing frontend dashboards to present insights. All PDFs in Github are exports of .pbix files I've worked on, and the data is 
+        scrubbed/modified to protect client identities. Take a look and explore the projects I've worked on, view more details in Github
+        and play with a demo right here!
+      </h1>
+
+      <h1 className="px-2 mb-2 h-full text-mediumYellow min-w-max ring-mediumYellow ring-2 rounded-sm font-interBold text-sm overflow-hidden">POWER BI</h1>
       
       <div className="flex flex-col w-full pt-5 pb-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <ProjectCard 
@@ -97,7 +106,7 @@ import ProjectCard from './components/ProjectCard';
         />
       </div>
 
-      <div className="flex flex-row justify-center">
+      <div className="flex flex-row justify-center mb-2">
         <h1 className="px-2 h-full text-lightBlue min-w-max ring-lightBlue ring-2 rounded-sm font-interBold text-sm overflow-hidden">PYTHON</h1>
         <span className="mx-2 h-full text-white min-w-max ring-gray ring-2 rounded-sm font-interBold text-sm overflow-hidden">+</span>
         <h1 className="px-2 h-full text-purple min-w-max ring-purple ring-2 rounded-sm font-interBold text-sm overflow-hidden">MACHINE LEARNING</h1>
