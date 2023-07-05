@@ -2,6 +2,10 @@
 
 This is a collection of selected projects I've worked on during my time as an analyst & consultant at Elliott Davis, from 2021-2023, as well as a few Python data analysis projects. Before joining I had no prior experience in Power BI or any business intelligence development, and it has been wonderful to aid clients in discovering more about their data while also building aesthetically pleasing frontend dashboards to present insights. All PDFs are exports of .pbix files I've worked on, and the data is scrubbed/modified to protect client identities. See below for brief project summaries and check out each folder's README for more details. Thank you!
 
+## Links
+
+[Live URL](https://analytics-showcase-gdbecker.netlify.app/)
+
 ## Table of Contents
 
 - [Projects Overview](#projects-overview)
