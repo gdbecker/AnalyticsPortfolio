@@ -6,11 +6,11 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
 
   function getOutlineClass(type) {
     if (type == 'Power BI') {
-      return "flex w-full flex-col rounded-md overflow-hidden bg-white shadow-lightYellow shadow-[0_0px_4px]";
+      return "shadow-lightYellow";
     } else if (type == 'Python') {
-      return "flex w-full flex-col rounded-md overflow-hidden bg-white shadow-lightBlue shadow-[0_0px_4px]";
+      return "shadow-lightBlue";
     } else if (type == 'Machine Learning') {
-      return "flex w-full flex-col rounded-md overflow-hidden bg-white shadow-purple shadow-[0_0px_4px]";
+      return "shadow-purple";
     }
   }
 
@@ -45,16 +45,16 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
 
   function getHoverClass(type) {
     if (type == 'Power BI') {
-      return "flex flex-row project-link text-lg hover:text-mediumYellow";
+      return "text-mediumYellow";
     } else if (type == 'Python') {
-      return "flex flex-row project-link text-lg hover:text-lightBlue";
+      return "text-lightBlue";
     } else if (type == 'Machine Learning') {
-      return "flex flex-row project-link text-lg hover:text-purple";
+      return "text-purple";
     }
   }
 
   return (
-    <div className={getOutlineClass(type)}>
+    <div className={`flex w-full flex-col rounded-md overflow-hidden bg-white ${ getOutlineClass(type) } shadow-[0_0px_4px]`}>
       <div className={`flex flex-row h-44 ${ img_bg }`}></div>
       <div className="flex-auto grid grid-cols-1 px-5 py-3 pb-1 text-gray">
         <div className="flex-row">
@@ -74,7 +74,7 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
             className="flex py-2 text-xl font-interBold relative no-underline lg:text-md"><span className={getShadowClass(type)}>{title}</span></Link>
         </div>
         <div className="grid grid-cols-2 items-end justify-between w-full py-3 font-interRegular text-md lg:text-sm">
-          <Link href={code_url} target="_blank" className={getHoverClass(type)}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
+          <Link href={code_url} target="_blank" className={`flex flex-row project-link text-lg hover:${ getHoverClass(type) }`}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
           <div className="flex flex-col items-end justify-end">
             {getLabel(type)}
           </div>

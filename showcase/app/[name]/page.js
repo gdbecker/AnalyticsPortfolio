@@ -21,11 +21,11 @@ import { db } from './../services/firebase.config';
   const getProjects = async () => {
     await getDocs(collectionRef).then((project) => {
       let projectData = project.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      projectData.filter(function(p) {
+      projectData = projectData.filter(function(p) {
         return p.id == pathname.slice(1);
       });
       setProject(projectData[0])
-      console.log(projectData[0])
+      console.log(projectData)
       setIsLoading(false)
     }).catch((err) => {
       console.log(err);
@@ -39,21 +39,21 @@ import { db } from './../services/firebase.config';
 
   function getHoverClass(type) {
     if (type == 'Power BI') {
-      return "flex flex-row hover:text-mediumYellow";
+      return "text-mediumYellow";
     } else if (type == 'Python') {
-      return "flex flex-row hover:text-lightBlue";
+      return "text-lightBlue";
     } else if (type == 'Machine Learning') {
-      return "flex flex-row hover:text-purple";
+      return "text-purple";
     }
   }
 
   function getShadowClass(type) {
     if (type == 'Power BI') {
-      return "flex w-full min-h-screen rounded-md shadow-lightYellow shadow-[0_0px_2px]";
+      return "shadow-lightYellow";
     } else if (type == 'Python') {
-      return "flex w-full min-h-screen rounded-md shadow-lightBlue shadow-[0_0px_2px]";
+      return "shadow-lightBlue";
     } else if (type == 'Machine Learning') {
-      return "flex w-full min-h-screen rounded-md shadow-purple shadow-[0_0px_2px]";
+      return "shadow-purple";
     }
   }
 
@@ -64,8 +64,8 @@ import { db } from './../services/firebase.config';
         <h1 className="pb-6 font-interBold text-center text-white text-xl">{project.title}</h1>
 
         <div className="grid grid-cols-2 pb-3 items-end justify-between text-white text-md font-interRegular">
-          <a href="/" className={getHoverClass(project.type)}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
-          <a href={project.code_url} target="_blank" className={`justify-end ${getHoverClass(project.type)}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
+          <a href="/" className={`flex flex-row hover:${ getHoverClass(project.type) }`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
+          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end hover:${getHoverClass(project.type)}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
         </div>
         <iframe 
           src={project.demo_url}
@@ -73,7 +73,7 @@ import { db } from './../services/firebase.config';
           frameborder="0" 
           scrolling="auto" 
           title="Project Demo"
-          className={getShadowClass(project.type)}>
+          className={`flex w-full min-h-screen rounded-md ${ getShadowClass(project.type) } shadow-[0_0px_2px]`}>
         </iframe>
       </main>
     )
