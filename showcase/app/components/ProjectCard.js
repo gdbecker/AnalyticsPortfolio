@@ -45,11 +45,11 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
 
   function getHoverClass(type) {
     if (type == 'Power BI') {
-      return "text-mediumYellow";
+      return "hover:text-mediumYellow";
     } else if (type == 'Python') {
-      return "text-lightBlue";
+      return "hover:text-lightBlue";
     } else if (type == 'Machine Learning') {
-      return "text-purple";
+      return "hover:text-purple";
     }
   }
 
@@ -74,7 +74,7 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
             className="flex py-2 text-xl font-interBold relative no-underline lg:text-md"><span className={getShadowClass(type)}>{title}</span></Link>
         </div>
         <div className="grid grid-cols-2 items-end justify-between w-full py-3 font-interRegular text-md lg:text-sm">
-          <Link href={code_url} target="_blank" className={`flex flex-row project-link text-lg hover:${ getHoverClass(type) }`}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
+          <Link href={code_url} target="_blank" className={`flex flex-row project-link text-lg ${ getHoverClass(type) }`}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
           <div className="flex flex-col items-end justify-end">
             {getLabel(type)}
           </div>

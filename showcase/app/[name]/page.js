@@ -39,11 +39,11 @@ import { db } from './../services/firebase.config';
 
   function getHoverClass(type) {
     if (type == 'Power BI') {
-      return "text-mediumYellow";
+      return "hover:text-mediumYellow";
     } else if (type == 'Python') {
-      return "text-lightBlue";
+      return "hover:text-lightBlue";
     } else if (type == 'Machine Learning') {
-      return "text-purple";
+      return "hover:text-purple";
     }
   }
 
@@ -64,8 +64,8 @@ import { db } from './../services/firebase.config';
         <h1 className="pb-6 font-interBold text-center text-white text-xl">{project.title}</h1>
 
         <div className="grid grid-cols-2 pb-3 items-end justify-between text-white text-md font-interRegular">
-          <a href="/" className={`flex flex-row hover:${ getHoverClass(project.type) }`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
-          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end hover:${getHoverClass(project.type)}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
+          <a href="/" className={`flex flex-row ${ getHoverClass(project.type) }`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
+          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end ${getHoverClass(project.type)}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
         </div>
         <iframe 
           src={project.demo_url}
