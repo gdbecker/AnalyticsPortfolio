@@ -25,10 +25,10 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
       );
     } else if (type == 'Machine Learning') {
       return (
-      <div className="flex flex-col items-end">
-        <p className="px-2 h-full text-lightBlue max-w-fit my-1 ring-lightBlue ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">PYTHON</p>
+      // <div className="flex flex-col items-end">
+        // <p className="px-2 h-full text-lightBlue max-w-fit my-1 ring-lightBlue ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">PYTHON</p>
         <p className="px-2 h-full text-purple min-w-max my-1 ring-purple ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">MACHINE LEARNING</p>
-      </div>
+      // </div>
       );
     }
   }
@@ -71,12 +71,17 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
             href={{
               pathname: `/${id}`
             }}
-            className="flex py-2 text-xl font-interBold relative no-underline lg:text-md"><span className={getShadowClass(type)}>{title}</span></Link>
+            className="flex py-2 text-xl font-interBold relative no-underline lg:text-md"><span className={getShadowClass(type.split(",")[0])}>{title}</span></Link>
         </div>
         <div className="grid grid-cols-2 items-end justify-between w-full py-3 font-interRegular text-md lg:text-sm">
-          <Link href={code_url} target="_blank" className={`flex flex-row project-link text-lg ${ getHoverClass(type) }`}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
-          <div className="flex flex-col items-end justify-end">
+          <Link href={code_url} target="_blank" className={`flex flex-row project-link text-lg ${ getHoverClass(type.split(",")[0]) }`}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
+          {/* <div className="flex flex-col items-end justify-end">
             {getLabel(type)}
+          </div> */}
+          <div className="flex flex-col items-end justify-end">
+            <div className="flex flex-col items-end">
+              {type.split(",").map((t) => getLabel(t))}
+            </div>
           </div>
         </div>
       </div>

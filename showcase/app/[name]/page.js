@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import LoadingPage from '../loading';
 import { usePathname } from 'next/navigation'
 import { IoChevronBack } from 'react-icons/io5';
 import { FaGithub } from 'react-icons/fa';
@@ -57,6 +58,12 @@ import { db } from './../services/firebase.config';
     }
   }
 
+  if (isLoading) {
+    return (
+      <LoadingPage />
+    )
+  }
+
   if (!isLoading) {
     return (
       <main className="flex flex-col w-full min-h-screen p-10 justify-center bg-gray 2xl:px-36">
@@ -64,8 +71,8 @@ import { db } from './../services/firebase.config';
         <h1 className="pb-6 font-interBold text-center text-white text-xl">{project.title}</h1>
 
         <div className="grid grid-cols-2 pb-3 items-end justify-between text-white text-md font-interRegular">
-          <a href="/" className={`flex flex-row ${ getHoverClass(project.type) }`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
-          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end ${getHoverClass(project.type)}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
+          <a href="/" className={`flex flex-row ${ getHoverClass(project.type.split(",")[0]) }`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
+          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end ${getHoverClass(project.type.split(",")[0])}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
         </div>
         <iframe 
           src={project.demo_url}
@@ -73,7 +80,7 @@ import { db } from './../services/firebase.config';
           frameborder="0" 
           scrolling="auto" 
           title="Project Demo"
-          className={`flex w-full min-h-screen rounded-md ${ getShadowClass(project.type) } shadow-[0_0px_2px]`}>
+          className={`flex w-full min-h-screen rounded-md ${ getShadowClass(project.type.split(",")[0]) } shadow-[0_0px_2px]`}>
         </iframe>
       </main>
     )

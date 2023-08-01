@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import LoadingPage from './loading';
 import ProjectCard from './components/ProjectCard';
 import { BiSearch } from 'react-icons/bi'
 import { BiChevronDown } from 'react-icons/bi'
@@ -37,13 +38,13 @@ import { db } from './services/firebase.config';
   const filterProjects = (projectName, type) => {
     if (projectName != "" && type != "All" && type != "Filter by Type") {
       var f =  projects.filter(function(p) {
-        return p.type == type && p.title.toLowerCase().includes(projectName.toLowerCase());
+        return p.type.includes(type) && p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
       setFilteredProjects(f);
     } else if (type != "All" && type != "Filter by Type") {
       var f =  projects.filter(function(p) {
-        return p.type == type;
+        return p.type.includes(type);
       });
 
       setFilteredProjects(f);
@@ -60,14 +61,15 @@ import { db } from './services/firebase.config';
 
   // Get project types list
   const grabTypes = (projects) => {
-    let allTypes = projects.map(p => p.type);
-    let typeList = [...new Set(allTypes)].sort();
+    let allTypes = projects.map(p => p.type.split(","));
+    let allTypesMerge = allTypes.flat(1);
+    let typeList = [...new Set(allTypesMerge)].sort();
 
     typeList = typeList.map(p => {
       return({type: p});
     });
 
-    typeList.unshift({type: "All"})
+    typeList.unshift({type: "Filter by Type"})
 
     setTypes(typeList);
   }
@@ -99,6 +101,12 @@ import { db } from './services/firebase.config';
     getProjects();
   }, [])
 
+  if (isLoading) {
+    return (
+      <LoadingPage />
+    )
+  }
+
   if (!isLoading) {
     return (
       <main className="flex flex-col items-center justify-center w-full h-full p-10 bg-gray md:items-center 2xl:px-36">
@@ -116,7 +124,7 @@ import { db } from './services/firebase.config';
           <div className="flex flex-row w-full items-center justify-between pl-5 shadow-md rounded-md bg-white md:w-[40%]">
             <h1 className="font-interRegular text-gray"><BiSearch /></h1>
             <input 
-              className="flex w-full p-5 bg-white text-gray text-xs font-interRegular rounded-md focus:outline-none"
+              className="flex w-full p-4 bg-white text-gray text-xs font-interRegular rounded-md focus:outline-none"
               placeholder="Search for a project!"
               id="projectSearch" 
               type="text" 
@@ -124,8 +132,8 @@ import { db } from './services/firebase.config';
               onChange={e => onChangeProjectSearch(e)}
             />
           </div>
-          <details className="flex dropdown w-[60%] my-10 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
-          <summary className="flex flex-row items-center justify-between mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
+          <details className="flex dropdown w-[100%] my-4 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
+          <summary className="flex flex-row items-center justify-between h-full mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
             <h1 
               className="flex normal-case text-xs font-interRegular"
             >{typeSelect}</h1>

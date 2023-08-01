@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer className="text-center font-interRegular text-sm">
-          Coded by <a href="https://github.com/gdbecker/AnalyticsPortfolio/tree/main" target="_blank" className="font-interRegular hover:text-mediumYellow">Garrett Becker</a>.
+          Coded by <a href="https://github.com/gdbecker/AnalyticsPortfolio/tree/main" target="_blank" className="font-interRegular hover:text-mediumYellow">Garrett Becker</a>
         </footer>
       </body>
     </html>
