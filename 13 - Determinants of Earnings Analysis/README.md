@@ -47,7 +47,7 @@ plt.axhline(y=0, color= 'r', ls='--')
 plt.show()
 ```
 
-Analyse the Estimated Values & Regression Residuals
+Analyze the Estimated Values & Regression Residuals
 ```python
 # Original Regression of Actual vs. Predicted Prices
 plt.figure(dpi=100)
