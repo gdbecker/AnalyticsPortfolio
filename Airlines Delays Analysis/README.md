@@ -2,6 +2,8 @@
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course.
 
+!["airlines-part-1.jpg"](./airlines-part-1.jpg)
+
 ## Project Details
 - [Details](#details)
 - [Link to Demo](#link-to-demo)
