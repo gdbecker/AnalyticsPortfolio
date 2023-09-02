@@ -34,7 +34,7 @@ This is a collection of selected projects I've worked on during my time as an an
 
 ## Projects Overview
 
-### [Airlines Delays Analysis](/tree/main/Airlines%20Delays%20Analysis)
+### [Airlines Delays Analysis](./Airlines%20Delays%20Analysis/)
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Airlines Delays](https://www.kaggle.com/datasets/ulrikthygepedersen/airlines-delay) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
 
