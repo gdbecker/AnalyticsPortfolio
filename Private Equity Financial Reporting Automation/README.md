@@ -1,6 +1,8 @@
-# 04 - Private Equity Financial Reporting Automation
+# Private Equity Financial Reporting Automation
 
 In a similar vein as 03 Automated Medical Financial Reporting, this one was another good challenge in transforming a client's existing financial reporting deck into a fully automated Power BI report. I took over this project half-way in and helped finish it up week by week, ensuring that the math and design matched what they needed. There were also some tricky formatting needs they had that was a good test to push myself in what I can develop in Power BI.
+
+!["Private Equity Financial Reporting.jpg"](./Private%20Equity%20Financial%20Reporting%20Automation.jpg)
 
 ## Project Details
 - [Details](#details)

@@ -1,6 +1,8 @@
-# 08 - Healthcare Proposal Dashboard
+# Healthcare Proposal Dashboard
 
 Instead of a generic demo dashboard, my manager needed a set of dashboard reports to show to a healthcare client in an effort to set up an engagement. We borrowed from existing datasets given to us from this client in order to create what is seen here. From initial conversations they were interested in seeing how their different service lines performed by year across different categories, as well as find out if their current Excel reporting package could be automated in Power BI or be made more efficiently in general. I focused on these ideas when working on this one. 
+
+!["Healthcare Proposal Dashboard.jpg"](./Healthcare%20Proposal%20Dashboard.jpg)
 
 ## Project Details
 - [Details](#details)

@@ -1,6 +1,10 @@
-# 01 - Healthcare Practice Demos
+# Healthcare Practice Demos
 
 These are a set of Power BI demos intended to go to market for existing Elliott Davis healthcare clients. My director had experience in Tableau so some of the functionality has was used to was not natively built-in with this app, so this was a great challenge to push myself with what Power BI is capable of technically in order to provide a better solution. I also tested this project with a bit of Python scripting, and there are two V2 versions, depending on if the client wanted to see hygiene broken out or not.
+
+!["Healthcare Private Practice V1.jpg"](./Healthcare%20Private%20Practice%20V1.jpg)
+
+!["Healthcare Private Practice V2.jpg"](./Healthcare%20Private%20Practice%20V2.jpg)
 
 ## Project Details
 - [Details](#details)

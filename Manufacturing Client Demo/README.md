@@ -1,8 +1,10 @@
-# Internal Use Work Tracker
+# Manufacturing Client Demo
+
+Coming soon!
 
 This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
 
-!["Internal Use Work Tracker.jpg"](./Internal%20Use%20Work%20Tracker.jpg)
+!["Manufacturing Client Demo.jpg"](./Manufacturing%20Client%20Demo.jpg)
 
 ## Project Details
 - [Details](#details)

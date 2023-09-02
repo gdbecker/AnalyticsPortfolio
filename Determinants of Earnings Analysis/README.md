@@ -1,6 +1,8 @@
-# 13 - Determinants of Earnings Analysis
+# Determinants of Earnings Analysis
 
 Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge.
+
+!["Determinants of Earnings Analysis.jpg"](./Determinants%20of%20Earnings%20Analysis.jpg)
 
 ## Project Details
 - [Details](#details)

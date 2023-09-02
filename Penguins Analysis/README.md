@@ -1,6 +1,8 @@
-# 14 - Penguins Analysis
+# Penguins Analysis
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course.
+
+!["penguins-part-1.jpg"](./penguins-part-1.jpg)
 
 ## Project Details
 - [Details](#details)

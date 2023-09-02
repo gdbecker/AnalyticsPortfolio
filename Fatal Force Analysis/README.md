@@ -1,6 +1,8 @@
-# 12 - Fatal Force Analysis
+# Fatal Force Analysis
 
 Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge.
+
+!["Fatal Force Analysis.jpg"](./Fatal%20Force%20Analysis.jpg)
 
 ## Project Details
 - [Details](#details)
