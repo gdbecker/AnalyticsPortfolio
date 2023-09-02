@@ -4,26 +4,29 @@ This is a collection of selected projects I've worked on during my time as an an
 
 ## Links
 
-[Live URL](https://analytics-showcase-gdbecker.netlify.app/)
+[Showcase Site](https://analytics-showcase-gdbecker.netlify.app/)
 
 ## Table of Contents
 
 - [Projects Overview](#projects-overview)
-  - [Healthcare Practice Demos](#healthcare-practice-demos)
-  - [Healthcare Ongoing Dashboard](#healthcare-ongoing-dashboard)
+  - [Airlines Delays Analysis](#airlines-delays-analysis)
   - [Automated Medical Financial Reporting](#automated-medical-financial-reporting)
-  - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
-  - [Current Client Analytics Demo](current-client-analytics-demo)
   - [Client Proposal Dashboard](#client-proposal-dashboard)
+  - [Current Client Analytics Demo](#current-client-analytics-demo)
+  - [Cybersecurity Analytics Report](#cybersecurity-analytics-report)
+  - [Determinants of Earnings Analysis](#determinants-of-earnings-analysis)
+  - [External Webinar Dashboards](#external-webinar-dashboards)
+  - [Fatal Force Analysis](#fatal-force-analysis)
   - [Group Case Study Demo](#group-case-study-demo)
+  - [Healthcare Ongoing Dashboard](#healthcare-ongoing-dashboard)
+  - [Healthcare Practice Demos](#healthcare-practice-demos)
   - [Healthcare Proposal Dashboard](#healthcare-proposal-dashboard)
   - [Internal Use Work Tracker](#internal-use-work-tracker)
-  - [External Webinar Dashboards](#external-webinar-dashboards)
-  - [Space Missions Analysis](#space-missions-analysis)
-  - [Fatal Force Analysis](#fatal-force-analysis)
-  - [Determinants of Earnings Analysis](#determinants-of-earnings-analysis)
+  - [Manufacturing Client Demo](#manufacturing-client-demo)
+  - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
   - [Penguins Analysis](#penguins-analysis)
-  - [Airlines Delays Analysis](#airlines-delays-analysis)
+  - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
+  - [Space Missions Analysis](#space-missions-analysis)
 - [Other Related Work](#other-related-work)
   - [Case Study and Blog Posts](#case-study-and-blog-posts)
 - [Author](#author)
@@ -31,73 +34,86 @@ This is a collection of selected projects I've worked on during my time as an an
 
 ## Projects Overview
 
-### Healthcare Practice Demos
+### [Airlines Delays Analysis](/tree/main/Airlines%20Delays%20Analysis)
 
-These are a set of Power BI demos intended to go to market for existing Elliott Davis healthcare clients. My director had experience in Tableau so some of the functionality has was used to was not natively built-in with this app, so this was a great challenge to push myself with what Power BI is capable of technically in order to provide a better solution. I also tested this project with a bit of Python scripting, and there are two V2 versions, depending on if the client wanted to see hygiene broken out or not.
-
-### Healthcare Ongoing Dashboard
-
-I was super encouraged when one of the first projects I worked on became a monthly addition to an existing client. My manager and I worked on developing this one together for a couple of months, fine-tuning it with the current engagement team, and this client loved it enough to make an addendum to subscribe for monthly updates on their data. As of now I am maintaining the production version of this file and providing analytics updates for them each month.
+Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Airlines Delays](https://www.kaggle.com/datasets/ulrikthygepedersen/airlines-delay) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
 
 ### Automated Medical Financial Reporting
 
 This was a great challenge with my manager to develop a solution for a client who had a manual and very time-consuming reporting process and needed something more efficient - not just for automating, but also making Power BI look less like a traditional dashboard and more like a printed report. We were able to help this client cut down their time from 1.5 weeks to about 1 day of making this report. This project was also featured in [External Webinar Dashboards](#external-webinar-dashboards) and [Case Study and Blog Posts](#case-study-and-blog-posts).
 
-### Private Equity Financial Reporting Automation
+### Client Proposal Dashboard
 
-In a similar vein as [Automated Medical Financial Reporting](#automated-medical-financial-reporting), this one was another good challenge in transforming a client's existing financial reporting deck into a fully automated Power BI report. I took over this project half-way in and helped finish it up week by week, ensuring that the math and design matched what they needed. There were also some tricky formatting needs they had that was a good test to push myself in what I can develop in Power BI.
+As my director was planning for potential engagements, he was looking for a template demo dashboard we could have on hand which we could easily customize for proposals. One of my colleagues started this one and I helped fine-tune the data model and take it further visually to produce the result seen here. The key idea is not only to display how we could personalize Power BI reports towards a potential client, but also showcase the basic yet powerful capabilities in these reports - from filtering, to visual interactivity, and all the way to maps and time trends.
 
 ### Current Client Analytics Demo
 
 After working through [Healthcare Practice Demos](#healthcare-practice-demos), I was able to borrow quite of a few of the new functionalities I developed to make a potential addendum dashboard series for an existing Elliott Davis client. The main interest was analyzing how loans were paid off over time, and being able to slice and dice categories by different measures. It was satisfying being able to test different visuals and how they would work best given the provided data and what needed to be seen.
 
-### Client Proposal Dashboard
+### Cybersecurity Analytics Report
 
-As my director was planning for potential engagements, he was looking for a template demo dashboard we could have on hand which we could easily customize for proposals. One of my colleagues started this one and I helped fine-tune the data model and take it further visually to produce the result seen here. The key idea is not only to display how we could personalize Power BI reports towards a potential client, but also showcase the basic yet powerful capabilities in these reports - from filtering, to visual interactivity, and all the way to maps and time trends.
-
-### Group Case Study Demo
-
-Earlier on in my time at Elliott Davis my manager was looking for a dashboard pack we could showcase in a variety of settings to get the word out on the Data & Analytics service line at our firm, as well as provide a starter point of conversation for clients interested in adding on analytics for their engagements. A couple of colleagues and I first worked on our own files and individual dummy data models across different industries - and then from which I combined everything into one file we could post online to our Power BI Service Workspace. As with other demos/proposals I worked on this one was a great showcase of what my team and I could do as well as the significant functionality within Power BI.
-
-### Healthcare Proposal Dashboard
-
-Instead of a generic demo dashboard, my manager needed a set of dashboard reports to show to a healthcare client in an effort to set up an engagement. We borrowed from existing datasets given to us from this client in order to create what is seen here. From initial conversations they were interested in seeing how their different service lines performed by year across different categories, as well as find out if their current Excel reporting package could be automated in Power BI or be made more efficiently in general. I focused on these ideas when working on this one. 
-
-### Internal Use Work Tracker
-
-This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
-
-### External Webinar Dashboards
-
-On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted about data analytics and how businesses could leverage data in their workplaces. The dashboards in this set are the ones I screenshared during the event, while three of my colleagues voiced-over and talked about the business cases, what we did to help solve, as well as deliver a quick demo of how Power BI works. It was a huge success and one of the firm's most popular webinars to date, and helped garner much more interest in analytics and discovering the power behind their data.
-
-### Space Missions Analysis
-
-Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. The analysis digs into the [Space Missions Launches](https://www.kaggle.com/datasets/sefercanapaydn/mission-launches) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
-
-### Fatal Force Analysis
-
-Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. 
-
-This analysis digs into the following datasets from Kaggle:
-- [Fatal Police Shootings in the US](https://www.kaggle.com/datasets/abhi8923shriv/fatalpoliceshootingsintheus)
-- [Percentage of People Below Poverty Level](https://www.kaggle.com/datasets/musti12/percentage-people-below-poverty-level) 
-- [Police Killings in the US](https://www.kaggle.com/datasets/azizozmen/police-killings-us) 
-- [Sharing Race by City](https://www.kaggle.com/datasets/musti12/sharing-race-by-city) 
-
-Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
+Coming soon!
 
 ### Determinants of Earnings Analysis
 
 Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. The analysis digs into the [Determinants of Earnings Datasets](https://www.kaggle.com/datasets/garrettbecker/determinants-of-earnings-datasets) from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
 
+### External Webinar Dashboards
+
+On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted about data analytics and how businesses could leverage data in their workplaces. The dashboards in this set are the ones I screenshared during the event, while three of my colleagues voiced-over and talked about the business cases, what we did to help solve, as well as deliver a quick demo of how Power BI works. It was a huge success and one of the firm's most popular webinars to date, and helped garner much more interest in analytics and discovering the power behind their data.
+
+### Fatal Force Analysis
+
+Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge.
+
+This analysis digs into the following datasets from Kaggle:
+
+- [Fatal Police Shootings in the US](https://www.kaggle.com/datasets/abhi8923shriv/fatalpoliceshootingsintheus)
+- [Percentage of People Below Poverty Level](https://www.kaggle.com/datasets/musti12/percentage-people-below-poverty-level)
+- [Police Killings in the US](https://www.kaggle.com/datasets/azizozmen/police-killings-us)
+- [Sharing Race by City](https://www.kaggle.com/datasets/musti12/sharing-race-by-city)
+
+Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
+
+### Group Case Study Demo
+
+Earlier on in my time at Elliott Davis my manager was looking for a dashboard pack we could showcase in a variety of settings to get the word out on the Data & Analytics service line at our firm, as well as provide a starter point of conversation for clients interested in adding on analytics for their engagements. A couple of colleagues and I first worked on our own files and individual dummy data models across different industries - and then from which I combined everything into one file we could post online to our Power BI Service Workspace. As with other demos/proposals I worked on this one was a great showcase of what my team and I could do as well as the significant functionality within Power BI.
+
+### Healthcare Ongoing Dashboard
+
+I was super encouraged when one of the first projects I worked on became a monthly addition to an existing client. My manager and I worked on developing this one together for a couple of months, fine-tuning it with the current engagement team, and this client loved it enough to make an addendum to subscribe for monthly updates on their data. As of now I am maintaining the production version of this file and providing analytics updates for them each month.
+
+### Healthcare Practice Demos
+
+These are a set of Power BI demos intended to go to market for existing Elliott Davis healthcare clients. My director had experience in Tableau so some of the functionality has was used to was not natively built-in with this app, so this was a great challenge to push myself with what Power BI is capable of technically in order to provide a better solution. I also tested this project with a bit of Python scripting, and there are two V2 versions, depending on if the client wanted to see hygiene broken out or not.
+
+### Healthcare Proposal Dashboard
+
+Instead of a generic demo dashboard, my manager needed a set of dashboard reports to show to a healthcare client in an effort to set up an engagement. We borrowed from existing datasets given to us from this client in order to create what is seen here. From initial conversations they were interested in seeing how their different service lines performed by year across different categories, as well as find out if their current Excel reporting package could be automated in Power BI or be made more efficiently in general. I focused on these ideas when working on this one.
+
+### Internal Use Work Tracker
+
+This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
+
+### Manufacturing Client Demo
+
+Coming soon!
+
+### Manufacturing Supervisor Dashboards
+
+Coming soon!
+
 ### Penguins Analysis
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Penguins](https://www.kaggle.com/datasets/larsen0966/penguins) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
 
-### Airlines Delays Analysis
+### Private Equity Financial Reporting Automation
 
-Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Airlines Delays](https://www.kaggle.com/datasets/ulrikthygepedersen/airlines-delay) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
+In a similar vein as [Automated Medical Financial Reporting](#automated-medical-financial-reporting), this one was another good challenge in transforming a client's existing financial reporting deck into a fully automated Power BI report. I took over this project half-way in and helped finish it up week by week, ensuring that the math and design matched what they needed. There were also some tricky formatting needs they had that was a good test to push myself in what I can develop in Power BI.
+
+### Space Missions Analysis
+
+Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. The analysis digs into the [Space Missions Launches](https://www.kaggle.com/datasets/sefercanapaydn/mission-launches) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
 
 ## Other Related Work
 

@@ -1,10 +1,11 @@
-# 15 - Airlines Delays Analysis
+# Airlines Delays Analysis
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course.
 
 !["airlines-part-1.jpg"](./airlines-part-1.jpg)
 
 ## Project Details
+
 - [Details](#details)
 - [Link to Demo](#link-to-demo)
 - [Tools Used](#tools-used)
@@ -43,6 +44,7 @@ Below are some code snippets I'm proud of from this project:
 
 Part 1: Exploration.
 Global map of flights in the data.
+
 ```python
 fig = go.Figure()
 
@@ -79,6 +81,7 @@ fig.show()
 
 Part 2: Linear and Logistic Machine Learning.
 Linear regression model evaluation.
+
 ```python
 print('MAE:', metrics.mean_absolute_error(y_test, predictions))
 print('MSE:', metrics.mean_squared_error(y_test, predictions))
@@ -87,6 +90,7 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, predictions)))
 
 Part 3: Decision Trees and Random Forests Machine Learning.
 Classification report for Decision Trees model.
+
 ```python
 predictions = dtree.predict(x_test)
 
@@ -95,6 +99,7 @@ print(classification_report(y_test, predictions))
 
 Part 4: K-Nearest Neighbors and K-Means Clustering Machine Learning
 Plotting the error rate vs tested K values.
+
 ```python
 plt.figure(figsize=(12,6))
 plt.plot(range(1,41), error_rate, linestyle='--', marker='o', markerfacecolor='red', markersize=10)
@@ -105,6 +110,7 @@ plt.ylabel('Error Rate')
 
 Part 5: Principal Component Analysis
 Plotting the different components found.
+
 ```python
 plt.figure(figsize=(8,6))
 plt.scatter(x_pca[:,0], x_pca[:,1], c=df['Class'], cmap='plasma')
