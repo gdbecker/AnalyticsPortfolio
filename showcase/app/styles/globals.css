@@ -19,22 +19,36 @@
 }
 
 /* Project backgrounds */
-.bg-healthcare-private-practice-v1 {
-  background-image: url(../../public/Healthcare\ Private\ Practice\ V1.jpg);
+.bg-airlines-part-1 {
+  background-image: url(../../public/airlines-part-1.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-healthcare-private-practice-v2 {
-  background-image: url(../../public/Healthcare\ Private\ Practice\ V2.jpg);
+.bg-airlines-part-2 {
+  background-image: url(../../public/airlines-part-2.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-healthcare-ongoing-dashboard {
-  background-image: url(../../public/Healthcare\ Ongoing\ Dashboard.jpg);
+.bg-airlines-part-3 {
+  background-image: url(../../public/airlines-part-3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-airlines-part-4 {
+  background-image: url(../../public/airlines-part-4.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-airlines-part-5 {
+  background-image: url(../../public/airlines-part-5.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,8 +61,8 @@
   background-size: cover;
 }
 
-.bg-private-equity {
-  background-image: url(../../public/Private\ Equity\ Financial\ Reporting\ Automation.jpg);
+.bg-client-proposal {
+  background-image: url(../../public/Client\ Proposal\ Dashboard.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,8 +75,29 @@
   background-size: cover;
 }
 
-.bg-client-proposal {
-  background-image: url(../../public/Client\ Proposal\ Dashboard.jpg);
+.bg-cybersecurity-report {
+  background-image: url(../../public/Cybersecurity\ Analytics\ Report.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-determinants-earnings {
+  background-image: url(../../public/Determinants\ of\ Earnings\ Analysis.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-external-webinar {
+  background-image: url(../../public/Webinar\ Part\ 1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-fatal-force {
+  background-image: url(../../public/Fatal\ Force\ Analysis.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,6 +105,27 @@
 
 .bg-group-case-study {
   background-image: url(../../public/Case\ Study\ Demo\ -\ Combined.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-healthcare-ongoing-dashboard {
+  background-image: url(../../public/Healthcare\ Ongoing\ Dashboard.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-healthcare-private-practice-v1 {
+  background-image: url(../../public/Healthcare\ Private\ Practice\ V1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-healthcare-private-practice-v2 {
+  background-image: url(../../public/Healthcare\ Private\ Practice\ V2.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,29 +145,15 @@
   background-size: cover;
 }
 
-.bg-external-webinar {
-  background-image: url(../../public/Webinar\ Part\ 1.jpg);
+.bg-manufacturing-demo {
+  background-image: url(../../public/Manufacturing\ Client\ Demo.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-space-missions {
-  background-image: url(../../public/Space\ Missions\ Analysis.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-fatal-force {
-  background-image: url(../../public/Fatal\ Force\ Analysis.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-determinants-earnings {
-  background-image: url(../../public/Determinants\ of\ Earnings\ Analysis.jpg);
+.bg-manufacturing-supervisors {
+  background-image: url(../../public/Manufacturing\ Supervisor\ Dashboards.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -152,36 +194,15 @@
   background-size: cover;
 }
 
-.bg-airlines-part-1 {
-  background-image: url(../../public/airlines-part-1.jpg);
+.bg-private-equity {
+  background-image: url(../../public/Private\ Equity\ Financial\ Reporting\ Automation.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-airlines-part-2 {
-  background-image: url(../../public/airlines-part-2.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-airlines-part-3 {
-  background-image: url(../../public/airlines-part-3.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-airlines-part-4 {
-  background-image: url(../../public/airlines-part-4.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-airlines-part-5 {
-  background-image: url(../../public/airlines-part-5.jpg);
+.bg-space-missions {
+  background-image: url(../../public/Space\ Missions\ Analysis.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
