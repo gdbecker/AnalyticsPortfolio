@@ -1,8 +1,6 @@
 # Cybersecurity Analytics Report
 
-Coming soon
-
-After working through 01 Healthcare Practice Demos, I was able to borrow quite of a few of the new functionalities I developed to make a potential addendum dashboard series for an existing Elliott Davis client. The main interest was analyzing how loans were paid off over time, and being able to slice and dice categories by different measures. It was satisfying being able to test different visuals and how they would work best given the provided data and what needed to be seen.
+Another division of the Digital Consulting Practice Group, Cyber & Penetration Testing, had an interest in finding out how analytics could increase their value in service offerings. I was brought on to develop a potential analytics report that the Cyber team could give to their clients before they begin a security engagement as a way to set the stage for their understanding how secure they are, as well as existing vulnerabilities.
 
 !["Cybersecurity Analytics Report.jpg"](./Cybersecurity%20Analytics%20Report.jpg)
 
@@ -15,7 +13,7 @@ After working through 01 Healthcare Practice Demos, I was able to borrow quite o
 
 ## Details
 
-This one was a great encouragement for me to make sure I stay diligent in documenting and saving all the work I do because sometimes you never know when it might need to be dusted off again. I first worked on this project early on in my time at Elliott Davis, but the dashboard set didn't move past my creating and sharing it with our internal lead on the enagegment. About a year later interest was sparked once more, and I was able to pull this back out, get myself reacquainted with what I made and make further adjustments and updates. Now our internal leader wants to use this dashboard set as a monthly addendum to his existing client engagement, which not only adds greater value for them but also gets the word out on the significant insights that can be drawn from data analytics. 
+The challenge for this project was less the visuals/format itself, but more with collaborating with another team to develop the series of reports. We got to learn from each other what we specialize in which made it for a great learning experience. The Cyber team had a set of data sources they usually drew from to give their clients a pre-engagement security screening, and my task was to communicate with them on the best ways to present that information. It was also an interesting case where you want to showcase data well, but it's better of course not to have data to show because the less that's imported, the more secure they are! This report we made aimed to highlight areas within their organization that have security risks and vulnerabilities present to set the stage for their engagement with Elliott Davis.
 
 Files included for view in this project:
 - Cybersecurity Analytics Report.pdf
@@ -23,11 +21,11 @@ Files included for view in this project:
 
 ## By the Numbers
 
--  months of development time
+- 2 months of development time
 - 3 colleagues collaborated with
 - 7 report pages
--  data source
--  queries connected to data source
+- 1 data source
+- 7 queries connected to data source
 
 ## Tools Used
 
@@ -43,20 +41,26 @@ Below are some code snippets I'm proud of from this project:
 
 Custom DAX table to allow users to dynamically select categories to slice by
 ```DAX
-
+Legend Categories = 
+    UNION(
+        DISTINCT(SELECTCOLUMNS(
+            'archive org',
+            "Category", 'archive org'[From],
+            "Field", "From Date"
+        )),
+        DISTINCT(SELECTCOLUMNS(
+            'archive org',
+            "Category", 'archive org'[To],
+            "Field", "To Date"
+        ))
+    )
 ```
 
-DAX table filter that allows measures to be used in slicers
+DAX date table that adjusts to the imported data
 ```DAX
-
-```
-
-This measure, combined with above, allows measures to be used in slicers
-```DAX
-
+Date Table = CALENDAR(DATE(2000, 1, 1), MAX('archive org'[To]))
 ```
 
 ## Useful Resources
 
-- [Power BI: Filter by a measure in a slicer](https://www.youtube.com/watch?v=AZAL-QPn5Zc) - Filtering visuals by DAX measure values is not natively supported in Power BI but this video helped me find a clever solution
-- [Power BI: Dynamic axes and legends](https://www.youtube.com/watch?v=8e8a3o1w51M) - Perfect for making visuals with dynamic axes so users can pick what category they want to view by
+- [Power BI: Date Tables](https://www.youtube.com/watch?v=WybnTHDl-AM) - Quickly generate date tables to use in your data model

@@ -52,7 +52,7 @@ After working through [Healthcare Practice Demos](#healthcare-practice-demos), I
 
 ### [Cybersecurity Analytics Report](./Cybersecurity%20Analytics%20Report/)
 
-Coming soon!
+Another division of the Digital Consulting Practice Group, Cyber & Penetration Testing, had an interest in finding out how analytics could increase their value in service offerings. I was brought on to develop a potential analytics report that the Cyber team could give to their clients before they begin a security engagement as a way to set the stage for their understanding how secure they are, as well as existing vulnerabilities.
 
 ### [Determinants of Earnings Analysis](./Determinants%20of%20Earnings%20Analysis/)
 
