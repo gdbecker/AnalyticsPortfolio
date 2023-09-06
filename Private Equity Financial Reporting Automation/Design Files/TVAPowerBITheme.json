@@ -1,0 +1,84 @@
+﻿{
+    "name": "TVA",
+    "dataColors": [
+        "#eb5425",
+        "#f4e3d9",
+        "#814c3c",
+        "#d68f6f",
+        "#a59b9a",
+        "#c5785f",
+        "#5c6463",
+        "#ac240c"
+    ],
+    "background": "#FFFFFF",
+    "foreground": "#070f25",
+    "tableAccent": "#0F1934",
+    "bad": "#E57200",
+    "neutral": "#75787B",
+    "good": "#00AB8E",
+    "minimum": "#0082BA",
+    "center": "#A59C94",
+    "maximum": "#004C97",
+    "textClasses": {
+        "label": {
+            "color": "#000000",
+            "fontFace": "Calibri",
+            "fontSize": 9
+        },
+        "callout": {
+            "color": "#003594",
+            "fontFace": "Calibri",
+            "fontSize": 16
+        },
+        "title": {
+            "color": "#003594",
+            "fontFace": "Calibri",
+            "fontSize": 10
+        },
+        "header": {
+            "color": "#003594",
+            "fontFace": "Calibri",
+            "fontSize": 10
+        }
+    },
+    "visualStyles": {
+        "*": {
+            "*": {
+                "visualTooltip": [
+                    {
+                        "titleFontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "valueFontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ],
+                "outspacePane": [
+                    {
+                        "titleSize": 10,
+                        "headerSize": 10,
+                        "checkboxAndApplyColor": {
+                            "solid": {
+                                "color": "#E57200"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "transparency": 100
+                    }
+                ]
+            }
+        }
+    }
+}

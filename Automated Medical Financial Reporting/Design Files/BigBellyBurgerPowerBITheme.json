@@ -1,0 +1,84 @@
+﻿{
+    "name": "Big Belly Burger",
+    "dataColors": [
+        "#f7ef1d",
+        "#d31025",
+        "#f4f0eb",
+        "#d87645",
+        "#e1939b",
+        "#85272e",
+        "#a52631",
+        "#d04e5f"
+    ],
+    "background": "#FFFFFF",
+    "foreground": "#070f25",
+    "tableAccent": "#0F1934",
+    "bad": "#E57200",
+    "neutral": "#75787B",
+    "good": "#00AB8E",
+    "minimum": "#0082BA",
+    "center": "#A59C94",
+    "maximum": "#004C97",
+    "textClasses": {
+        "label": {
+            "color": "#000000",
+            "fontFace": "Calibri",
+            "fontSize": 9
+        },
+        "callout": {
+            "color": "#003594",
+            "fontFace": "Calibri",
+            "fontSize": 16
+        },
+        "title": {
+            "color": "#003594",
+            "fontFace": "Calibri",
+            "fontSize": 10
+        },
+        "header": {
+            "color": "#003594",
+            "fontFace": "Calibri",
+            "fontSize": 10
+        }
+    },
+    "visualStyles": {
+        "*": {
+            "*": {
+                "visualTooltip": [
+                    {
+                        "titleFontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "valueFontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ],
+                "outspacePane": [
+                    {
+                        "titleSize": 10,
+                        "headerSize": 10,
+                        "checkboxAndApplyColor": {
+                            "solid": {
+                                "color": "#E57200"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "transparency": 100
+                    }
+                ]
+            }
+        }
+    }
+}
