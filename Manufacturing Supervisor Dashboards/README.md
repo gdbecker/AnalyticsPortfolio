@@ -1,8 +1,6 @@
 # Manufacturing Supervisor Dashboards
 
-Coming soon!
-
-This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
+After working on several healthcare and private equity financial reports, it felt great delving into the operational side of a business, specifically in the manufacturing industry. For this one I was able to help our client explore and understand more from their existing data, drawing connections and insights they haven't seen before to better understand how they can train and equip their staff. This dashboard series explored questions like: "Are my employees improving over time?" "How are our different markets stack up against each other?" "Who among a supervisor's employees might need further training?"
 
 !["Manufacturing Supervisor Dashboards.jpg"](./Manufacturing%20Supervisor%20Dashboards.jpg)
 
@@ -15,19 +13,19 @@ This was a great challenge because instead of creating dashboards for clients, n
 
 ## Details
 
-While on my portion the development time was about a month, this project was happening in iterative stages between the two colleagues who were on this before me. On each phase the solution was getting better and better, and most of my role was to combine different aspects of both previous dashboards and combine them into one, establishing a common look and feel across all pages. I worked with my director a few other upper level business leaders to discuss their feedback, what they wanted to see or have removed, and communicate what would be best to see across the firm. Many people would be using this new tool to track their work and engagements, and so the dashboards needed to be flexible enough for data views they are used to, but also specific to focus on only the data they need. Overall this was a great challenge to develop dashboards just for the firm's internal use which not only ultimately showed others the data views they needed to make decisions, but also the power behind data analytics and what could be offered to their clients.
+Similar to the Manufacturing Client Demo project, this one started out by exploring the client's existing data and reports. What did they most want to see and understand? What data sources did they have, could I connect to them directly, and how could I develop the best long-term solution given what I had? After developing an initial set of operational reports, more individuals from the client began attending meetings to give feedback so the set of reports shown here was the result of taking an iterative approach. Taking it a step at a time to first present what was possible and then fine-tuning it further worked out wonderfully. I especially enjoyed figuring out how to display the trend indicator arrows on a couple of the pages for each employee, and they change depending on if you want to see their trends for the past two months or year-to-date. It was a great challenge to learn more about this client's business to be able to accurately and ethically display their data for greater understanding. 
 
 Files included for view in this project:
-- Internal Use Work Tracker.pdf
+- Manufacturing Supervisor Dashboard.pdf
   - Masked file version that was developed
 
 ## By the Numbers
 
-- 1 month of development time
-- 4 colleagues collaborated with
-- 6 report pages
-- 1 data source
-- 2 queries connected to data source
+- 2 months of development time
+- 10 colleagues collaborated with
+- 5 report pages
+- 3 data source
+- 3 queries connected to data sources
 
 ## Tools Used
 
@@ -43,44 +41,39 @@ Below are some code snippets I'm proud of from this project:
 
 DAX formula for custom color formatting
 ```DAX
-Background Formating - Stages = 
+Background Formating - TimeCodeName = 
 SWITCH ( 
-    SELECTEDVALUE('Table'[Stage]),
-    "Stage 1", "#003594",
-    "Stage 2", "#e57200",
-    "Stage 3", "#f5c799",
-    "Stage 4", "#0082ba",
-    "Stage 5", "#00ab8e",
-    "Stage 6", "#a59c94",
-    "#c8c9c7"
+    SELECTEDVALUE('Combined Scrub Exports'[TimeCodeName]),
+    "F014-6", "#00B0F0",
+    "F013", "#FF0000",
+    "F014-15", "#C6EFCE",
+    "F014-12", "#FFFF00",
+    "2-F014-2", "#FFFF00",
+    "F010", "#FFFF00",
+    "F014-5", "#FFEB9C",
+    "F007", "#9BC2E6",
+    "F012", "#FFC7CE",
+    "#FFFFFF"
 )
 ```
 
 Using a DAX SWITCH and USERELATIONSHIP to let users control which category to view by
 ```DAX
-Sum Forecasted Amount (Variable Category) = 
+% Change - % Complete (Variable Category) = 
     SWITCH(
         TRUE(),
-        ----------- Month Category -----------
-        SELECTEDVALUE('Opportunities Created by Cadence'[Cadence]) = "Month",
+        ----------- MTD -----------
+        SELECTEDVALUE('Indicator Symbols'[Time Trend]) = "MTD",
         CALCULATE(
-            [Sum Forecasted Amount],
-            USERELATIONSHIP('Table'[Created Month], 'Opportunities Created by Cadence'[Date])
+            [% Change - % Complete - MTD]
         ),
 
-        ----------- Week Category -----------
-        SELECTEDVALUE('Opportunities Created by Cadence'[Cadence]) = "Week",
+        ----------- YTD -----------
+        SELECTEDVALUE('Indicator Symbols'[Time Trend]) = "YTD",
         CALCULATE(
-            [Sum Forecasted Amount],
-            USERELATIONSHIP('Table'[Created Week (Monday Start)], 'Opportunities Created by Cadence'[Date])
+            [% Change - % Complete - YTD]
         ),
 
-        ----------- Quarter Category -----------
-        SELECTEDVALUE('Opportunities Created by Cadence'[Cadence]) = "Quarter",
-        CALCULATE(
-            [Count of RowNumber],
-            USERELATIONSHIP('Table'[Created Quarter], 'Opportunities Created by Cadence'[Date])
-        ),
         BLANK()
     )
 ```
@@ -90,33 +83,20 @@ DAX UNION table to combine fields from multiple tables
 Legend Categories = 
     UNION(
         DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Name],
-            "Field", "Name"
+            FILTER('Combined Tech Data', AND('Combined Tech Data'[STATUS] <> "(Removed)", 'Combined Tech Data'[STATUS] <> BLANK())),
+            "Category", 'Combined Tech Data'[STATE],
+            "Field", "State"
         )),
         DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Position],
-            "Field", "Position"
-        )),
-        DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Specialty Group],
-            "Field", "Specialty Group"
-        )),
-        DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Office Location],
-            "Field", "Market"
-        )),
-        DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Service Line],
-            "Field", "Service Line"
+            FILTER('Combined Tech Data', AND('Combined Tech Data'[STATUS] <> "(Removed)", 'Combined Tech Data'[STATUS] <> BLANK())),
+            "Category", 'Combined Tech Data'[SUPERVISOR NAME],
+            "Field", "Supervisor"
         ))
     )
 ```
 
 ## Useful Resources
 
-- [Leverage Power BI Service Workspaces](https://learn.microsoft.com/en-us/power-bi/fundamentals/service-get-started) - My team and I have gotten into the practice of making online workspaces in Power BI Service which you can publish your .pbix files. Makes it super easy to quickly share work and findings, as well as give colleagues different levels of access depending on what they need
+- [Power BI: Filter by a measure in a slicer](https://www.youtube.com/watch?v=AZAL-QPn5Zc) - Filtering visuals by DAX measure values is not natively supported in Power BI but this video helped me find a clever solution
+- [Power BI: Dynamic axes and legends](https://www.youtube.com/watch?v=8e8a3o1w51M) - Perfect for making visuals with dynamic axes so users can pick what category they want to view by
+- [Power BI: Date Tables](https://www.youtube.com/watch?v=WybnTHDl-AM) - Quickly generate date tables to use in your data model

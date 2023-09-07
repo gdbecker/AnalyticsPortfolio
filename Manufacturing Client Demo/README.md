@@ -1,8 +1,6 @@
 # Manufacturing Client Demo
 
-Coming soon!
-
-This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
+It's always interesting to discover what new challenge you might come across when it comes to a Power BI project - no two are the same. The main goal for this engagement was to redesign and build new reports from the client's existing Power BI environment, so there was less data modeling and engineering involved as much as a greater focus on what reports they currently had available and what other views/functionalities they would like to see. I'm thankful for this one to continue practicing making an effective and beautiful user experience as well as effectively communicating feedback with clients for delivering a better product and service.
 
 !["Manufacturing Client Demo.jpg"](./Manufacturing%20Client%20Demo.jpg)
 
@@ -15,19 +13,19 @@ This was a great challenge because instead of creating dashboards for clients, n
 
 ## Details
 
-While on my portion the development time was about a month, this project was happening in iterative stages between the two colleagues who were on this before me. On each phase the solution was getting better and better, and most of my role was to combine different aspects of both previous dashboards and combine them into one, establishing a common look and feel across all pages. I worked with my director a few other upper level business leaders to discuss their feedback, what they wanted to see or have removed, and communicate what would be best to see across the firm. Many people would be using this new tool to track their work and engagements, and so the dashboards needed to be flexible enough for data views they are used to, but also specific to focus on only the data they need. Overall this was a great challenge to develop dashboards just for the firm's internal use which not only ultimately showed others the data views they needed to make decisions, but also the power behind data analytics and what could be offered to their clients.
+We began this project by first exploring the client's data sources and existing Power BI development - everything from what we could securely access to the existing data model, measures, and visuals. I established a color pallette and overall look and feel for their existing dashboard pages and redesigned those, and the eight reports I included within this project are the new ones I developed for them. It started as an exploration of what else Power BI was capable of and could offer, and after time and feedback narrowed down into the reports shown here for the client to utilize. This engagement also taught me to ask questions and seek understanding, and not to forget the overall business goals of our work in the midst of technical challenges. I love figuring new things out and this was great practice for not losing sight of what we were doing as I solved problems.
 
 Files included for view in this project:
-- Internal Use Work Tracker.pdf
+- Manufacturing Client Demo.pdf
   - Masked file version that was developed
 
 ## By the Numbers
 
-- 1 month of development time
+- 2 months of development time
 - 4 colleagues collaborated with
-- 6 report pages
+- 8 report pages
 - 1 data source
-- 2 queries connected to data source
+- 46 queries connected to data source
 
 ## Tools Used
 
@@ -35,7 +33,7 @@ Files included for view in this project:
 - Power BI
   - DAX
   - Power Query
-- SharePoint (data source)
+- Power BI Data Flows (data source)
 
 ## What I learned
 
@@ -43,43 +41,26 @@ Below are some code snippets I'm proud of from this project:
 
 DAX formula for custom color formatting
 ```DAX
-Background Formating - Stages = 
-SWITCH ( 
-    SELECTEDVALUE('Table'[Stage]),
-    "Stage 1", "#003594",
-    "Stage 2", "#e57200",
-    "Stage 3", "#f5c799",
-    "Stage 4", "#0082ba",
-    "Stage 5", "#00ab8e",
-    "Stage 6", "#a59c94",
-    "#c8c9c7"
-)
+1 - CY Gross Sales (GL) - Background Formatting = "#FFFF00"
 ```
 
 Using a DAX SWITCH and USERELATIONSHIP to let users control which category to view by
 ```DAX
-Sum Forecasted Amount (Variable Category) = 
+GL Amount (Variable Category) = 
     SWITCH(
         TRUE(),
-        ----------- Month Category -----------
-        SELECTEDVALUE('Opportunities Created by Cadence'[Cadence]) = "Month",
+        ----------- Product Line -----------
+        SELECTEDVALUE('Legend Categories'[Field]) = "Product",
         CALCULATE(
-            [Sum Forecasted Amount],
-            USERELATIONSHIP('Table'[Created Month], 'Opportunities Created by Cadence'[Date])
+            [GL Amount],
+            USERELATIONSHIP('Legend Categories'[Category], 'dim product'[Desc])
         ),
 
-        ----------- Week Category -----------
-        SELECTEDVALUE('Opportunities Created by Cadence'[Cadence]) = "Week",
+        ----------- Customer -----------
+        SELECTEDVALUE('Legend Categories'[Field]) = "Customer",
         CALCULATE(
-            [Sum Forecasted Amount],
-            USERELATIONSHIP('Table'[Created Week (Monday Start)], 'Opportunities Created by Cadence'[Date])
-        ),
-
-        ----------- Quarter Category -----------
-        SELECTEDVALUE('Opportunities Created by Cadence'[Cadence]) = "Quarter",
-        CALCULATE(
-            [Count of RowNumber],
-            USERELATIONSHIP('Table'[Created Quarter], 'Opportunities Created by Cadence'[Date])
+            [GL Amount],
+            USERELATIONSHIP('Legend Categories'[Category], 'dim customer'[Customer])
         ),
         BLANK()
     )
@@ -90,33 +71,19 @@ DAX UNION table to combine fields from multiple tables
 Legend Categories = 
     UNION(
         DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Name],
-            "Field", "Name"
+            'dim product',
+            "Category", 'dim product'[Desc],
+            "Field", "Product"
         )),
         DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Position],
-            "Field", "Position"
-        )),
-        DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Specialty Group],
-            "Field", "Specialty Group"
-        )),
-        DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Office Location],
-            "Field", "Market"
-        )),
-        DISTINCT(SELECTCOLUMNS(
-            'Table',
-            "Category", 'Table'[Service Line],
-            "Field", "Service Line"
+            'dim customer',
+            "Category", 'dim customer'[Customer],
+            "Field", "Customer"
         ))
     )
 ```
 
 ## Useful Resources
 
-- [Leverage Power BI Service Workspaces](https://learn.microsoft.com/en-us/power-bi/fundamentals/service-get-started) - My team and I have gotten into the practice of making online workspaces in Power BI Service which you can publish your .pbix files. Makes it super easy to quickly share work and findings, as well as give colleagues different levels of access depending on what they need
+- [Power BI: Filter by a measure in a slicer](https://www.youtube.com/watch?v=AZAL-QPn5Zc) - Filtering visuals by DAX measure values is not natively supported in Power BI but this video helped me find a clever solution
+- [Power BI: Dynamic axes and legends](https://www.youtube.com/watch?v=8e8a3o1w51M) - Perfect for making visuals with dynamic axes so users can pick what category they want to view by

@@ -97,11 +97,11 @@ This was a great challenge because instead of creating dashboards for clients, n
 
 ### [Manufacturing Client Demo](./Manufacturing%20Client%20Demo/)
 
-Coming soon!
+It's always interesting to discover what new challenge you might come across when it comes to a Power BI project - no two are the same. The main goal for this engagement was to redesign and build new reports from the client's existing Power BI environment, so there was less data modeling and engineering involved as much as a greater focus on what reports they currently had available and what other views/functionalities they would like to see. I'm thankful for this one to continue practicing making an effective and beautiful user experience as well as effectively communicating feedback with clients for delivering a better product and service.
 
 ### [Manufacturing Supervisor Dashboards](./Manufacturing%20Supervisor%20Dashboards/)
 
-Coming soon!
+After working on several healthcare and private equity financial reports, it felt great delving into the operational side of a business, specifically in the manufacturing industry. For this one I was able to help our client explore and understand more from their existing data, drawing connections and insights they haven't seen before to better understand how they can train and equip their staff. This dashboard series explored questions like: "Are my employees improving over time?" "How are our different markets stack up against each other?" "Who among a supervisor's employees might need further training?"
 
 ### [Penguins Analysis](./Penguins%20Analysis/)
 
