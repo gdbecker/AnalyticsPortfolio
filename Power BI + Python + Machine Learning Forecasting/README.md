@@ -2,7 +2,7 @@
 
 Coming soon!
 
-!["Power BI + Python + Machine Learning Forecasting.jpg"](./Power%20BI%20Python%20Machine%20Learning%20Forecasting.jpg)
+!["Power BI + Python + Machine Learning Forecasting.jpg"](./Power-BI-Python-Machine-Learning-Forecasting.jpg)
 
 ## Project Details
 - [Details](#details)
