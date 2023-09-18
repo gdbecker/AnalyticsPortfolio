@@ -194,6 +194,13 @@
   background-size: cover;
 }
 
+.bg-pbi-python-ml-forecasting {
+  background-image: url(../../public/Power\ BI\ +\ Python\ +\ Machine\ Learning\ Forecasting.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-private-equity {
   background-image: url(../../public/Private\ Equity\ Financial\ Reporting\ Automation.jpg);
   background-position: top center;

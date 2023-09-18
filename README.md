@@ -25,6 +25,7 @@ This is a collection of selected projects I've worked on during my time as an an
   - [Manufacturing Client Demo](#manufacturing-client-demo)
   - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
   - [Penguins Analysis](#penguins-analysis)
+  - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
   - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
   - [Space Missions Analysis](#space-missions-analysis)
 - [Other Related Work](#other-related-work)
@@ -106,6 +107,10 @@ After working on several healthcare and private equity financial reports, it fel
 ### [Penguins Analysis](./Penguins%20Analysis/)
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Penguins](https://www.kaggle.com/datasets/larsen0966/penguins) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
+
+### [Power BI + Python + Machine Learning Forecasting](./Power%20BI%20%2B%20Python%20%2B%20Machine%20Learning%20Forecasting/)
+
+Coming soon!
 
 ### [Private Equity Financial Reporting Automation](./Private%20Equity%20Financial%20Reporting%20Automation/)
 
