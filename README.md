@@ -110,7 +110,7 @@ Python data science project I came up with as a capstone to finish off Jose Port
 
 ### [Power BI + Python + Machine Learning Forecasting](./Power%20BI%20%2B%20Python%20%2B%20Machine%20Learning%20Forecasting/)
 
-Coming soon!
+My director asked one of my colleagues and I to try building a machine learning model to predict revenue, using either R or Python. The key idea was to spend time investing in research for building a scalable model that could be used for potential future engagements with clients to add greater value. This was a great challenge not only putting together concepts I taught myself in an online Python machine learning course, but also think strategically about our work and what we could help customers unlock with their information for better decision making.
 
 ### [Private Equity Financial Reporting Automation](./Private%20Equity%20Financial%20Reporting%20Automation/)
 
