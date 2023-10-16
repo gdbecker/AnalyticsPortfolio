@@ -2,7 +2,7 @@
 
 In a similar vein as Automated Medical Financial Reporting, this one was another good challenge in transforming a client's existing financial reporting deck into a fully automated Power BI report. I took over this project half-way in and helped finish it up week by week, ensuring that the math and design matched what they needed. There were also some tricky formatting needs they had that was a good test to push myself in what I can develop in Power BI.
 
-!["Private Equity Financial Reporting.jpg"](./Private%20Equity%20Financial%20Reporting%20Automation.jpg)
+!["Report"](./Private%20Equity%20Financial%20Reporting%20Automation.jpg)
 
 ## Project Details
 - [Details](#details)
@@ -39,11 +39,11 @@ Files included for view in this project:
 
 ## Data Engineering Pipeline
 
-!["Private Equity Financial Reporting Automation Pipeline.jpg"](./Private%20Equity%20Financial%20Reporting%20Automation%20Pipeline.png)
+!["Pipeline"](./Private%20Equity%20Financial%20Reporting%20Automation%20Pipeline.png)
 
 ## Data Model
 
-!["Private Equity Financial Reporting Automation Data Model.jpg"](./Private%20Equity%20Financial%20Reporting%20Automation%20Data%20Model.JPG)
+!["Data Model"](./Private%20Equity%20Financial%20Reporting%20Automation%20Data%20Model.JPG)
 
 ## What I learned
 

@@ -2,12 +2,14 @@
 
 On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted about data analytics and how businesses could leverage data in their workplaces. The dashboards in this set are the ones I screenshared during the event, while three of my colleagues voiced-over and talked about the business cases, what we did to help solve, as well as deliver a quick demo of how Power BI works. It was a huge success and one of the firm's most popular webinars to date, and helped garner much more interest in analytics and discovering the power behind their data.
 
-!["Webinar Part 1.jpg"](./Webinar%20Part%201.jpg)
+!["Report"](./Webinar%20Part%201.jpg)
 
 ## Project Details
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -42,6 +44,14 @@ Files included for view in this project:
 - QuickBooks Online (data source)
 - AWS (data source)
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Webinar%20Part%201%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Webinar%20Part%201%20Data%20Model.JPG)
 
 ## What I learned
 
