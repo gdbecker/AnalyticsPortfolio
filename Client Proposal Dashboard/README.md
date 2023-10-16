@@ -2,12 +2,14 @@
 
 As my director was planning for potential engagements, he was looking for a template demo dashboard we could have on hand which we could easily customize for proposals. One of my colleagues started this one and I helped fine-tune the data model and take it further visually to produce the result seen here. The key idea is not only to display how we could personalize Power BI reports towards a potential client, but also showcase the basic yet powerful capabilities in these reports - from filtering, to visual interactivity, and all the way to maps and time trends.
 
-!["Client Proposal Dashboard.jpg"](./Client%20Proposal%20Dashboard.jpg)
+!["Report"](./Client%20Proposal%20Dashboard.jpg)
 
 ## Project Details
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Client%20Proposal%20Dashboard%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Client%20Proposal%20Dashboard%20Data%20Model.JPG)
 
 ## What I learned
 

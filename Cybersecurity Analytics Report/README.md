@@ -2,12 +2,14 @@
 
 Another division of the Digital Consulting Practice Group, Cyber & Penetration Testing, had an interest in finding out how analytics could increase their value in service offerings. I was brought on to develop a potential analytics report that the Cyber team could give to their clients before they begin a security engagement as a way to set the stage for their understanding how secure they are, as well as existing vulnerabilities.
 
-!["Cybersecurity Analytics Report.jpg"](./Cybersecurity%20Analytics%20Report.jpg)
+!["Report"](./Cybersecurity%20Analytics%20Report.jpg)
 
 ## Project Details
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Cybersecurity%20Analytics%20Report%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Cybersecurity%20Analytics%20Report%20Data%20Model.JPG)
 
 ## What I learned
 

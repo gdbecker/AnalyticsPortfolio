@@ -2,12 +2,14 @@
 
 I was super encouraged when one of the first projects I worked on became a monthly addition to an existing client. My manager and I worked on developing this one together for a couple of months, fine-tuning it with the current engagement team, and this client loved it enough to make an addendum to subscribe for monthly updates on their data. As of now I am maintaining the production version of this file and providing analytics updates for them each month.
 
-!["Healthcare Ongoing Dashboard.jpg"](./Healthcare%20Ongoing%20Dashboard.jpg)
+!["Report"](./Healthcare%20Ongoing%20Dashboard.jpg)
 
 ## Project Details
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Healthcare%20Ongoing%20Dashboard%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Healthcare%20Ongoing%20Dashboard%20Data%20Model.JPG)
 
 ## What I learned
 

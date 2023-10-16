@@ -2,12 +2,14 @@
 
 Earlier on in my time at Elliott Davis my manager was looking for a dashboard pack we could showcase in a variety of settings to get the word out on the Data & Analytics service line at our firm, as well as provide a starter point of conversation for clients interested in adding on analytics for their engagements. A couple of colleagues and I first worked on our own files and individual dummy data models across different industries - and then from which I combined everything into one file we could post online to our Power BI Service Workspace. As with other demos/proposals I worked on this one was a great showcase of what my team and I could do as well as the significant functionality within Power BI.
 
-!["Case Study Demo - Combined.jpg"](./Case%20Study%20Demo%20-%20Combined.jpg)
+!["Report"](./Case%20Study%20Demo%20-%20Combined.jpg)
 
 ## Project Details
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -42,6 +44,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Case%20Study%20Demo%20-%20Combined%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Case%20Study%20Demo%20-%20Combined%20Data%20Model.JPG)
 
 ## What I learned
 

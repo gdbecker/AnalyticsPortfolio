@@ -2,12 +2,14 @@
 
 This was a great challenge with my manager to develop a solution for a client who had a manual and very time-consuming reporting process and needed something more efficient - not just for automating, but also making Power BI look less like a traditional dashboard and more like a printed report. We were able to help this client cut down their time from 1.5 weeks to about 1 day of making this report. This project was also featured in "External Webinar Dashboards and Case Study" and Blog Posts.
 
-!["Example Report Export.jpg"](./Example%20Report%20Export.jpg)
+!["Report"](./Example%20Report%20Export.jpg)
 
 ## Project Details
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -36,6 +38,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Example%20Report%20Export%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Example%20Report%20Export%20Data%20Model.JPG)
 
 ## What I learned
 

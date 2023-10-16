@@ -2,12 +2,14 @@
 
 After working through Healthcare Practice Demos, I was able to borrow quite of a few of the new functionalities I developed to make a potential addendum dashboard series for an existing Elliott Davis client. The main interest was analyzing how loans were paid off over time, and being able to slice and dice categories by different measures. It was satisfying being able to test different visuals and how they would work best given the provided data and what needed to be seen.
 
-!["Demo Dashboard.jpg"](./Demo%20Dashboard.jpg)
+!["Report"](./Demo%20Dashboard.jpg)
 
 ## Project Details
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Demo%20Dashboard%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Demo%20Dashboard%20Data%20Model.JPG)
 
 ## What I learned
 
