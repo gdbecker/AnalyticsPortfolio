@@ -8,6 +8,8 @@ In a similar vein as Automated Medical Financial Reporting, this one was another
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Private Equity Financial Reporting Automation Pipeline.jpg"](./Private%20Equity%20Financial%20Reporting%20Automation%20Pipeline.png)
+
+## Data Model
+
+!["Private Equity Financial Reporting Automation Data Model.jpg"](./Private%20Equity%20Financial%20Reporting%20Automation%20Data%20Model.JPG)
 
 ## What I learned
 
