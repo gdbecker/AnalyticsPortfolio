@@ -8,6 +8,8 @@ My director asked one of my colleagues and I to try building a machine learning 
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -42,6 +44,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - Python
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Power%20BI%20+%20Python%20+%20Machine%20Learning%20Forecasting%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Power%20BI%20+%20Python%20+%20Machine%20Learning%20Forecasting%20Data%20Model.JPG)
 
 ## What I learned
 

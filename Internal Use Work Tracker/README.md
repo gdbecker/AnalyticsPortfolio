@@ -8,6 +8,8 @@ This was a great challenge because instead of creating dashboards for clients, n
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Internal%20Use%20Work%20Tracker%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Internal%20Use%20Work%20Tracker%20Data%20Model.JPG)
 
 ## What I learned
 

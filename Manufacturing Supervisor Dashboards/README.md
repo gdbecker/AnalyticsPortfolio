@@ -8,6 +8,8 @@ After working on several healthcare and private equity financial reports, it fel
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - SharePoint (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Manufacturing%20Supervisor%20Dashboards%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Manufacturing%20Supervisor%20Dashboards%20Data%20Model.JPG)
 
 ## What I learned
 

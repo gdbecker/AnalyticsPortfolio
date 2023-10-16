@@ -8,6 +8,8 @@ It's always interesting to discover what new challenge you might come across whe
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
+- [Data Engineering Pipeline](#data-engineering-pipeline)
+- [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
 
@@ -34,6 +36,14 @@ Files included for view in this project:
   - DAX
   - Power Query
 - Power BI Data Flows (data source)
+
+## Data Engineering Pipeline
+
+!["Pipeline"](./Manufacturing%20Client%20Demo%20Pipeline.png)
+
+## Data Model
+
+!["Data Model"](./Manufacturing%20Client%20Demo%20Data%20Model.JPG)
 
 ## What I learned
 
