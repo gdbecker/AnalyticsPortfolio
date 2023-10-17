@@ -152,6 +152,13 @@
   background-size: cover;
 }
 
+.bg-manufacturing-qbo {
+  background-image: url(../../public/Manufacturing\ Quickbooks\ Analysis.pdf);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-manufacturing-supervisors {
   background-image: url(../../public/Manufacturing\ Supervisor\ Dashboards.jpg);
   background-position: top center;
