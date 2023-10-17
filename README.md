@@ -23,6 +23,7 @@ This is a collection of selected projects I've worked on during my time as an an
   - [Healthcare Proposal Dashboard](#healthcare-proposal-dashboard)
   - [Internal Use Work Tracker](#internal-use-work-tracker)
   - [Manufacturing Client Demo](#manufacturing-client-demo)
+  - [Manufacturing QuickBooks Analysis](#manufacturing-quickbooks-analysis)
   - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
   - [Penguins Analysis](#penguins-analysis)
   - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)

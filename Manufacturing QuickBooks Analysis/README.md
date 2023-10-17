@@ -5,6 +5,7 @@ One of our current clients liked what we built for them so much that they wanted
 !["Report"](./Manufacturing%20Quickbooks%20Analysis.jpg)
 
 ## Project Details
+- [Demo](#demo)
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
@@ -12,6 +13,8 @@ One of our current clients liked what we built for them so much that they wanted
 - [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
+
+## [Demo](https://app.powerbi.com/view?r=eyJrIjoiY2U5MjhhMDctNTRhMS00MWQ2LTgyOTctMjU5NDBiYjk2MzNlIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
 ## Details
 
@@ -82,10 +85,10 @@ SWITCH(
     "Net Income", [Net Income],
     "Net Income Margin", [Net Income Margin],
     "Addbacks", [Addbacks],
-    "EBITDA, As Adjusted w/o Lumen Storm Work", [EBITDA, As Adjusted w/o Lumen Storm Work],
-    "EBITDA, As Adjusted Margin w/o Lumen Storm Work", [EBITDA, As Adjusted Margin w/o Lumen Storm Work],
-    "EBITDA, As Adjusted w/ Lumen Storm Work", [EBITDA, As Adjusted w/ Lumen Storm Work],
-    "EBITDA, As Adjusted Margin w/ Lumen Storm Work", [EBITDA, As Adjusted Margin w/ Lumen Storm Work]
+    "EBITDA, As Adjusted w/o Extra Work", [EBITDA, As Adjusted w/o Extra Work],
+    "EBITDA, As Adjusted Margin w/o Extra Work", [EBITDA, As Adjusted Margin w/o Extra Work],
+    "EBITDA, As Adjusted w/ Extra Work", [EBITDA, As Adjusted w/ Extra Work],
+    "EBITDA, As Adjusted Margin w/ Extra Work", [EBITDA, As Adjusted Margin w/ Extra Work]
 )
 ```
 
