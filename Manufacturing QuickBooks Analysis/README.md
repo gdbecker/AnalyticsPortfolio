@@ -2,10 +2,11 @@
 
 One of our current clients liked what we built for them so much that they wanted us to focus on their financials to produce a new set of reports. This proved to be a great challenge in multiple ways - from connecting to more than one instance of QuickBooks, discovering the best way to bring the data they need in, and deepening our relationship and trust between us and the client. I also enjoyed figuring out how to cleverly manipulate DAX in different ways to achieve certain view they wished to see, including switching between MTD and QTD on the overview page, as well as the summary view table at the end. These new reports gave our client greater insight and transparency into their data to make stronger financial decisions.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiY2U5MjhhMDctNTRhMS00MWQ2LTgyOTctMjU5NDBiYjk2MzNlIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Manufacturing%20Quickbooks%20Analysis.jpg)
 
 ## Project Details
-- [Demo](#demo)
 - [Details](#details)
 - [By the Numbers](#by-the-numbers)
 - [Tools Used](#tools-used)
@@ -13,8 +14,6 @@ One of our current clients liked what we built for them so much that they wanted
 - [Data Model](#data-model)
 - [What I learned](#what-i-learned)
 - [Useful resources](#useful-resources)
-
-## [Demo](https://app.powerbi.com/view?r=eyJrIjoiY2U5MjhhMDctNTRhMS00MWQ2LTgyOTctMjU5NDBiYjk2MzNlIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
 ## Details
 
