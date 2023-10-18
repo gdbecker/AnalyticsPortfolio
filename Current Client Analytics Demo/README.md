@@ -2,6 +2,8 @@
 
 After working through Healthcare Practice Demos, I was able to borrow quite of a few of the new functionalities I developed to make a potential addendum dashboard series for an existing Elliott Davis client. The main interest was analyzing how loans were paid off over time, and being able to slice and dice categories by different measures. It was satisfying being able to test different visuals and how they would work best given the provided data and what needed to be seen.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiYWJhNTBhY2ItNzE4MS00YjEzLTliMWMtN2ViMDNhMTdlYmYxIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Demo%20Dashboard.jpg)
 
 ## Project Details

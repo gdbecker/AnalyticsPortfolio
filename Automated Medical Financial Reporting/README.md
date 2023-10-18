@@ -2,6 +2,8 @@
 
 This was a great challenge with my manager to develop a solution for a client who had a manual and very time-consuming reporting process and needed something more efficient - not just for automating, but also making Power BI look less like a traditional dashboard and more like a printed report. We were able to help this client cut down their time from 1.5 weeks to about 1 day of making this report. This project was also featured in "External Webinar Dashboards and Case Study" and Blog Posts.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiZTY3M2RmMmUtODhmYi00MDBmLWJkMDEtNWUwMTY4ZDMxYTk0IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Example%20Report%20Export.jpg)
 
 ## Project Details

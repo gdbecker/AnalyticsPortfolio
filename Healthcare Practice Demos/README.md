@@ -2,9 +2,13 @@
 
 These are a set of Power BI demos intended to go to market for existing Elliott Davis healthcare clients. My director had experience in Tableau so some of the functionality has was used to was not natively built-in with this app, so this was a great challenge to push myself with what Power BI is capable of technically in order to provide a better solution. I also tested this project with a bit of Python scripting, and there are two V2 versions, depending on if the client wanted to see hygiene broken out or not.
 
-!["Report"](./Healthcare%20Private%20Practice%20V1.jpg)
+### [Live Demo V1](https://app.powerbi.com/view?r=eyJrIjoiMDZhMmQyZjItNzIyNy00Nzk2LThkOGYtNWZiZDIwZTgyZTY2IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
-!["Report"](./Healthcare%20Private%20Practice%20V2.jpg)
+!["Report V1"](./Healthcare%20Private%20Practice%20V1.jpg)
+
+### [Live Demo V2](https://app.powerbi.com/view?r=eyJrIjoiMjA2MjJkMzYtYTM5OC00OWM1LWJmOWQtMTM5ZWE3NzM4OGU5IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
+!["Report V2"](./Healthcare%20Private%20Practice%20V2.jpg)
 
 ## Project Details
 - [Details](#details)

@@ -2,7 +2,9 @@
 
 After working on several healthcare and private equity financial reports, it felt great delving into the operational side of a business, specifically in the manufacturing industry. For this one I was able to help our client explore and understand more from their existing data, drawing connections and insights they haven't seen before to better understand how they can train and equip their staff. This dashboard series explored questions like: "Are my employees improving over time?" "How are our different markets stack up against each other?" "Who among a supervisor's employees might need further training?"
 
-!["Manufacturing Supervisor Dashboards.jpg"](./Manufacturing%20Supervisor%20Dashboards.jpg)
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiNjJhNjgyMjgtNDBjYy00N2E1LWJkN2MtNWJmYmRmODU3MTM1IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
+!["Report"](./Manufacturing%20Supervisor%20Dashboards.jpg)
 
 ## Project Details
 - [Details](#details)

@@ -2,6 +2,8 @@
 
 Earlier on in my time at Elliott Davis my manager was looking for a dashboard pack we could showcase in a variety of settings to get the word out on the Data & Analytics service line at our firm, as well as provide a starter point of conversation for clients interested in adding on analytics for their engagements. A couple of colleagues and I first worked on our own files and individual dummy data models across different industries - and then from which I combined everything into one file we could post online to our Power BI Service Workspace. As with other demos/proposals I worked on this one was a great showcase of what my team and I could do as well as the significant functionality within Power BI.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiMWM5NWI0MjUtMmRhYy00ZDkzLWJiNjUtNzlmM2M3ZGE2MjZmIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Case%20Study%20Demo%20-%20Combined.jpg)
 
 ## Project Details

@@ -2,6 +2,8 @@
 
 Another division of the Digital Consulting Practice Group, Cyber & Penetration Testing, had an interest in finding out how analytics could increase their value in service offerings. I was brought on to develop a potential analytics report that the Cyber team could give to their clients before they begin a security engagement as a way to set the stage for their understanding how secure they are, as well as existing vulnerabilities.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiMTliNmEzOGUtZDQyNy00NjlkLTgzZGUtNWVlZmVlZWE2MzYwIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Cybersecurity%20Analytics%20Report.jpg)
 
 ## Project Details

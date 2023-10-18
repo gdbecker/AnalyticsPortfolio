@@ -2,6 +2,8 @@
 
 In a similar vein as Automated Medical Financial Reporting, this one was another good challenge in transforming a client's existing financial reporting deck into a fully automated Power BI report. I took over this project half-way in and helped finish it up week by week, ensuring that the math and design matched what they needed. There were also some tricky formatting needs they had that was a good test to push myself in what I can develop in Power BI.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiZmNhNDg1NjctZGNiMy00YWI3LWEyN2YtOWY1NGY0MDZkYTNjIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Private%20Equity%20Financial%20Reporting%20Automation.jpg)
 
 ## Project Details

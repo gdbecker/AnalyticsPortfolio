@@ -2,6 +2,8 @@
 
 As my director was planning for potential engagements, he was looking for a template demo dashboard we could have on hand which we could easily customize for proposals. One of my colleagues started this one and I helped fine-tune the data model and take it further visually to produce the result seen here. The key idea is not only to display how we could personalize Power BI reports towards a potential client, but also showcase the basic yet powerful capabilities in these reports - from filtering, to visual interactivity, and all the way to maps and time trends.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiZWE0YjMwZWYtMGQ3My00YjNjLTkzNTctN2IxMDVkZjdkYjRmIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Client%20Proposal%20Dashboard.jpg)
 
 ## Project Details

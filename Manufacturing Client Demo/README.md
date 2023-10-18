@@ -2,7 +2,9 @@
 
 It's always interesting to discover what new challenge you might come across when it comes to a Power BI project - no two are the same. The main goal for this engagement was to redesign and build new reports from the client's existing Power BI environment, so there was less data modeling and engineering involved as much as a greater focus on what reports they currently had available and what other views/functionalities they would like to see. I'm thankful for this one to continue practicing making an effective and beautiful user experience as well as effectively communicating feedback with clients for delivering a better product and service.
 
-!["Manufacturing Client Demo.jpg"](./Manufacturing%20Client%20Demo.jpg)
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiYjFmNzk5M2YtZDQwYy00YTA1LWJmN2UtNzQ2YTI2ZWEwZTczIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
+!["Report"](./Manufacturing%20Client%20Demo.jpg)
 
 ## Project Details
 - [Details](#details)

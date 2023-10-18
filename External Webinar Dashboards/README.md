@@ -2,6 +2,8 @@
 
 On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted about data analytics and how businesses could leverage data in their workplaces. The dashboards in this set are the ones I screenshared during the event, while three of my colleagues voiced-over and talked about the business cases, what we did to help solve, as well as deliver a quick demo of how Power BI works. It was a huge success and one of the firm's most popular webinars to date, and helped garner much more interest in analytics and discovering the power behind their data.
 
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiODFiZmVhYzYtMDQyOC00YzI1LTg4MDYtYzM5ODgwOWZmMjIwIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+
 !["Report"](./Webinar%20Part%201.jpg)
 
 ## Project Details
