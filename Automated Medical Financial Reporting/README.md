@@ -4,7 +4,7 @@ This was a great challenge with my manager to develop a solution for a client wh
 
 ### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiZTY3M2RmMmUtODhmYi00MDBmLWJkMDEtNWUwMTY4ZDMxYTk0IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
-!["Report"](./Example%20Report%20Export.jpg)
+!["Report"](./Automated%20Medical%20Financial%20Reporting.jpg)
 
 ## Project Details
 - [Details](#details)
@@ -43,11 +43,11 @@ Files included for view in this project:
 
 ## Data Engineering Pipeline
 
-!["Pipeline"](./Example%20Report%20Export%20Pipeline.png)
+!["Pipeline"](./Automated%20Medical%20Financial%20Reporting%20Pipeline.png)
 
 ## Data Model
 
-!["Data Model"](./Example%20Report%20Export%20Data%20Model.JPG)
+!["Data Model"](./Automated%20Medical%20Financial%20Reporting%20Data%20Model.JPG)
 
 ## What I learned
 
@@ -78,4 +78,4 @@ Actual Billed Charges = CALCULATE(SUM('Summary Sheet'[Amount Billed]))
 
 ## Useful Resources
 
-- Tip/trick: In order to achieve the pdf-like report view, I first exported one of the client's pdf report pages as a .png file, and then used that image as the background in the Power BI file. I overlayed text boxes/styles until I matched the needed design.
+- Tip/trick: In order to achieve the pdf-like report view, I first exported one of the client's pdf report pages as a .png file, and then used that image as the background in the Power BI file. I overlaid text boxes/styles until I matched the needed design.
