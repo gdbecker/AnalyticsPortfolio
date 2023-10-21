@@ -19,7 +19,7 @@ This is a collection of selected projects I've worked on during my time as an an
   - [Fatal Force Analysis](#fatal-force-analysis)
   - [Group Case Study Demo](#group-case-study-demo)
   - [Healthcare Ongoing Dashboard](#healthcare-ongoing-dashboard)
-  - [Healthcare Practice Demos](#healthcare-practice-demos)
+  - [Healthcare Private Practice](#healthcare-private-practice)
   - [Healthcare Proposal Dashboard](#healthcare-proposal-dashboard)
   - [Internal Use Work Tracker](#internal-use-work-tracker)
   - [Manufacturing Client Demo](#manufacturing-client-demo)
@@ -85,9 +85,9 @@ Earlier on in my time at Elliott Davis my manager was looking for a dashboard pa
 
 I was super encouraged when one of the first projects I worked on became a monthly addition to an existing client. My manager and I worked on developing this one together for a couple of months, fine-tuning it with the current engagement team, and this client loved it enough to make an addendum to subscribe for monthly updates on their data. As of now I am maintaining the production version of this file and providing analytics updates for them each month.
 
-### [Healthcare Practice Demos](./Healthcare%20Practice%20Demos/)
+### [Healthcare Private Practice](./Healthcare%20Private%20Practice/)
 
-These are a set of Power BI demos intended to go to market for existing Elliott Davis healthcare clients. My director had experience in Tableau so some of the functionality has was used to was not natively built-in with this app, so this was a great challenge to push myself with what Power BI is capable of technically in order to provide a better solution. I also tested this project with a bit of Python scripting, and there are two V2 versions, depending on if the client wanted to see hygiene broken out or not.
+These are a set of Power BI demos intended to go to market for existing Elliott Davis healthcare clients. My director had experience in Tableau so some of the functionality has was used to was not natively built-in with this app, so this was a great challenge to push myself with what Power BI is capable of technically in order to provide a better solution. I also tested this project with a bit of Python scripting.
 
 ### [Healthcare Proposal Dashboard](./Healthcare%20Proposal%20Dashboard/)
 
@@ -95,7 +95,7 @@ Instead of a generic demo dashboard, my manager needed a set of dashboard report
 
 ### [Internal Use Work Tracker](./Internal%20Use%20Work%20Tracker/)
 
-This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisons would be using this tool so the end result needed to be flexible but specific enough for their needs.
+This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisions would be using this tool so the end result needed to be flexible but specific enough for their needs.
 
 ### [Manufacturing Client Demo](./Manufacturing%20Client%20Demo/)
 
