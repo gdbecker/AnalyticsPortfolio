@@ -2,9 +2,9 @@
 
 Earlier on in my time at Elliott Davis my manager was looking for a dashboard pack we could showcase in a variety of settings to get the word out on the Data & Analytics service line at our firm, as well as provide a starter point of conversation for clients interested in adding on analytics for their engagements. A couple of colleagues and I first worked on our own files and individual dummy data models across different industries - and then from which I combined everything into one file we could post online to our Power BI Service Workspace. As with other demos/proposals I worked on this one was a great showcase of what my team and I could do as well as the significant functionality within Power BI.
 
-### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiMWM5NWI0MjUtMmRhYy00ZDkzLWJiNjUtNzlmM2M3ZGE2MjZmIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiODQ1MjE2MjUtZTk3MS00MGVmLTk5MGYtZmUxMDc4NmY5NjI2IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
-!["Report"](./Case%20Study%20Demo%20-%20Combined.jpg)
+!["Report"](./Group%20Case%20Study%20Demo.jpg)
 
 ## Project Details
 - [Details](#details)
@@ -20,16 +20,8 @@ Earlier on in my time at Elliott Davis my manager was looking for a dashboard pa
 The guidelines on this one were loose for the purpose of being able to show anything we had learned in the app up to this point, with the goal of showcasing Power BI's capabilities as best as possible. My manager wanted each of us to choose a different industry to form dummy data in and then create visuals from, so we picked construction, retail and e-commerce as our focal points. Each file had a different style, so when I combined them altogether I established a theme to match Elliott Davis's branding as close as possible. It was a great challenge to start figuring out the Advanced Editor in the Power Query backend in order to copy the data pipelines and sources from other files into one, as well as making sure the three data models were copied exactly.
 
 Files included for view in this project:
-- Case Study - Sales Forecasting.pdf
-  - Separate file one of my colleagues made, dummy data used
-- Case Study Demo - Combined.pdf
+- Group Case Study Demo.pdf
   - All of our separate demos put into one file
-- Case Study Demo - GB.pdf
-  - Separate file I made, dummy data used
-- Retail Sample Demo - NT.pdf
-  - Separate file one of my colleagues made, dummy data used
-- Sample Data Set - HB.pdf
-  - Separate file one of my colleagues made, dummy data used
 
 ## By the Numbers
 
@@ -49,11 +41,11 @@ Files included for view in this project:
 
 ## Data Engineering Pipeline
 
-!["Pipeline"](./Case%20Study%20Demo%20-%20Combined%20Pipeline.png)
+!["Pipeline"](./Group%20Case%20Study%20Demo%20Pipeline.png)
 
 ## Data Model
 
-!["Data Model"](./Case%20Study%20Demo%20-%20Combined%20Data%20Model.JPG)
+!["Data Model"](./Group%20Case%20Study%20Demo%20Data%20Model.JPG)
 
 ## What I learned
 

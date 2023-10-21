@@ -2,9 +2,9 @@
 
 After working through Healthcare Practice Demos, I was able to borrow quite of a few of the new functionalities I developed to make a potential addendum dashboard series for an existing Elliott Davis client. The main interest was analyzing how loans were paid off over time, and being able to slice and dice categories by different measures. It was satisfying being able to test different visuals and how they would work best given the provided data and what needed to be seen.
 
-### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiYWJhNTBhY2ItNzE4MS00YjEzLTliMWMtN2ViMDNhMTdlYmYxIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiYjA4Y2FjZTItZDVkOS00YzFmLTkwNDYtODczNzFkZjE1ZWVkIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
-!["Report"](./Demo%20Dashboard.jpg)
+!["Report"](./Current%20Client%20Analytics%20Demo.jpg)
 
 ## Project Details
 - [Details](#details)
@@ -20,7 +20,7 @@ After working through Healthcare Practice Demos, I was able to borrow quite of a
 This one was a great encouragement for me to make sure I stay diligent in documenting and saving all the work I do because sometimes you never know when it might need to be dusted off again. I first worked on this project early on in my time at Elliott Davis, but the dashboard set didn't move past my creating and sharing it with our internal lead on the enagegment. About a year later interest was sparked once more, and I was able to pull this back out, get myself reacquainted with what I made and make further adjustments and updates. Now our internal leader wants to use this dashboard set as a monthly addendum to his existing client engagement, which not only adds greater value for them but also gets the word out on the significant insights that can be drawn from data analytics. 
 
 Files included for view in this project:
-- Demo Dashboard.pdf
+- Current Client Analytics Demo.pdf
   - Masked file version that was developed
 
 ## By the Numbers
@@ -41,11 +41,11 @@ Files included for view in this project:
 
 ## Data Engineering Pipeline
 
-!["Pipeline"](./Demo%20Dashboard%20Pipeline.png)
+!["Pipeline"](./Current%20Client%20Analytics%20Demo%20Pipeline.png)
 
 ## Data Model
 
-!["Data Model"](./Demo%20Dashboard%20Data%20Model.JPG)
+!["Data Model"](./Current%20Client%20Analytics%20Demo%20Data%20Model.JPG)
 
 ## What I learned
 
