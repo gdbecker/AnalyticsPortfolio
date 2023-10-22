@@ -4,7 +4,7 @@ My director asked one of my colleagues and I to try building a machine learning 
 
 ### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiNTY4NmVhOTEtNzMyNy00MTI1LThmNjQtOGMzNzEyNjMxYjZjIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
-!["Report"](./Power-BI-Python-Machine-Learning-Forecasting.jpg)
+!["Report"](./Power%20BI%20+%20Python%20+%20Machine%20Learning%20Forecasting.jpg)
 
 ## Project Details
 - [Details](#details)
