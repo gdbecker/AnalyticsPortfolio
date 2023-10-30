@@ -28,6 +28,7 @@ This is a collection of selected projects I've worked on during my time as an an
   - [Penguins Analysis](#penguins-analysis)
   - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
   - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
+  - [QBO Payroll Import Automation](#qbo-payroll-import-automation)
   - [Space Missions Analysis](#space-missions-analysis)
 - [Other Related Work](#other-related-work)
   - [Case Study and Blog Posts](#case-study-and-blog-posts)
@@ -120,6 +121,10 @@ My director asked one of my colleagues and I to try building a machine learning 
 ### [Private Equity Financial Reporting Automation](./Private%20Equity%20Financial%20Reporting%20Automation/)
 
 In a similar vein as [Automated Medical Financial Reporting](#automated-medical-financial-reporting), this one was another good challenge in transforming a client's existing financial reporting deck into a fully automated Power BI report. I took over this project half-way in and helped finish it up week by week, ensuring that the math and design matched what they needed. There were also some tricky formatting needs they had that was a good test to push myself in what I can develop in Power BI.
+
+### [QBO Payroll Import Automation](./QBO%20Payroll%20Import%20Automation/)
+
+Coming soon!
 
 ### [Space Missions Analysis](./Space%20Missions%20Analysis/)
 
