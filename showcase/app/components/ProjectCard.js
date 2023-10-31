@@ -5,51 +5,58 @@ import { FaGithub } from 'react-icons/fa';
 function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
 
   function getOutlineClass(type) {
-    if (type == 'Power BI') {
+    if (type == "Power BI") {
       return "shadow-lightYellow";
-    } else if (type == 'Python') {
+    } else if (type == "Python") {
       return "shadow-lightBlue";
-    } else if (type == 'Machine Learning') {
+    } else if (type == "Machine Learning") {
       return "shadow-purple";
+    } else if (type == "Automation") {
+      return "shadow-darkRed";
     }
   }
 
   function getLabel(type) {
-    if (type == 'Power BI') {
+    if (type == "Power BI") {
       return (
         <p className="px-2 h-full text-mediumYellow w-fit my-1 ring-mediumYellow ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">POWER BI</p>
       );
-    } else if (type == 'Python') {
+    } else if (type == "Python") {
       return (
         <p className="px-2 h-full text-lightBlue min-w-max my-1 ring-lightBlue ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">PYTHON</p>
       );
-    } else if (type == 'Machine Learning') {
+    } else if (type == "Machine Learning") {
       return (
-      // <div className="flex flex-col items-end">
-        // <p className="px-2 h-full text-lightBlue max-w-fit my-1 ring-lightBlue ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">PYTHON</p>
         <p className="px-2 h-full text-purple min-w-max my-1 ring-purple ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">MACHINE LEARNING</p>
-      // </div>
+      );
+    } else if (type == "Automation") {
+      return (
+        <p className="px-2 h-full text-darkRed min-w-max my-1 ring-darkRed ring-2 rounded-sm font-interBold text-sm overflow-hidden lg:text-[0.75rem]">AUTOMATION</p>
       );
     }
   }
 
   function getShadowClass(type) {
-    if (type == 'Power BI') {
+    if (type == "Power BI") {
       return "link-shadow-pbi";
-    } else if (type == 'Python') {
+    } else if (type == "Python") {
       return "link-shadow-python";
-    } else if (type == 'Machine Learning') {
+    } else if (type == "Machine Learning") {
       return "link-shadow-ml";
+    } else if (type == "Automation") {
+      return "link-shadow-auto";
     }
   } 
 
   function getHoverClass(type) {
-    if (type == 'Power BI') {
+    if (type == "Power BI") {
       return "hover:text-mediumYellow";
-    } else if (type == 'Python') {
+    } else if (type == "Python") {
       return "hover:text-lightBlue";
-    } else if (type == 'Machine Learning') {
+    } else if (type == "Machine Learning") {
       return "hover:text-purple";
+    } else if (type == "Automation") {
+      return "hover:text-darkRed";
     }
   }
 
@@ -59,15 +66,6 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
       <div className="flex-auto grid grid-cols-1 px-5 py-3 pb-1 text-gray">
         <div className="flex-row">
           <Link 
-            // href={{
-            //   pathname: `/${title}` ,
-            //   query: {
-            //     demo_url: `${demo_url}`,
-            //     title: `${title}`,
-            //     code_url: `${code_url}`,
-            //     type: `${type}`,
-            //   }
-            // }}
             href={{
               pathname: `/${id}`
             }}
@@ -75,9 +73,6 @@ function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
         </div>
         <div className="grid grid-cols-2 items-end justify-between w-full py-3 font-interRegular text-md lg:text-sm">
           <Link href={code_url} target="_blank" className={`flex flex-row project-link text-lg ${ getHoverClass(type.split(",")[0]) }`}><FaGithub /> <p className="text-sm pl-2">Learn More</p></Link>
-          {/* <div className="flex flex-col items-end justify-end">
-            {getLabel(type)}
-          </div> */}
           <div className="flex flex-col items-end justify-end">
             <div className="flex flex-col items-end">
               {type.split(",").map((t) => getLabel(t))}

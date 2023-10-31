@@ -39,22 +39,26 @@ import { db } from './../services/firebase.config';
   }, [])
 
   function getHoverClass(type) {
-    if (type == 'Power BI') {
+    if (type == "Power BI") {
       return "hover:text-mediumYellow";
-    } else if (type == 'Python') {
+    } else if (type == "Python") {
       return "hover:text-lightBlue";
-    } else if (type == 'Machine Learning') {
+    } else if (type == "Machine Learning") {
       return "hover:text-purple";
+    } else if (type == "Automation") {
+      return "hover:text-darkRed";
     }
   }
 
   function getShadowClass(type) {
-    if (type == 'Power BI') {
+    if (type == "Power BI") {
       return "shadow-lightYellow";
-    } else if (type == 'Python') {
+    } else if (type == "Python") {
       return "shadow-lightBlue";
-    } else if (type == 'Machine Learning') {
+    } else if (type == "Machine Learning") {
       return "shadow-purple";
+    } else if (type == "Automation") {
+      return "shadow-darkRed";
     }
   }
 

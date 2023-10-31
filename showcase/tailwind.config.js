@@ -20,6 +20,8 @@ module.exports = {
       "lightGray": "hsl(0, 0%, 81%)",
       "purple": "hsl(227, 37%, 79%)",
       "purpleTransparent": "hsla(227, 37%, 79%, 0.7)",
+      "darkRed": "#C70039",
+      "darkRedTransparent": "hsla(343, 100%, 39%, 0.7)",
     },
     extend: {
       fontFamily: {

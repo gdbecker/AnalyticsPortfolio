@@ -2,7 +2,7 @@
 
 Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge.
 
-!["Space Missions Analysis.jpg"](./Space%20Missions%20Analysis.jpg)
+!["Report"](./Space%20Missions%20Python%20Analysis.jpg)
 
 ## Project Details
 - [Details](#details)

@@ -19,92 +19,92 @@
 }
 
 /* Project backgrounds */
-.bg-airlines-part-1 {
-  background-image: url(../../public/airlines-part-1.jpg);
+.bg-airline-delays-python-analysis-1 {
+  background-image: url(../../public/airline-delays-python-analysis-1.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-airlines-part-2 {
-  background-image: url(../../public/airlines-part-2.jpg);
+.bg-airline-delays-python-analysis-2 {
+  background-image: url(../../public/airline-delays-python-analysis-2.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-airlines-part-3 {
-  background-image: url(../../public/airlines-part-3.jpg);
+.bg-airline-delays-python-analysis-3 {
+  background-image: url(../../public/airline-delays-python-analysis-3.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-airlines-part-4 {
-  background-image: url(../../public/airlines-part-4.jpg);
+.bg-airline-delays-python-analysis-4 {
+  background-image: url(../../public/airline-delays-python-analysis-4.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-airlines-part-5 {
-  background-image: url(../../public/airlines-part-5.jpg);
+.bg-airline-delays-python-analysis-5 {
+  background-image: url(../../public/airline-delays-python-analysis-5.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-automated-medical {
-  background-image: url(../../public/Example\ Report\ Export.jpg);
+.bg-automated-medical-financial-reporting {
+  background-image: url(../../public/Automated\ Medical\ Financial\ Reporting.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-client-proposal {
+.bg-client-proposal-dashboard {
   background-image: url(../../public/Client\ Proposal\ Dashboard.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-current-client-demo {
-  background-image: url(../../public/Demo\ Dashboard.jpg);
+.bg-current-client-analytics-demo {
+  background-image: url(../../public/Current\ Client\ Analytics\ Demo.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-cybersecurity-report {
+.bg-cybersecurity-analytics-report {
   background-image: url(../../public/Cybersecurity\ Analytics\ Report.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-determinants-earnings {
-  background-image: url(../../public/Determinants\ of\ Earnings\ Analysis.jpg);
+.bg-determinants-of-earnings-analysis {
+  background-image: url(../../public/Determinants\ of\ Earnings\ Python\ Analysis.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-external-webinar {
-  background-image: url(../../public/Webinar\ Part\ 1.jpg);
+.bg-external-webinar-dashboards {
+  background-image: url(../../public/External\ Webinar\ Dashboards.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-fatal-force {
-  background-image: url(../../public/Fatal\ Force\ Analysis.jpg);
+.bg-fatal-force-python-analysis {
+  background-image: url(../../public/Fatal\ Force\ Python\ Analysis.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-group-case-study {
-  background-image: url(../../public/Case\ Study\ Demo\ -\ Combined.jpg);
+.bg-group-case-study-demo {
+  background-image: url(../../public/Group\ Case\ Study\ Demo.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -117,106 +117,106 @@
   background-size: cover;
 }
 
-.bg-healthcare-private-practice-v1 {
-  background-image: url(../../public/Healthcare\ Private\ Practice\ V1.jpg);
+.bg-healthcare-private-practice {
+  background-image: url(../../public/Healthcare\ Private\ Practice.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-healthcare-private-practice-v2 {
-  background-image: url(../../public/Healthcare\ Private\ Practice\ V2.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-healthcare-proposal {
+.bg-healthcare-proposal-dashboard {
   background-image: url(../../public/Healthcare\ Proposal\ Dashboard.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-internal-work {
+.bg-internal-use-work-tracker {
   background-image: url(../../public/Internal\ Use\ Work\ Tracker.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-manufacturing-demo {
+.bg-manufacturing-client-demo {
   background-image: url(../../public/Manufacturing\ Client\ Demo.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-manufacturing-qbo {
-  background-image: url(../../public/Manufacturing\ Quickbooks\ Analysis.pdf);
+.bg-manufacturing-quickbooks-analysis {
+  background-image: url(../../public/Manufacturing\ Quickbooks\ Analysis.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-manufacturing-supervisors {
+.bg-manufacturing-supervisor-dashboards {
   background-image: url(../../public/Manufacturing\ Supervisor\ Dashboards.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-penguins-part-1 {
-  background-image: url(../../public/penguins-part-1.jpg);
+.bg-penguins-python-analysis-1 {
+  background-image: url(../../public/penguins-python-analysis-1.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-penguins-part-2 {
-  background-image: url(../../public/penguins-part-2.jpg);
+.bg-penguins-python-analysis-2 {
+  background-image: url(../../public/penguins-python-analysis-2.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-penguins-part-3 {
-  background-image: url(../../public/penguins-part-3.jpg);
+.bg-penguins-python-analysis-3 {
+  background-image: url(../../public/penguins-python-analysis-3.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-penguins-part-4 {
-  background-image: url(../../public/penguins-part-4.jpg);
+.bg-penguins-python-analysis-4 {
+  background-image: url(../../public/penguins-python-analysis-4.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-penguins-part-5 {
-  background-image: url(../../public/penguins-part-5.jpg);
+.bg-penguins-python-analysis-5 {
+  background-image: url(../../public/penguins-python-analysis-5.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-pbi-python-ml-forecasting {
-  background-image: url(../../public/Power-BI-Python-Machine-Learning-Forecasting.jpg);
+.bg-power-bi-python-machine-learning-forecasting {
+  background-image: url(../../public/Power\ BI\ +\ Python\ +\ Machine\ Learning\ Forecasting.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-private-equity {
+.bg-private-equity-financial-reporting-automation {
   background-image: url(../../public/Private\ Equity\ Financial\ Reporting\ Automation.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bg-space-missions {
-  background-image: url(../../public/Space\ Missions\ Analysis.jpg);
+.bg-qbo-payroll-import-automation {
+  background-image: url(../../public/QBO\ Payroll\ Import\ Automation.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-space-missions-python-analysis {
+  background-image: url(../../public/Space\ Missions\ Python\ Analysis.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -271,5 +271,22 @@
 }
 
 .link-shadow-ml:hover::before {
+  transform: scaleX(1);
+}
+
+.link-shadow-auto::before {
+  box-shadow: inset 0 -0.4em 0 0 hsla(343, 100%, 39%, 0.7);
+  bottom: 12px;
+  content: "";
+  display: block;
+  height: 0.3em;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  width: 100%;
+}
+
+.link-shadow-auto:hover::before {
   transform: scaleX(1);
 }
