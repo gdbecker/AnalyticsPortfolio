@@ -124,7 +124,7 @@ In a similar vein as [Automated Medical Financial Reporting](#automated-medical-
 
 ### [QBO Payroll Import Automation](./QBO%20Payroll%20Import%20Automation/)
 
-Coming soon!
+There was an internal team whose work with a client had time-consuming processes to cleanse and prepare QuickBooks Online data. I was able to step in and help them save time on a few, including this preparing this payroll import, by using Power BI and Power Query.
 
 ### [Space Missions Analysis](./Space%20Missions%20Analysis/)
 

@@ -1,8 +1,8 @@
 # QBO Payroll Import Automation
 
-Coming soon!
+There was an internal team whose work with a client had time-consuming processes to cleanse and prepare QuickBooks Online data. I was able to step in and help them save time on a few, including this preparing this payroll import, by using Power BI and Power Query.
 
-### [Live Demo]()
+### [Live Demo](https://app.powerbi.com/view?r=eyJrIjoiYjg4Zjc0NGUtMmY2Mi00ODY3LWI2M2YtYTBhMzIzY2IzZjUzIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
 !["Report"](./QBO%20Payroll%20Import%20Automation.jpg)
 
@@ -17,7 +17,11 @@ Coming soon!
 
 ## Details
 
-Coming soon!
+This was an unusual project because instead of preparing a dashboard for client use, I was actually making an automation tool, and I was working with one of our internal teams at the firm instead of speaking with the client directly. It was great practice and a challenge to understand the existing process for how our team was preparing this payroll report for QBO and then how to translate those steps into Power BI.
+
+There were two standard reports the team was able to download from another source, as well as three mapping tables to translate the raw data into info that QBO would understand - I started by combining these into 5 tabs in a standard import Excel file. The end result needed to be a table with a set of certain columns which the team could import into QBO via TPI right away, so I imported each of the tabs into Power Query, and duplicated the query for "Inv Accounting Detail" because there I needed to separate out the credits and debits into separate columns. The final "TPI Import" query is the only one that needed to be loaded into the data model, and combined each of the three data source queries along with mapping table details.
+
+Using this tool allowed our internal team to cut down time working on their client's payroll data from one week to a single hour. It felt super satisfying making a tool for them they could easily use and help ease their workload!
 
 Files included for view in this project:
 - QBO Payroll Import Automation.pdf
@@ -137,5 +141,5 @@ in
 
 ## Useful Resources
 
-- [Running Python in Power BI](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-python-scripts) - Handy guide from Microsoft regarding getting Python set up within Power BI, and to use as a data source
-- [Python Visualizations in Power BI](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-python-visuals) - Another Microsoft guide to run Python scripts on report pages to create visualizations
+- [Power BI: Advanced Editor](https://www.myonlinetraininghub.com/tips-for-using-the-power-query-advanced-editor) - I've discovered the Advanced Editor view of the backend queries to be a huge help in not just changing a query data source, but also adding in custom transformation steps 
+- [Get a color pallette from photos](https://www.myonlinetraininghub.com/tips-for-using-the-power-query-advanced-editor) - I like making a .json file for each project I work on that has all of the theme's styles, based on a client's existing branding. Helps to make it personal and also let's me focus more on presenting info
