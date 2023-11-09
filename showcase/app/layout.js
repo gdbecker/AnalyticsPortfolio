@@ -1,5 +1,6 @@
 import './styles/globals.css'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
 export const metadata = {
   title: 'Analytics Project Showcase',
@@ -13,10 +14,8 @@ export default function RootLayout({ children }) {
       
         <Navigation />
         {children}
+        <Footer />
 
-        <footer className="text-center font-interRegular text-sm">
-          Coded by <a href="https://github.com/gdbecker/AnalyticsPortfolio/tree/main" target="_blank" className="font-interRegular hover:text-mediumYellow">Garrett Becker</a>
-        </footer>
       </body>
     </html>
   )
