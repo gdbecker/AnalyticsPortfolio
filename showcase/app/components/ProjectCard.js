@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa';
 
-function ProjectCard({ index, id, img_bg, title, demo_url, code_url, type }) {
+function ProjectCard({ index, id, img_bg, title, code_url, type }) {
 
   function getOutlineClass(type) {
     if (type == "Power BI") {

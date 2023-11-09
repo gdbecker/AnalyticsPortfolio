@@ -162,13 +162,12 @@ import { db } from './services/firebase.config';
 
         <div className="flex flex-col w-full pt-5 pb-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-          {filteredProjects.map(({ id, img_bg, title, demo_url, code_url, type  }, index) =>
+          {filteredProjects.map(({ id, img_bg, title, code_url, type }, index) =>
             <ProjectCard 
               index={index}
               id={id}
               img_bg={img_bg}
               title={title}
-              demo_url={demo_url}
               code_url={code_url}
               type={type}
             />

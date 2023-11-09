@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Logo from '../../public/powerbi.png';
-import Avatar from '../../public/gdbecker.jpeg';
+import Avatar from '../../public/GarrettBecker.jpg';
 
 function Navigation() {
 
@@ -22,7 +22,7 @@ function Navigation() {
         <Image 
           src={Avatar}
           alt="Profile Photo"
-          className="w-10 h-10 rounded-full md:w-12 md:h-12"
+          className="w-10 h-10 rounded-full border-lightGray border-2 md:w-12 md:h-12"
         />
       </a>
     </div>
