@@ -61,7 +61,7 @@ function ProjectCard({ index, id, img_bg, title, code_url, type }) {
   }
 
   return (
-    <div className={`flex w-full flex-col rounded-md overflow-hidden bg-white ${ getOutlineClass(type) } shadow-[0_0px_4px]`}>
+    <div className={`flex w-full flex-col rounded-md overflow-hidden bg-white ${ getOutlineClass(type) } shadow-[0_0px_4px]`} x-intersect="$el.classList.add('flip-in-ver-left')">
       <div className={`flex flex-row h-44 ${ img_bg }`}></div>
       <div className="flex-auto grid grid-cols-1 px-5 py-3 pb-1 text-gray">
         <div className="flex-row">

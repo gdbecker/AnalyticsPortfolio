@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "alpinejs": "^3.13.2",
     "autoprefixer": "10.4.14",
     "firebase": "^10.1.0",
     "next": "13.4.4",

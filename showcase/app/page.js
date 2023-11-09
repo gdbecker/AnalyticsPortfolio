@@ -112,7 +112,7 @@ import { db } from './services/firebase.config';
       <main className="flex flex-col items-center justify-center w-full h-full p-10 bg-gray md:items-center 2xl:px-36">
 
         <h1 className="pb-9 font-interRegular text-justify text-white leading-7 md:w-[50vw]">
-          This is a collection of selected projects I've worked on during my time as an analyst & consultant at Elliott Davis, as well 
+          This is a collection of selected projects I've worked on during my professional career so far, as well 
           as a few Python data analysis projects. Before joining I had no prior experience in Power BI or any business intelligence 
           development, and it has been wonderful to aid clients in discovering more about their data while also building aesthetically 
           pleasing frontend dashboards to present insights. All PDFs in Github are exports of .pbix files I've worked on, and the data is 
