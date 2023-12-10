@@ -3,7 +3,7 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
 export const metadata = {
-  title: 'Analytics Project Showcase',
+  title: 'Analytics Projects Showcase',
   description: 'Showcase for Professional Analytics Projects!',
 }
 
