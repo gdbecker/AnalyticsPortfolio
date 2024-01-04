@@ -19,6 +19,12 @@
 }
 
 /* Project backgrounds */
+.project-background {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-airline-delays-python-analysis-1 {
   background-image: url(../../public/airline-delays-python-analysis-1.jpg);
   background-position: top center;
