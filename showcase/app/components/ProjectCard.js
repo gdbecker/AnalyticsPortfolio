@@ -4,6 +4,15 @@ import { FaGithub } from 'react-icons/fa';
 
 function ProjectCard({ index, id, img, title, code_url, type }) {
 
+  function getImgUrl(img) {
+    return '../../public/a-airline-delays-python-analysis-1.jpg';
+    // return `../../public/${img}.jpg`;
+  }
+
+  function getBackgroundClass(img) {
+    return `flex flex-row h-44 bg-top bg-no-repeat bg-cover bg-[url('../../public/a-airline-delays-python-analysis-1.jpg')]`;
+  }
+
   function getOutlineClass(type) {
     if (type == "Power BI") {
       return "shadow-lightYellow";
@@ -63,8 +72,11 @@ function ProjectCard({ index, id, img, title, code_url, type }) {
   return (
     <div className={`flex w-full flex-col rounded-md overflow-hidden bg-white ${ getOutlineClass(type) } shadow-[0_0px_4px]`} x-intersect="$el.classList.add('flip-in-ver-left')">
       <div 
-        className={`flex flex-row h-44 project-background bg-[url("../../public/${ img }.jpg")]`}
-        >
+        className={"flex flex-row h-44 bg-top bg-no-repeat bg-cover"}
+        style={{
+          backgroundImage: `url(${ img }.jpg)`
+        }}
+      >
       </div>
       <div className="flex-auto grid grid-cols-1 px-5 py-3 pb-1 text-gray">
         <div className="flex-row">
