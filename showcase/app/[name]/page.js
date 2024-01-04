@@ -4,6 +4,7 @@ import LoadingPage from '../loading';
 import { usePathname } from 'next/navigation'
 import { IoChevronBack } from 'react-icons/io5';
 import { FaGithub } from 'react-icons/fa';
+import styles from '../styles/dynamicStyles';
 
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './../services/firebase.config';
@@ -38,28 +39,8 @@ import { db } from './../services/firebase.config';
     getProjects();
   }, [])
 
-  function getHoverClass(type) {
-    if (type == "Power BI") {
-      return "hover:text-mediumYellow";
-    } else if (type == "Python") {
-      return "hover:text-lightBlue";
-    } else if (type == "Machine Learning") {
-      return "hover:text-purple";
-    } else if (type == "Automation") {
-      return "hover:text-darkRed";
-    }
-  }
-
-  function getShadowClass(type) {
-    if (type == "Power BI") {
-      return "shadow-lightYellow";
-    } else if (type == "Python") {
-      return "shadow-lightBlue";
-    } else if (type == "Machine Learning") {
-      return "shadow-purple";
-    } else if (type == "Automation") {
-      return "shadow-darkRed";
-    }
+  function getCSS(category, type) {
+    return styles[category][type];
   }
 
   if (isLoading) {
@@ -75,8 +56,8 @@ import { db } from './../services/firebase.config';
         <h1 className="pb-6 font-interBold text-center text-white text-xl">{project.title}</h1>
 
         <div className="grid grid-cols-2 pb-3 items-end justify-between text-white text-md font-interRegular">
-          <a href="/" className={`flex flex-row ${ getHoverClass(project.type.split(",")[0]) }`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
-          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end ${getHoverClass(project.type.split(",")[0])}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
+          <a href="/" className={`flex flex-row ${getCSS('hover', project.type.split(",")[0])}`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
+          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end ${getCSS('hover', project.type.split(",")[0])}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
         </div>
         <iframe 
           src={project.demo_url}
@@ -84,7 +65,7 @@ import { db } from './../services/firebase.config';
           frameborder="0" 
           scrolling="auto" 
           title="Project Demo"
-          className={`flex w-full min-h-screen rounded-md ${ getShadowClass(project.type.split(",")[0]) } shadow-[0_0px_2px]`}>
+          className={`flex w-full min-h-screen rounded-md ${getCSS('outline', project.type.split(",")[0])} shadow-[0_0px_2px]`}>
         </iframe>
       </main>
     )
