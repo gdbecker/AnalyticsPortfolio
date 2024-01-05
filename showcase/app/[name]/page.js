@@ -39,6 +39,7 @@ import { db } from './../services/firebase.config';
     getProjects();
   }, [])
 
+  // Get specific Tailwind class based on CSS and project types
   function getCSS(category, type) {
     return styles[category][type];
   }
