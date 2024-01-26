@@ -133,31 +133,31 @@ function Home() {
             />
           </div>
           <details className="flex dropdown w-[100%] my-4 md:my-0 md:w-[28%] lg:w-[20%] xl:w-[15%]">
-          <summary className="flex flex-row items-center justify-between h-full mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
-            <h1 
-              className="flex normal-case text-xs font-interRegular"
-            >{typeSelect}</h1>
-            <BiChevronDown className="text-sm"/>
-          </summary>
-          <ul 
-            className="flex px-2 py-4 shadow menu dropdown-content z-[1] rounded-md w-full bg-white text-gray"
-            
-            >
-            {types.map((t) => (
-              <li
-                onClick={(e) => handleTypeChange(e)}
-                className="text-xs font-interRegular"
+            <summary className="flex flex-row items-center justify-between h-full mb-[2px] btn w-full rounded-md border-0 shadow-md no-animation bg-white text-veryDarkBlue-Light hover:bg-white">
+              <h1 
+                className="flex normal-case text-xs font-interRegular"
+              >{typeSelect}</h1>
+              <BiChevronDown className="text-sm"/>
+            </summary>
+            <ul 
+              className="flex px-2 py-4 shadow menu dropdown-content z-[1] rounded-md w-full bg-white text-gray"
+              
               >
-                <a 
-                  className="px-4 py-1 rounded-none hover:bg-white"
-                  name={t.type}
+              {types.map((t) => (
+                <li
+                  onClick={(e) => handleTypeChange(e)}
+                  className="text-xs font-interRegular"
                 >
-                  {t.type}
-                </a>
-              </li>
-          ))}
-          </ul>
-        </details>
+                  <a 
+                    className="px-4 py-1 rounded-none hover:bg-white"
+                    name={t.type}
+                  >
+                    {t.type}
+                  </a>
+                </li>
+            ))}
+            </ul>
+          </details>
         </div>
 
         <div className="flex flex-col w-full pt-5 pb-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

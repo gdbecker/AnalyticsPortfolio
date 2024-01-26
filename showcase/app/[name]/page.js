@@ -65,7 +65,7 @@ import { db } from './../services/firebase.config';
           frameborder="0" 
           scrolling="auto" 
           title="Project Demo"
-          className={`flex w-full min-h-screen rounded-md ${getCSS('outline', project.types[0])} shadow-[0_0px_2px]`}>
+          className={`flex w-full min-h-screen rounded-md ${getCSS('outline', project.types[0])} shadow-[0_0px_4px]`}>
         </iframe>
       </main>
     )
