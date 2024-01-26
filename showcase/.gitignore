@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# environment variables
+**/.env
+
 # firebase variables
 **/firebase.config.js
 
@@ -17,6 +20,7 @@
 
 # production
 /build
+/.firebase
 
 # misc
 .DS_Store
