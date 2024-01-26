@@ -7,7 +7,7 @@ import { BiChevronDown } from 'react-icons/bi'
 import { collection, getDocs, doc } from 'firebase/firestore';
 import { db } from './services/firebase.config';
 
- function Home() {
+function Home() {
 
   // Firebase db variables
   const collectionRef = collection(db, "projects");
@@ -38,13 +38,13 @@ import { db } from './services/firebase.config';
   const filterProjects = (projectName, type) => {
     if (projectName != "" && type != "All" && type != "Filter by Type") {
       var f =  projects.filter(function(p) {
-        return p.type.includes(type) && p.title.toLowerCase().includes(projectName.toLowerCase());
+        return p.types.includes(type) && p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
       setFilteredProjects(f);
     } else if (type != "All" && type != "Filter by Type") {
       var f =  projects.filter(function(p) {
-        return p.type.includes(type);
+        return p.types.includes(type);
       });
 
       setFilteredProjects(f);
@@ -61,7 +61,7 @@ import { db } from './services/firebase.config';
 
   // Get project types list
   const grabTypes = (projects) => {
-    let allTypes = projects.map(p => p.type.split(","));
+    let allTypes = projects.map(p => p.types);
     let allTypesMerge = allTypes.flat(1);
     let typeList = [...new Set(allTypesMerge)].sort();
 
@@ -87,10 +87,10 @@ import { db } from './services/firebase.config';
         }
         return 0;
       });
-      setProjects(projectData)
-      setFilteredProjects(projectData)
-      grabTypes(projectData)
-      setIsLoading(false)
+      setProjects(projectData);
+      setFilteredProjects(projectData);
+      grabTypes(projectData);
+      setIsLoading(false);
     }).catch((err) => {
       console.log(err);
     })
@@ -162,14 +162,15 @@ import { db } from './services/firebase.config';
 
         <div className="flex flex-col w-full pt-5 pb-10 gap-7 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-          {filteredProjects.map(({ id, img, title, code_url, type }, index) =>
+          {filteredProjects.map(({ id, img, title, code_url, types }, index) =>
             <ProjectCard 
+              key={index}
               index={index}
               id={id}
               img={img}
               title={title}
               code_url={code_url}
-              type={type}
+              types={types}
             />
           )}
 

@@ -17,7 +17,7 @@ import { db } from './../services/firebase.config';
 
   // State variables
   const [isLoading, setIsLoading] = useState(true);
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   // Get specific project
   const getProjects = async () => {
@@ -26,9 +26,8 @@ import { db } from './../services/firebase.config';
       projectData = projectData.filter(function(p) {
         return p.id == pathname.slice(1);
       });
-      setProject(projectData[0])
-      console.log(projectData)
-      setIsLoading(false)
+      setProject(projectData[0]);
+      setIsLoading(false);
     }).catch((err) => {
       console.log(err);
     })
@@ -57,8 +56,8 @@ import { db } from './../services/firebase.config';
         <h1 className="pb-6 font-interBold text-center text-white text-xl">{project.title}</h1>
 
         <div className="grid grid-cols-2 pb-3 items-end justify-between text-white text-md font-interRegular">
-          <a href="/" className={`flex flex-row ${getCSS('hover', project.type.split(",")[0])}`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
-          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end ${getCSS('hover', project.type.split(",")[0])}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
+          <a href="/" className={`flex flex-row ${getCSS('hover', project.types[0])}`}><span className="pt-1 pr-2"><IoChevronBack /></span> Back</a>
+          <a href={project.code_url} target="_blank" className={`flex flex-row justify-end ${getCSS('hover', project.types[0])}`}><span className="pt-1 pr-2"><FaGithub /></span> Learn More</a>
         </div>
         <iframe 
           src={project.demo_url}
@@ -66,7 +65,7 @@ import { db } from './../services/firebase.config';
           frameborder="0" 
           scrolling="auto" 
           title="Project Demo"
-          className={`flex w-full min-h-screen rounded-md ${getCSS('outline', project.type.split(",")[0])} shadow-[0_0px_2px]`}>
+          className={`flex w-full min-h-screen rounded-md ${getCSS('outline', project.types[0])} shadow-[0_0px_2px]`}>
         </iframe>
       </main>
     )
