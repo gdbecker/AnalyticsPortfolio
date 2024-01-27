@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa';
 import styles from '../styles/dynamicStyles';
 
-function ProjectCard({ index, id, img, title, code_url, types }) {
+function ProjectCard({ id, img, title, code_url, types }) {
 
   // Get specific Tailwind class based on CSS and project types
   function getCSS(category, type) {

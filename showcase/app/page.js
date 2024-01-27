@@ -37,19 +37,19 @@ function Home() {
   // Filter by project name search and type
   const filterProjects = (projectName, type) => {
     if (projectName != "" && type != "All" && type != "Filter by Type") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.types.includes(type) && p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
       setFilteredProjects(f);
     } else if (type != "All" && type != "Filter by Type") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.types.includes(type);
       });
 
       setFilteredProjects(f);
     } else if (projectName != "") {
-      var f =  projects.filter(function(p) {
+      let f =  projects.filter(function(p) {
         return p.title.toLowerCase().includes(projectName.toLowerCase());
       });
 
@@ -77,7 +77,8 @@ function Home() {
   // Get all projects
   const getProjects = async () => {
     await getDocs(collectionRef).then((project) => {
-      let projectData = project.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      let projectData = project.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      projectData = projectData.filter((project) => project.active);
       projectData.sort(function (first, second) {
         if (first.title < second.title) {
           return -1;
