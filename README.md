@@ -1,6 +1,6 @@
 # Analytics Professional Work Portfolio
 
-This is a collection of selected projects I've worked on during my professional career so far, as well as a few Python data analysis projects. Before joining I had no prior experience in Power BI or any business intelligence development, and it has been wonderful to aid clients in discovering more about their data while also building aesthetically pleasing frontend dashboards to present insights. All PDFs are exports of .pbix files I've worked on, and the data is scrubbed/modified to protect client identities. See below for brief project summaries and check out each folder's README for more details. Thank you!
+This is a collection of selected projects I've worked on during my professional career so far, as well as a few Python data analysis projects. Just before Elliott Davis, I had no prior experience in Power BI or any business intelligence development, and it has been wonderful to aid clients in discovering more about their data while also building aesthetically pleasing frontend dashboards to present insights. All PDFs are exports of .pbix files I've worked on, and the data is scrubbed/modified to protect client identities. See below for brief project summaries and check out each folder's README for more details. Thank you!
 
 ## Links
 
@@ -8,32 +8,35 @@ This is a collection of selected projects I've worked on during my professional 
 
 ## Table of Contents
 
-- [Projects Overview](#projects-overview)
-  - [Airlines Delays Analysis](#airlines-delays-analysis)
-  - [Automated Medical Financial Reporting](#automated-medical-financial-reporting)
-  - [Client Proposal Dashboard](#client-proposal-dashboard)
-  - [Current Client Analytics Demo](#current-client-analytics-demo)
-  - [Cybersecurity Analytics Report](#cybersecurity-analytics-report)
-  - [Determinants of Earnings Analysis](#determinants-of-earnings-analysis)
-  - [External Webinar Dashboards](#external-webinar-dashboards)
-  - [Fatal Force Analysis](#fatal-force-analysis)
-  - [Group Case Study Demo](#group-case-study-demo)
-  - [Healthcare Ongoing Dashboard](#healthcare-ongoing-dashboard)
-  - [Healthcare Private Practice](#healthcare-private-practice)
-  - [Healthcare Proposal Dashboard](#healthcare-proposal-dashboard)
-  - [Internal Use Work Tracker](#internal-use-work-tracker)
-  - [Manufacturing Client Demo](#manufacturing-client-demo)
-  - [Manufacturing QuickBooks Analysis](#manufacturing-quickbooks-analysis)
-  - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
-  - [Penguins Analysis](#penguins-analysis)
-  - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
-  - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
-  - [QBO Payroll Import Automation](#qbo-payroll-import-automation)
-  - [Space Missions Analysis](#space-missions-analysis)
-- [Other Related Work](#other-related-work)
-  - [Case Study and Blog Posts](#case-study-and-blog-posts)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Analytics Professional Work Portfolio](#analytics-professional-work-portfolio)
+  - [Links](#links)
+  - [Table of Contents](#table-of-contents)
+  - [Projects Overview](#projects-overview)
+    - [Airlines Delays Analysis](#airlines-delays-analysis)
+    - [Automated Medical Financial Reporting](#automated-medical-financial-reporting)
+    - [Client Proposal Dashboard](#client-proposal-dashboard)
+    - [Current Client Analytics Demo](#current-client-analytics-demo)
+    - [Cybersecurity Analytics Report](#cybersecurity-analytics-report)
+    - [Determinants of Earnings Analysis](#determinants-of-earnings-analysis)
+    - [External Webinar Dashboards](#external-webinar-dashboards)
+    - [Fatal Force Analysis](#fatal-force-analysis)
+    - [Group Case Study Demo](#group-case-study-demo)
+    - [Healthcare Ongoing Dashboard](#healthcare-ongoing-dashboard)
+    - [Healthcare Private Practice](#healthcare-private-practice)
+    - [Healthcare Proposal Dashboard](#healthcare-proposal-dashboard)
+    - [Internal Use Work Tracker](#internal-use-work-tracker)
+    - [Manufacturing Client Demo](#manufacturing-client-demo)
+    - [Manufacturing QuickBooks Analysis](#manufacturing-quickbooks-analysis)
+    - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
+    - [Penguins Analysis](#penguins-analysis)
+    - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
+    - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
+    - [QBO Payroll Import Automation](#qbo-payroll-import-automation)
+    - [Space Missions Analysis](#space-missions-analysis)
+  - [Other Related Work](#other-related-work)
+    - [Case Study and Blog Posts](#case-study-and-blog-posts)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Projects Overview
 

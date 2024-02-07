@@ -114,7 +114,7 @@ function Home() {
 
         <h1 className="pb-9 font-interRegular text-justify text-white leading-7 md:w-[50vw]">
           This is a collection of selected projects I've worked on during my professional career so far, as well 
-          as a few Python data analysis projects. Before joining I had no prior experience in Power BI or any business intelligence 
+          as a few Python data analysis projects. Just before Elliott Davis, I had no prior experience in Power BI or any business intelligence 
           development, and it has been wonderful to aid clients in discovering more about their data while also building aesthetically 
           pleasing frontend dashboards to present insights. All PDFs in Github are exports of .pbix files I've worked on, and the data is 
           scrubbed/modified to protect client identities. Take a look and explore the projects I've worked on, view more details in Github
