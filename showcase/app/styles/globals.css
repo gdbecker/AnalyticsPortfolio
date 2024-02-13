@@ -18,6 +18,15 @@
   src: url(../../public/Inter-Medium.ttf);
 }
 
+/* Project Backgrounds */
+.bg-project {
+  transition: transform 0.2s;
+}
+
+.bg-project:hover {
+  transform: scale(1.2);
+}
+
 /* Link Underline Animation */
 .link-shadow-PowerBI::before {
   box-shadow: inset 0 -0.4em 0 0 hsla(44, 87%, 48%, 0.7);
