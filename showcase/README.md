@@ -15,3 +15,9 @@ Showcase website to display my analytics work across Power BI, Python, and Machi
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 - Mobile-first workflow
 - [VS Code](https://code.visualstudio.com/)
+
+## Author
+
+- Website - [Garrett Becker]()
+- Replit - [@gdbecker](https://replit.com/@gdbecker)
+- LinkedIn - [Garrett Becker](https://www.linkedin.com/in/garrett-becker-923b4a106/)
