@@ -13,6 +13,7 @@ This is a collection of selected projects I've worked on during my professional 
   - [Table of Contents](#table-of-contents)
   - [Projects Overview](#projects-overview)
     - [Airlines Delays Analysis](#airlines-delays-analysis)
+    - [Airlines Delays Power BI ML Project](#airlines-delays-power-bi-ml-project)
     - [Automated Medical Financial Reporting](#automated-medical-financial-reporting)
     - [Client Proposal Dashboard](#client-proposal-dashboard)
     - [Current Client Analytics Demo](#current-client-analytics-demo)
@@ -28,6 +29,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Manufacturing Client Demo](#manufacturing-client-demo)
     - [Manufacturing QuickBooks Analysis](#manufacturing-quickbooks-analysis)
     - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
+    - [ML Project Tutorial](#ml-project-tutorial)
     - [Penguins Analysis](#penguins-analysis)
     - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
     - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
@@ -43,6 +45,10 @@ This is a collection of selected projects I've worked on during my professional 
 ### [Airlines Delays Analysis](./Airlines%20Delays%20Analysis/)
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Airlines Delays](https://www.kaggle.com/datasets/ulrikthygepedersen/airlines-delay) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
+
+### [Airlines Delays Power BI ML Project](./Airlines%20Delays%20Power%20BI%20ML/)
+
+Beyond client projects and engagements I wanted to spend some time learning on my own other features Power BI has and what else it's capable of, and I stumbled across a couple of awesome tutorials from [Microsoft](https://learn.microsoft.com/en-us/power-bi/connect-data/service-tutorial-build-machine-learning-model) and [TheOyinbooke](https://www.youtube.com/watch?app=desktop&v=LTlaq9mpJj8) on YouTube, [Github link here](https://github.com/theoyinbooke/Machine-Learning-with-Power-BI/tree/main). This is a mini project that combines aspects of the [ML tutorial project](./ML%20Tutorial%20Project/) and my [Python airlines delays analysis](./Airlines%20Delays%20Analysis/).
 
 ### [Automated Medical Financial Reporting](./Automated%20Medical%20Financial%20Reporting/)
 
@@ -113,6 +119,10 @@ One of our current clients liked what we built for them so much that they wanted
 
 After working on several healthcare and private equity financial reports, it felt great delving into the operational side of a business, specifically in the manufacturing industry. For this one I was able to help our client explore and understand more from their existing data, drawing connections and insights they haven't seen before to better understand how they can train and equip their staff. This dashboard series explored questions like: "Are my employees improving over time?" "How are our different markets stack up against each other?" "Who among a supervisor's employees might need further training?"
 
+### [ML Project Tutorial](./ML%20Tutorial%20Project/)
+
+Beyond client projects and engagements I wanted to spend some time learning on my own other features Power BI has and what else it's capable of, and I stumbled across a couple of awesome tutorials from [Microsoft](https://learn.microsoft.com/en-us/power-bi/connect-data/service-tutorial-build-machine-learning-model) and [TheOyinbooke](https://www.youtube.com/watch?app=desktop&v=LTlaq9mpJj8) on YouTube, [Github link here](https://github.com/theoyinbooke/Machine-Learning-with-Power-BI/tree/main). This tutorial is a mini project that explored a few of the AI functions behind the scenes in Power Query as well as standing up a full ML model in Power BI Service's Power Query. 
+
 ### [Penguins Analysis](./Penguins%20Analysis/)
 
 Python data science project I came up with as a capstone to finish off Jose Portilla's course [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) on Udemy. This is a portfolio project to showcase what I learned from the course. The five part analysis and series of machine learning models digs into the [Penguins](https://www.kaggle.com/datasets/larsen0966/penguins) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and has a focused scope for each notebook.
@@ -143,6 +153,7 @@ Also check out a case study and a series of blog posts I contributed to Elliott 
 - [Blog Series: Power BI Best Practices - Data Engineering and Data Analysis Expressions](https://www.elliottdavis.com/microsoft-power-bi-best-practices-part-2/)
 - [Blog Series: Power BI Best Practices - Reports and Deployment](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-reports-and-deployment/)
 - [Blog Series: Power BI Best Practices - Security and Administration](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-security-and-administration/)
+- [Blog Series: Power BI Best Practices - Business Guidelines for Power BI Adoption](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-business-guidelines-for-power-bi-adoption/)
 
 ## Author
 
