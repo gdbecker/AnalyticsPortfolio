@@ -29,6 +29,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Manufacturing Client Demo](#manufacturing-client-demo)
     - [Manufacturing QuickBooks Analysis](#manufacturing-quickbooks-analysis)
     - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
+    - [Medical Billing Service Provider Dashboards](#medical-billing-service-provider-dashboards)
     - [ML Project Tutorial](#ml-project-tutorial)
     - [Penguins Analysis](#penguins-analysis)
     - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
@@ -118,6 +119,10 @@ One of our current clients liked what we built for them so much that they wanted
 ### [Manufacturing Supervisor Dashboards](./Manufacturing%20Supervisor%20Dashboards/)
 
 After working on several healthcare and private equity financial reports, it felt great delving into the operational side of a business, specifically in the manufacturing industry. For this one I was able to help our client explore and understand more from their existing data, drawing connections and insights they haven't seen before to better understand how they can train and equip their staff. This dashboard series explored questions like: "Are my employees improving over time?" "How are our different markets stack up against each other?" "Who among a supervisor's employees might need further training?"
+
+### [Medical Billing Service Provider Dashboards](./Medical%20Billing%20Service%20Provider%20Dashboards/)
+
+This was a fun one for many reasons: this client approached us in need of automating a handful of reports they already used, as well as developing a set of brand new ones that would help them clean up their business processes and discover new insights. It was also fantastic experience working on another healthcare industry-related project and finding out more about their business in each week we collaborated. It was very much a partnership between us from the beginning - making sure we understood their math & logic to work through the DAX challenges we faced, as well as diving into their forecasting. 
 
 ### [ML Project Tutorial](./ML%20Tutorial%20Project/)
 
