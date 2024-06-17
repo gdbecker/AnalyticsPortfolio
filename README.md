@@ -35,6 +35,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
     - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
     - [QBO Payroll Import Automation](#qbo-payroll-import-automation)
+    - [Real Estate Client Dashboards](#real-estate-client-dashboards)
     - [Space Missions Analysis](#space-missions-analysis)
   - [Other Related Work](#other-related-work)
     - [Case Study and Blog Posts](#case-study-and-blog-posts)
@@ -144,6 +145,9 @@ In a similar vein as [Automated Medical Financial Reporting](#automated-medical-
 
 There was an internal team whose work with a client had time-consuming processes to cleanse and prepare QuickBooks Online data. I was able to step in and help them save time on a few, including this preparing this payroll import, by using Power BI and Power Query.
 
+### [Real Estate Client Dashboards](./Real%20Estate%20Client%20Dashboards/)
+
+There was an existing real estate tax client of the firm that was interested in a reporting solution for a few of their KPIs, and my team was able to step in and help. After exploring several options of what we could do, we decided on building reports with a new platform we had not used yet, Google Looker, to increase our analytics and reporting capabilities.
 ### [Space Missions Analysis](./Space%20Missions%20Analysis/)
 
 Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. The analysis digs into the [Space Missions Launches](https://www.kaggle.com/datasets/sefercanapaydn/mission-launches) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.
