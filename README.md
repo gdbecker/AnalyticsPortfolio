@@ -162,7 +162,7 @@ Also check out a case study and a series of blog posts I contributed to Elliott 
 - [Blog Series: Power BI Best Practices - Data Engineering and Data Analysis Expressions](https://www.elliottdavis.com/microsoft-power-bi-best-practices-part-2/)
 - [Blog Series: Power BI Best Practices - Reports and Deployment](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-reports-and-deployment/)
 - [Blog Series: Power BI Best Practices - Security and Administration](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-security-and-administration/)
-- [Blog Series: Power BI Best Practices - Business Guidelines for Power BI Adoption](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-business-guidelines-for-power-bi-adoption/)
+- [Blog Series: Power BI Best Practices - Business Guidelines for Power BI Adoption](https://www.elliottdavis.com/insights/microsoft-power-bi-best-practices-lessons-learned-business-guidelines-for-power-bi-adoption)
 
 ## Author
 
