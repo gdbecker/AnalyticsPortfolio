@@ -15,6 +15,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Airlines Delays Analysis](#airlines-delays-analysis)
     - [Airlines Delays Power BI ML Project](#airlines-delays-power-bi-ml-project)
     - [Automated Medical Financial Reporting](#automated-medical-financial-reporting)
+    - [Bind News Analysis Project](#bind-news-analysis-project)
     - [Client Proposal Dashboard](#client-proposal-dashboard)
     - [Current Client Analytics Demo](#current-client-analytics-demo)
     - [Cybersecurity Analytics Report](#cybersecurity-analytics-report)
@@ -55,6 +56,10 @@ Beyond client projects and engagements I wanted to spend some time learning on m
 ### [Automated Medical Financial Reporting](./Automated%20Medical%20Financial%20Reporting/)
 
 This was a great challenge with my manager to develop a solution for a client who had a manual and very time-consuming reporting process and needed something more efficient - not just for automating, but also making Power BI look less like a traditional dashboard and more like a printed report. We were able to help this client cut down their time from 1.5 weeks to about 1 day of making this report. This project was also featured in [External Webinar Dashboards](#external-webinar-dashboards) and [Case Study and Blog Posts](#case-study-and-blog-posts).
+
+### [Bind News Analysis Project](./Bing%20News%20Analysis%20Project/)
+
+Coming Soon
 
 ### [Client Proposal Dashboard](./Client%20Proposal%20Dashboard/)
 
