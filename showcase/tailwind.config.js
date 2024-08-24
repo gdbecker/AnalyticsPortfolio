@@ -24,6 +24,8 @@ module.exports = {
       "darkRedTransparent": "hsla(343, 100%, 39%, 0.7)",
       "green": "#34a853",
       "greenTransparent": "hsla(136.03, 53%, 43%, 0.7)",
+      "greenFabric": "#92eba0",
+      "greenFabricTransparent": "hsla(129, 69%, 75%, 0.7)",
     },
     extend: {
       fontFamily: {

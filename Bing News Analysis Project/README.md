@@ -1,10 +1,12 @@
 # Bing News Analysis Project
 
+!["Bing"](./Design%20Files/Bing_Logo_2.png)
+
 As part of preparing and learning for Microsoft's DP-600 certification, Fabric Analytics Engineer Associate, I knew I wanted to get practical project experience. I am really happy to have found this complete end-to-end project course on Udemy. Mr. K walks you through a complete data and analytics engineering project from start to finish, constructing a sustainable pipeline from data source to report, and even adds in alerts at the end with overall testing procedures. I wanted to highlight this starter project and other personal Fabric work to showcase what I'm learning and exciting capabilities of analytics engineering.
 
-### [Live Demo]()
+### [Live Demo](https://app.fabric.microsoft.com/view?r=eyJrIjoiN2QyOGI1ZTQtNzI5MS00MDM4LWE1NDEtYTA0ZDM0MzlkODQwIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
-!["Report"](./Client%20Proposal%20Dashboard.jpg)
+!["Report"](./news-dashboard_Page_1.jpg)
 
 ## Project Details
 - [Bing News Analysis Project](#bing-news-analysis-project)
@@ -15,7 +17,6 @@ As part of preparing and learning for Microsoft's DP-600 certification, Fabric A
   - [Tools Used](#tools-used)
   - [Data Engineering Pipeline](#data-engineering-pipeline)
   - [Data Model](#data-model)
-  - [What I learned](#what-i-learned)
   - [Useful Resources](#useful-resources)
   - [Udemy Course Details](#udemy-course-details)
     - [Certificate](#certificate)
@@ -51,11 +52,36 @@ Another new notebook was made called "news-sentiment-analysis", and here is wher
 !["5_Lakehouse"](./Process/5_Lakehouse.JPG)
 *New Lakehouse view with both delta tables*
 
-Next up was creating a Power BI report with the cleaned and analyzed Bing data.
+!["6_DataModel"](./Process/6_DataModel.JPG)
+*Semantic model after loading into the Lakehouse*
+
+Next up was creating a Power BI report with the cleaned and analyzed Bing data. I started out by aut-generating a report from the core semantic model called "news-dashboard" that included the cleaned delta table with sentiment labels from the notebook machine learning model. Another report page was developed that included measures added to the semantic model (percentages for how many articles are positive, neutral, or negative sentiments) and a table with key data fields. The auto-generated report page was redesigned as well as the custom page with a Bing .json theme I made to match the feel for the product.
+
+!["7_Dashboard1"](./Process/7_Dashboard1.jpg)
+*Custom report page*
+
+!["8_Dashboard2"](./Process/8_Dashboard2.jpg)
+*Auto-generated report page*
+
+Once the report pages were designed and built, one of the final steps for the project was to complete the Data Factory pipeline. Going back to "news-ingestion-pipeline", two more activities were added upon completion of the previous steps: both of them notebook steps. One was for the first notebook called "process-bing-news" and the second for "news-sentiment-analysis". A parameter was created for the first "Copy data" activity to allow flexibility for which search term to use when using the GET request for the Bing API.
+
+!["9_DataFactory"](./Process/9_DataFactory.JPG)
+*Completed Data Factory pipeline*
+
+The final step was to add a trigger with Data Activator from the custom Power BI report page. I established an alert for the measure calculating the percentage of positive articles by clicking on the card visual, and then selecting "Set alert". A Reflex item was created in another pane that allows you to configure the trigger settings for the visual and where to send the alert notification, whether that's through email or a Teams message. For this one, I chose Teams message and then selected the Reflex item back in the workspace to view the details. A time series trend up top shows when triggers happened, and many other configuration and monitoring tools are here, including who to send notifications to.
+
+!["10_DataActivator"](./Process/10_DataActivator.JPG)
+*Data Activator trigger for when the percentage of positive articles is greater than 0*
+
+An end-to-end test was conducted to make sure the entire analytics solution performed as expected, from running the pipeline with a new search term in the parameter (such as "sports" or "movies") and checking out Reflex Data Activator and sending a test alert. This was an awesome project to become more comfortable with Fabric and build an analytics project from scratch!
+
+!["11_WorkspaceItems"](./Process/11_WorkspaceItems.JPG)
+*Workspace items for this project*
 
 Files included for view in this project:
-- Bing News Analysis Project.pdf
-  - Result analysis dashboard, showcasing latest articles and sentiment labels
+- **Bing News Analysis Project.pdf**: Result analysis dashboard, showcasing latest articles and sentiment labels
+- **process-bing-news.ipynb**: PySpark notebook for processing the .json news data from the API
+- **news-sentiment-analysis.ipynb**: PySpark notebook for using an Azure Synapse sentiment machine learning model
 
 ## By the Numbers
 
@@ -69,6 +95,7 @@ Files included for view in this project:
 
 - Azure
   - Bing News Search API (data source)
+  - Synapse Machine Learning
 - Fabric 
   - Lakehouse
   - Notebook (PySpark and T-SQL)
@@ -84,23 +111,7 @@ Files included for view in this project:
 
 ## Data Model
 
-!["Data Model"](./Client%20Proposal%20Dashboard%20Data%20Model.JPG)
-
-## What I learned
-
-Below are some code snippets I'm proud of from this project:
-
-```DAX
-
-```
-
-```DAX
-
-```
-
-```DAX
-
-```
+!["Data Model"](./Bing%20News%20Analysis%20Project%20Data%20Model.JPG)
 
 ## Useful Resources
 
@@ -110,9 +121,9 @@ Below are some code snippets I'm proud of from this project:
 
 Mr. K Talk Tech's [Microsoft Fabric: End to End Data Engineering Project course on Udemy](https://www.udemy.com/course/microsoft-fabric-end-to-end-data-engineering-project).
 
-### [Certificate]()
+### [Certificate](https://www.udemy.com/certificate/UC-c20c6dfd-9a82-403f-a807-34634becab8e/)
 
-!["Certificate"](./Certificate.jpg)
+!["Certificate"](./Udemy%20Documents/Certificate.jpg)
 
 ### Course Details
 
