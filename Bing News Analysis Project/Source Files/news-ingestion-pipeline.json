@@ -1,0 +1,226 @@
+{
+	"name": "news-ingestion-pipeline",
+	"objectId": "ebe75bc7-41c7-45c2-adc3-25e50025c02a",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy latest news",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"additionalHeaders": {
+							"Ocp-Apim-Subscription-Key": "4b3d5aac88cb4ecfa08481d593571f6a"
+						},
+						"paginationRules": {
+							"supportRFC5988": "true"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "RestResource",
+							"typeProperties": {
+								"relativeUrl": {
+									"value": "?q=@{pipeline().parameters.search_term}&count=100&freshness=Day&category=en-US",
+									"type": "Expression"
+								}
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "069da0bf-461a-4ac2-9350-32167934b1a4"
+							}
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "bing_lake_db",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "23e2d9b3-2701-485b-9bb1-908d12dfe2da",
+										"artifactId": "12e89eb5-712f-4690-b302-7f1c61ea3c36",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "Json",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "bing-latest-news.json"
+								}
+							},
+							"schema": {}
+						}
+					},
+					"enableStaging": false
+				}
+			},
+			{
+				"name": "Data transformation",
+				"type": "TridentNotebook",
+				"dependsOn": [
+					{
+						"activity": "Copy latest news",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"notebookId": "09616c67-df64-4d65-be7d-17d9806cdfdd",
+					"workspaceId": "23e2d9b3-2701-485b-9bb1-908d12dfe2da"
+				}
+			},
+			{
+				"name": "Sentiment analysis",
+				"type": "TridentNotebook",
+				"dependsOn": [
+					{
+						"activity": "Data transformation",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"notebookId": "d4159ef2-b9a6-45b2-b463-f6b7ecae4d4c",
+					"workspaceId": "23e2d9b3-2701-485b-9bb1-908d12dfe2da"
+				}
+			},
+			{
+				"name": "Copy data as csv",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Sentiment analysis",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "LakehouseTableSource",
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "bing_lake_db",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "23e2d9b3-2701-485b-9bb1-908d12dfe2da",
+										"artifactId": "12e89eb5-712f-4690-b302-7f1c61ea3c36",
+										"rootFolder": "Tables"
+									}
+								}
+							},
+							"type": "LakehouseTable",
+							"schema": [],
+							"typeProperties": {
+								"table": "tbl_sentiment_analysis"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "bing_lake_db",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "23e2d9b3-2701-485b-9bb1-908d12dfe2da",
+										"artifactId": "12e89eb5-712f-4690-b302-7f1c61ea3c36",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "Download.csv"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\\",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			}
+		],
+		"parameters": {
+			"search_term": {
+				"type": "string",
+				"defaultValue": "latest news"
+			}
+		},
+		"lastModifiedByObjectId": "d66f10cd-daab-40af-841c-0f1b49df5934",
+		"lastPublishTime": "2024-08-24T17:51:53Z"
+	}
+}

@@ -1,0 +1,84 @@
+﻿{
+	"name": "JoshuaProject",
+	"dataColors": [
+		"#f3ece4",
+		"#239c8c",
+		"#f5b433",
+		"#ec7424",
+		"#24bcdc",
+		"#1cbcdc",
+		"#b8b458",
+		"#5498c0"
+	],
+	"background": "#FFFFFF",
+	"foreground": "#070f25",
+	"tableAccent": "#0F1934",
+	"bad": "#E57200",
+	"neutral": "#75787B",
+	"good": "#00AB8E",
+	"minimum": "#0082BA",
+	"center": "#A59C94",
+	"maximum": "#004C97",
+	"textClasses": {
+		"label": {
+			"color": "#000000",
+			"fontFace": "Trebuchet MS",
+			"fontSize": 9
+		},
+		"callout": {
+			"color": "#003594",
+			"fontFace": "Trebuchet MS",
+			"fontSize": 16
+		},
+		"title": {
+			"color": "#003594",
+			"fontFace": "Trebuchet MS",
+			"fontSize": 10
+		},
+		"header": {
+			"color": "#003594",
+			"fontFace": "Trebuchet MS",
+			"fontSize": 10
+		}
+	},
+	"visualStyles": {
+		"*": {
+			"*": {
+				"visualTooltip": [
+					{
+						"titleFontColor": {
+							"solid": {
+								"color": "#FFFFFF"
+							}
+						},
+						"valueFontColor": {
+							"solid": {
+								"color": "#FFFFFF"
+							}
+						}
+					}
+				],
+				"outspacePane": [
+					{
+						"titleSize": 10,
+						"headerSize": 10,
+						"checkboxAndApplyColor": {
+							"solid": {
+								"color": "#E57200"
+							}
+						}
+					}
+				]
+			}
+		},
+		"page": {
+			"*": {
+				"background": [
+					{
+						"transparency": 100
+					}
+				]
+			}
+		}
+	}
+}

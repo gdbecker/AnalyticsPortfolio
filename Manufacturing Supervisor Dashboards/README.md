@@ -7,21 +7,23 @@ After working on several healthcare and private equity financial reports, it fel
 !["Report"](./Manufacturing%20Supervisor%20Dashboards.jpg)
 
 ## Project Details
-- [Details](#details)
-- [By the Numbers](#by-the-numbers)
-- [Tools Used](#tools-used)
-- [Data Engineering Pipeline](#data-engineering-pipeline)
-- [Data Model](#data-model)
-- [What I learned](#what-i-learned)
-- [Useful resources](#useful-resources)
+- [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
+    - [Live Demo](#live-demo)
+  - [Project Details](#project-details)
+  - [Details](#details)
+  - [By the Numbers](#by-the-numbers)
+  - [Tools Used](#tools-used)
+  - [Data Engineering Pipeline](#data-engineering-pipeline)
+  - [Data Model](#data-model)
+  - [What I learned](#what-i-learned)
+  - [Useful Resources](#useful-resources)
 
 ## Details
 
 Similar to the Manufacturing Client Demo project, this one started out by exploring the client's existing data and reports. What did they most want to see and understand? What data sources did they have, could I connect to them directly, and how could I develop the best long-term solution given what I had? After developing an initial set of operational reports, more individuals from the client began attending meetings to give feedback so the set of reports shown here was the result of taking an iterative approach. Taking it a step at a time to first present what was possible and then fine-tuning it further worked out wonderfully. I especially enjoyed figuring out how to display the trend indicator arrows on a couple of the pages for each employee, and they change depending on if you want to see their trends for the past two months or year-to-date. It was a great challenge to learn more about this client's business to be able to accurately and ethically display their data for greater understanding. 
 
 Files included for view in this project:
-- Manufacturing Supervisor Dashboard.pdf
-  - Masked file version that was developed
+- **Manufacturing Supervisor Dashboard.pdf**: Masked file version that was developed
 
 ## By the Numbers
 

@@ -7,21 +7,23 @@ Earlier on in my time at Elliott Davis my manager was looking for a dashboard pa
 !["Report"](./Group%20Case%20Study%20Demo.jpg)
 
 ## Project Details
-- [Details](#details)
-- [By the Numbers](#by-the-numbers)
-- [Tools Used](#tools-used)
-- [Data Engineering Pipeline](#data-engineering-pipeline)
-- [Data Model](#data-model)
-- [What I learned](#what-i-learned)
-- [Useful resources](#useful-resources)
+- [Group Case Study Demo](#group-case-study-demo)
+    - [Live Demo](#live-demo)
+  - [Project Details](#project-details)
+  - [Details](#details)
+  - [By the Numbers](#by-the-numbers)
+  - [Tools Used](#tools-used)
+  - [Data Engineering Pipeline](#data-engineering-pipeline)
+  - [Data Model](#data-model)
+  - [What I learned](#what-i-learned)
+  - [Useful Resources](#useful-resources)
 
 ## Details
 
 The guidelines on this one were loose for the purpose of being able to show anything we had learned in the app up to this point, with the goal of showcasing Power BI's capabilities as best as possible. My manager wanted each of us to choose a different industry to form dummy data in and then create visuals from, so we picked construction, retail and e-commerce as our focal points. Each file had a different style, so when I combined them altogether I established a theme to match Elliott Davis's branding as close as possible. It was a great challenge to start figuring out the Advanced Editor in the Power Query backend in order to copy the data pipelines and sources from other files into one, as well as making sure the three data models were copied exactly.
 
 Files included for view in this project:
-- Group Case Study Demo.pdf
-  - All of our separate demos put into one file
+- **Group Case Study Demo.pdf**: All of our separate demos put into one file
 
 ## By the Numbers
 

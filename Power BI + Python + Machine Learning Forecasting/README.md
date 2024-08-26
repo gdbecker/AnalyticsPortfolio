@@ -7,13 +7,16 @@ My director asked one of my colleagues and I to try building a machine learning 
 !["Report"](./Power%20BI%20+%20Python%20+%20Machine%20Learning%20Forecasting.jpg)
 
 ## Project Details
-- [Details](#details)
-- [By the Numbers](#by-the-numbers)
-- [Tools Used](#tools-used)
-- [Data Engineering Pipeline](#data-engineering-pipeline)
-- [Data Model](#data-model)
-- [What I learned](#what-i-learned)
-- [Useful resources](#useful-resources)
+- [Power BI + Python + Machine Learning Forecasting](#power-bi--python--machine-learning-forecasting)
+    - [Live Demo](#live-demo)
+  - [Project Details](#project-details)
+  - [Details](#details)
+  - [By the Numbers](#by-the-numbers)
+  - [Tools Used](#tools-used)
+  - [Data Engineering Pipeline](#data-engineering-pipeline)
+  - [Data Model](#data-model)
+  - [What I learned](#what-i-learned)
+  - [Useful Resources](#useful-resources)
 
 ## Details
 
@@ -27,9 +30,9 @@ Economic datasets gathered with Python:
 - [Population from US Census Bureau](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
 
 Files included for view in this project:
-- Power BI + Python + Machine Learning Forecasting.pdf
-- 01 - Revenue - Linear Regression.ipynb (Jupyter notebook containing linear regression ML code)
-- 02 - Revenue - KNN Regression.ipynb (Jupyter notebook containing KNN regression ML code)
+- **Power BI + Python + Machine Learning Forecasting.pdf**
+- **01 - Revenue - Linear Regression.ipynb**: Jupyter notebook containing linear regression ML code
+- **02 - Revenue - KNN Regression.ipynb**: Jupyter notebook containing KNN regression ML code
 
 ## By the Numbers
 

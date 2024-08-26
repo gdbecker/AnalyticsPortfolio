@@ -15,7 +15,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Airlines Delays Analysis](#airlines-delays-analysis)
     - [Airlines Delays Power BI ML Project](#airlines-delays-power-bi-ml-project)
     - [Automated Medical Financial Reporting](#automated-medical-financial-reporting)
-    - [Bind News Analysis Project](#bind-news-analysis-project)
+    - [Bing News Analysis Project](#bing-news-analysis-project)
     - [Client Proposal Dashboard](#client-proposal-dashboard)
     - [Current Client Analytics Demo](#current-client-analytics-demo)
     - [Cybersecurity Analytics Report](#cybersecurity-analytics-report)
@@ -27,6 +27,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Healthcare Private Practice](#healthcare-private-practice)
     - [Healthcare Proposal Dashboard](#healthcare-proposal-dashboard)
     - [Internal Use Work Tracker](#internal-use-work-tracker)
+    - [Joshua Project Analytics](#joshua-project-analytics)
     - [Manufacturing Client Demo](#manufacturing-client-demo)
     - [Manufacturing QuickBooks Analysis](#manufacturing-quickbooks-analysis)
     - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
@@ -37,6 +38,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
     - [QBO Payroll Import Automation](#qbo-payroll-import-automation)
     - [Real Estate Client Dashboards](#real-estate-client-dashboards)
+    - [Recreation.gov Analytics](#recreationgov-analytics)
     - [Space Missions Analysis](#space-missions-analysis)
   - [Other Related Work](#other-related-work)
     - [Case Study and Blog Posts](#case-study-and-blog-posts)
@@ -57,9 +59,9 @@ Beyond client projects and engagements I wanted to spend some time learning on m
 
 This was a great challenge with my manager to develop a solution for a client who had a manual and very time-consuming reporting process and needed something more efficient - not just for automating, but also making Power BI look less like a traditional dashboard and more like a printed report. We were able to help this client cut down their time from 1.5 weeks to about 1 day of making this report. This project was also featured in [External Webinar Dashboards](#external-webinar-dashboards) and [Case Study and Blog Posts](#case-study-and-blog-posts).
 
-### [Bind News Analysis Project](./Bing%20News%20Analysis%20Project/)
+### [Bing News Analysis Project](./Bing%20News%20Analysis%20Project/)
 
-Coming Soon
+As part of preparing and learning for Microsoft's DP-600 certification, Fabric Analytics Engineer Associate, I knew I wanted to get practical project experience. I am really happy to have found this complete end-to-end project course on Udemy. Mr. K walks you through a complete data and analytics engineering project from start to finish, constructing a sustainable pipeline from data source to report, and even adds in alerts at the end with overall testing procedures. I wanted to highlight this starter project and other personal Fabric work to showcase what I'm learning and exciting capabilities of analytics engineering.
 
 ### [Client Proposal Dashboard](./Client%20Proposal%20Dashboard/)
 
@@ -114,6 +116,10 @@ Instead of a generic demo dashboard, my manager needed a set of dashboard report
 
 This was a great challenge because instead of creating dashboards for clients, now I was tasked with helping to develop a work tracker for internal use. Two of my colleagues worked on this one before I hopped on, and from their work I helped communicate with a few members of upper level leadership to bring it home. The overall idea was to gradually replace the existing solution to track work over time that was housed on one platform, and move it into Power BI - with the goal of course to create something even better. Many people from different service lines and divisions would be using this tool so the end result needed to be flexible but specific enough for their needs.
 
+### [Joshua Project Analytics](./Joshua%20Project%20Analytics/)
+
+Coming Soon
+
 ### [Manufacturing Client Demo](./Manufacturing%20Client%20Demo/)
 
 It's always interesting to discover what new challenge you might come across when it comes to a Power BI project - no two are the same. The main goal for this engagement was to redesign and build new reports from the client's existing Power BI environment, so there was less data modeling and engineering involved as much as a greater focus on what reports they currently had available and what other views/functionalities they would like to see. I'm thankful for this one to continue practicing making an effective and beautiful user experience as well as effectively communicating feedback with clients for delivering a better product and service.
@@ -153,6 +159,11 @@ There was an internal team whose work with a client had time-consuming processes
 ### [Real Estate Client Dashboards](./Real%20Estate%20Client%20Dashboards/)
 
 There was an existing real estate tax client of the firm that was interested in a reporting solution for a few of their KPIs, and my team was able to step in and help. After exploring several options of what we could do, we decided on building reports with a new platform we had not used yet, Google Looker, to increase our analytics and reporting capabilities.
+
+### [Recreation.gov Analytics](./Recreation.gov%20Analytics/)
+
+I wanted to get more hands-on Fabric analytics engineering project work, and thought it would be fun to create solutions for topics I'm passionate about. Nature is one of the best gifts we have, and I'm grateful for all the amazing ways we can get out there and explore, discover new trails and enjoy the world around us. Hiking mountains is one of my favorite things! In 2023 I actually used Recreation.gov to book a ticket for Multnomah Falls in Oregon, not knowing that they actually had a public API I could use with the account I made. For this project I dug into their documentation and explored their data, and built an concept analytics solution that focuses on how someone at the organization could funnel data into a stable and scalable data model, and then build reports they could share either with the public or use internally. 
+
 ### [Space Missions Analysis](./Space%20Missions%20Analysis/)
 
 Python data science project from Anglea Yu's course [100 Days of Code: Python on Udemy](https://www.udemy.com/course/100-days-of-code/). This is a professional portfolio project to showcase what I learned from the 100 day challenge. The analysis digs into the [Space Missions Launches](https://www.kaggle.com/datasets/sefercanapaydn/mission-launches) dataset from Kaggle. Loads data in, cleans as necessary for NaN or null values, and explores the data via a series of questions.

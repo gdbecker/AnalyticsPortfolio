@@ -1,0 +1,588 @@
+{
+	"name": "Data Ingestion Pipeline",
+	"objectId": "3a8fb2fa-f6a1-4659-943e-55232e26daa3",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy RecArea Data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"additionalHeaders": {
+							"apikey": "89160c01-b6d6-4112-a6c8-7a9f1d693944"
+						},
+						"paginationRules": {
+							"supportRFC5988": "true"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "RestResource",
+							"typeProperties": {
+								"relativeUrl": ""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "26af4b6c-12cc-4aa4-a92a-d35e11b8aa38"
+							}
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "Recreation_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+										"artifactId": "57295ad7-476c-4050-80d4-def33926306d",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "Json",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "RecAreaData.json"
+								}
+							},
+							"schema": {}
+						}
+					},
+					"enableStaging": false
+				}
+			},
+			{
+				"name": "Clean RecArea Data and Save",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "Copy RecArea Data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "bcf8472a-8214-4b06-87d6-abbcefd12d00",
+					"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+					"notifyOption": "NoNotification"
+				}
+			},
+			{
+				"name": "Select all RecAreaID",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Clean RecArea Data and Save",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT RecAreaID FROM dbo.RecArea_Data;",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"firstRowOnly": false,
+					"datasetSettings": {
+						"annotations": [],
+						"type": "AzureSqlTable",
+						"schema": [],
+						"typeProperties": {
+							"database": "Recreation_Lakehouse"
+						},
+						"externalReferences": {
+							"connection": "a23cd7ac-602c-4582-9e40-e305efc6a51e"
+						}
+					}
+				}
+			},
+			{
+				"name": "Get all facilities and activities per RecArea",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Select all RecAreaID",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Select all RecAreaID').output.value",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Set RecArea variable",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"typeProperties": {
+								"variableName": "RecAreaID",
+								"value": {
+									"value": "@item().RecAreaID",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Copy Facility Data",
+							"type": "Copy",
+							"dependsOn": [
+								{
+									"activity": "Set RecArea variable",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"typeProperties": {
+								"source": {
+									"type": "RestSource",
+									"httpRequestTimeout": "00:01:40",
+									"requestInterval": "00.00:00:00.010",
+									"requestMethod": "GET",
+									"additionalHeaders": {
+										"apikey": "89160c01-b6d6-4112-a6c8-7a9f1d693944"
+									},
+									"paginationRules": {
+										"supportRFC5988": "true"
+									},
+									"datasetSettings": {
+										"annotations": [],
+										"type": "RestResource",
+										"typeProperties": {
+											"relativeUrl": {
+												"value": "@concat(variables('RecAreaID'),'/facilities')",
+												"type": "Expression"
+											}
+										},
+										"schema": [],
+										"externalReferences": {
+											"connection": "83ee9ae2-112a-4140-bedb-edefbef55d6e"
+										}
+									}
+								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "LakehouseWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings"
+									},
+									"datasetSettings": {
+										"annotations": [],
+										"linkedService": {
+											"name": "Recreation_Lakehouse",
+											"properties": {
+												"annotations": [],
+												"type": "Lakehouse",
+												"typeProperties": {
+													"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+													"artifactId": "57295ad7-476c-4050-80d4-def33926306d",
+													"rootFolder": "Files"
+												}
+											}
+										},
+										"type": "Json",
+										"typeProperties": {
+											"location": {
+												"type": "LakehouseLocation",
+												"fileName": {
+													"value": "@concat(variables('RecAreaID'),'.json')",
+													"type": "Expression"
+												},
+												"folderPath": "FacilityData"
+											}
+										},
+										"schema": {}
+									}
+								},
+								"enableStaging": false
+							}
+						},
+						{
+							"name": "Copy Activity Data",
+							"type": "Copy",
+							"dependsOn": [
+								{
+									"activity": "Copy Facility Data",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"typeProperties": {
+								"source": {
+									"type": "RestSource",
+									"httpRequestTimeout": "00:01:40",
+									"requestInterval": "00.00:00:00.010",
+									"requestMethod": "GET",
+									"additionalHeaders": {
+										"apikey": "89160c01-b6d6-4112-a6c8-7a9f1d693944"
+									},
+									"paginationRules": {
+										"supportRFC5988": "true"
+									},
+									"datasetSettings": {
+										"annotations": [],
+										"type": "RestResource",
+										"typeProperties": {
+											"relativeUrl": {
+												"value": "@concat(variables('RecAreaID'),'/activities')",
+												"type": "Expression"
+											}
+										},
+										"schema": [],
+										"externalReferences": {
+											"connection": "83ee9ae2-112a-4140-bedb-edefbef55d6e"
+										}
+									}
+								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "LakehouseWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings"
+									},
+									"datasetSettings": {
+										"annotations": [],
+										"linkedService": {
+											"name": "Recreation_Lakehouse",
+											"properties": {
+												"annotations": [],
+												"type": "Lakehouse",
+												"typeProperties": {
+													"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+													"artifactId": "57295ad7-476c-4050-80d4-def33926306d",
+													"rootFolder": "Files"
+												}
+											}
+										},
+										"type": "Json",
+										"typeProperties": {
+											"location": {
+												"type": "LakehouseLocation",
+												"fileName": {
+													"value": "@concat(variables('RecAreaID'),'.json')",
+													"type": "Expression"
+												},
+												"folderPath": "ActivityData"
+											}
+										},
+										"schema": {}
+									}
+								},
+								"enableStaging": false
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Clean Activity Data and Save",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "Get all facilities and activities per RecArea",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "d7a3805a-88e2-4518-8f3b-1fad5eebce19",
+					"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+					"notifyOption": "NoNotification"
+				}
+			},
+			{
+				"name": "Clean Facility Data and Save",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "Get all facilities and activities per RecArea",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "5522ba5b-11bb-40c4-9f2e-473b4f4dbe9e",
+					"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+					"notifyOption": "NoNotification"
+				}
+			},
+			{
+				"name": "Select all FacilityID",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Clean Facility Data and Save",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT DISTINCT FacilityID\nFROM dbo.Facility_Data;",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"firstRowOnly": false,
+					"datasetSettings": {
+						"annotations": [],
+						"type": "AzureSqlTable",
+						"schema": [],
+						"typeProperties": {
+							"database": "Recreation_Lakehouse"
+						},
+						"externalReferences": {
+							"connection": "a23cd7ac-602c-4582-9e40-e305efc6a51e"
+						}
+					}
+				}
+			},
+			{
+				"name": "Get all Campsites per Facility",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Select all FacilityID",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Select all FacilityID').output.value",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Set FacilityID variable",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"typeProperties": {
+								"variableName": "FacilityID",
+								"value": {
+									"value": "@item().FacilityID",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Copy Campsite Data",
+							"type": "Copy",
+							"dependsOn": [
+								{
+									"activity": "Set FacilityID variable",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"typeProperties": {
+								"source": {
+									"type": "RestSource",
+									"httpRequestTimeout": "00:01:40",
+									"requestInterval": "00.00:00:00.010",
+									"requestMethod": "GET",
+									"additionalHeaders": {
+										"apikey": "89160c01-b6d6-4112-a6c8-7a9f1d693944"
+									},
+									"paginationRules": {
+										"supportRFC5988": "true"
+									},
+									"datasetSettings": {
+										"annotations": [],
+										"type": "RestResource",
+										"typeProperties": {
+											"relativeUrl": {
+												"value": "@concat(variables('FacilityID'),'/campsites')",
+												"type": "Expression"
+											}
+										},
+										"schema": [],
+										"externalReferences": {
+											"connection": "074517f1-4290-4d06-bca8-b7b11a8dd66c"
+										}
+									}
+								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "LakehouseWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings"
+									},
+									"datasetSettings": {
+										"annotations": [],
+										"linkedService": {
+											"name": "Recreation_Lakehouse",
+											"properties": {
+												"annotations": [],
+												"type": "Lakehouse",
+												"typeProperties": {
+													"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+													"artifactId": "57295ad7-476c-4050-80d4-def33926306d",
+													"rootFolder": "Files"
+												}
+											}
+										},
+										"type": "Json",
+										"typeProperties": {
+											"location": {
+												"type": "LakehouseLocation",
+												"fileName": {
+													"value": "@concat(variables('FacilityID'),'.json')",
+													"type": "Expression"
+												},
+												"folderPath": "CampsiteData"
+											}
+										},
+										"schema": {}
+									}
+								},
+								"enableStaging": false
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Clean Campsite Data and Save",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "Get all Campsites per Facility",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "6cba48f5-ba22-4587-b8c8-91c4c22f9543",
+					"workspaceId": "fb8c5c0a-2620-4db1-9e75-976ad2f69b69",
+					"notifyOption": "NoNotification"
+				}
+			}
+		],
+		"variables": {
+			"RecAreaID": {
+				"type": "String"
+			},
+			"FacilityID": {
+				"type": "String"
+			}
+		},
+		"lastModifiedByObjectId": "d66f10cd-daab-40af-841c-0f1b49df5934",
+		"lastPublishTime": "2024-08-26T01:02:50Z"
+	}
+}

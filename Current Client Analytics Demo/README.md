@@ -7,21 +7,23 @@ After working through Healthcare Practice Demos, I was able to borrow quite of a
 !["Report"](./Current%20Client%20Analytics%20Demo.jpg)
 
 ## Project Details
-- [Details](#details)
-- [By the Numbers](#by-the-numbers)
-- [Tools Used](#tools-used)
-- [Data Engineering Pipeline](#data-engineering-pipeline)
-- [Data Model](#data-model)
-- [What I learned](#what-i-learned)
-- [Useful resources](#useful-resources)
+- [Current Client Analytics Demo](#current-client-analytics-demo)
+    - [Live Demo](#live-demo)
+  - [Project Details](#project-details)
+  - [Details](#details)
+  - [By the Numbers](#by-the-numbers)
+  - [Tools Used](#tools-used)
+  - [Data Engineering Pipeline](#data-engineering-pipeline)
+  - [Data Model](#data-model)
+  - [What I learned](#what-i-learned)
+  - [Useful Resources](#useful-resources)
 
 ## Details
 
 This one was a great encouragement for me to make sure I stay diligent in documenting and saving all the work I do because sometimes you never know when it might need to be dusted off again. I first worked on this project early on in my time at Elliott Davis, but the dashboard set didn't move past my creating and sharing it with our internal lead on the enagegment. About a year later interest was sparked once more, and I was able to pull this back out, get myself reacquainted with what I made and make further adjustments and updates. Now our internal leader wants to use this dashboard set as a monthly addendum to his existing client engagement, which not only adds greater value for them but also gets the word out on the significant insights that can be drawn from data analytics. 
 
 Files included for view in this project:
-- Current Client Analytics Demo.pdf
-  - Masked file version that was developed
+- **Current Client Analytics Demo.pdf**: Masked file version that was developed
 
 ## By the Numbers
 

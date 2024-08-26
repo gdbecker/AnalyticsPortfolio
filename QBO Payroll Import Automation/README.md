@@ -7,13 +7,16 @@ There was an internal team whose work with a client had time-consuming processes
 !["Report"](./QBO%20Payroll%20Import%20Automation.jpg)
 
 ## Project Details
-- [Details](#details)
-- [By the Numbers](#by-the-numbers)
-- [Tools Used](#tools-used)
-- [Data Engineering Pipeline](#data-engineering-pipeline)
-- [Data Model](#data-model)
-- [What I learned](#what-i-learned)
-- [Useful resources](#useful-resources)
+- [QBO Payroll Import Automation](#qbo-payroll-import-automation)
+    - [Live Demo](#live-demo)
+  - [Project Details](#project-details)
+  - [Details](#details)
+  - [By the Numbers](#by-the-numbers)
+  - [Tools Used](#tools-used)
+  - [Data Engineering Pipeline](#data-engineering-pipeline)
+  - [Data Model](#data-model)
+  - [What I learned](#what-i-learned)
+  - [Useful Resources](#useful-resources)
 
 ## Details
 
@@ -24,7 +27,7 @@ There were two standard reports the team was able to download from another sourc
 Using this tool allowed our internal team to cut down time working on their client's payroll data from one week to a single hour. It felt super satisfying making a tool for them they could easily use and help ease their workload!
 
 Files included for view in this project:
-- QBO Payroll Import Automation.pdf
+- **QBO Payroll Import Automation.pdf**
 
 ## By the Numbers
 

@@ -26,7 +26,7 @@ This was a great project to learn and get some practice in Power BI's machine le
 I'm all for ongoing learning and development and learn best by doing and getting my hands dirty. This was a great way to explore more of Power BI's capabilities for client projects!
 
 Files included for view in this project:
-- ML Tutorial Project.pdf
+- **ML Tutorial Project.pdf**
 
 ## By the Numbers
 

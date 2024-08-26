@@ -7,21 +7,23 @@ In a similar vein as Automated Medical Financial Reporting, this one was another
 !["Report"](./Private%20Equity%20Financial%20Reporting%20Automation.jpg)
 
 ## Project Details
-- [Details](#details)
-- [By the Numbers](#by-the-numbers)
-- [Tools Used](#tools-used)
-- [Data Engineering Pipeline](#data-engineering-pipeline)
-- [Data Model](#data-model)
-- [What I learned](#what-i-learned)
-- [Useful resources](#useful-resources)
+- [Private Equity Financial Reporting Automation](#private-equity-financial-reporting-automation)
+    - [Live Demo](#live-demo)
+  - [Project Details](#project-details)
+  - [Details](#details)
+  - [By the Numbers](#by-the-numbers)
+  - [Tools Used](#tools-used)
+  - [Data Engineering Pipeline](#data-engineering-pipeline)
+  - [Data Model](#data-model)
+  - [What I learned](#what-i-learned)
+  - [Useful Resources](#useful-resources)
 
 ## Details
 
 One of my colleagues started on this engagement with my manager and about half-way in I took over after she moved to another project. There were many good challenges on this one to work through, from communicating clearly what the project scope should be with the client, to my learning and getting more familiar with basic financial statements - espeically P&L statements as well as their forecasting and trailing twelve months appendices. As with 03 Automated Medical Financial Reporting, this client needed to be able to quickly refresh any charts/math by simply updating the data source, as well have narrative text box sections to customize each month's findings to business leaders. It felt very satisfying to bring this one home and delivered to the client.
 
 Files included for view in this project:
-- Private Equity Financial Reporting Automation.pdf
-  - Masked file version that is currently being used by the client
+- **Private Equity Financial Reporting Automation.pdf**: Masked file version that is currently being used by the client
 
 ## By the Numbers
 

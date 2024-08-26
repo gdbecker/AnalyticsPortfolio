@@ -7,13 +7,16 @@ This was a great challenge with my manager to develop a solution for a client wh
 !["Report"](./Automated%20Medical%20Financial%20Reporting.jpg)
 
 ## Project Details
-- [Details](#details)
-- [By the Numbers](#by-the-numbers)
-- [Tools Used](#tools-used)
-- [Data Engineering Pipeline](#data-engineering-pipeline)
-- [Data Model](#data-model)
-- [What I learned](#what-i-learned)
-- [Useful resources](#useful-resources)
+- [Automated Medical Financial Reporting](#automated-medical-financial-reporting)
+    - [Live Demo](#live-demo)
+  - [Project Details](#project-details)
+  - [Details](#details)
+  - [By the Numbers](#by-the-numbers)
+  - [Tools Used](#tools-used)
+  - [Data Engineering Pipeline](#data-engineering-pipeline)
+  - [Data Model](#data-model)
+  - [What I learned](#what-i-learned)
+  - [Useful Resources](#useful-resources)
 
 ## Details
 
@@ -22,8 +25,7 @@ Before jumping into this one, Elliott Davis was asked, "Can you help us automate
 We were able to include automated narrative text boxes in addition to the standard line trends and pie charts displayed in this report. I thought it was neat how we could set up an Excel 'manual imports' sheet that captured the necessary values to fill in those automated narrative portions seamlessly. All in all, we helped this client cut down on their reporting time by 85%, shortening report building from 1.5 weeks to about a day.
 
 Files included for view in this project:
-- Automated Medical Financial Reporting.pdf
-  - Masked file version that is currently being used by the client
+- **Automated Medical Financial Reporting.pdf**: Masked file version that is currently being used by the client
 
 ## By the Numbers
 

@@ -27,7 +27,7 @@ After applying the ML model, I imported the "enriched" datasets into Power BI de
 I'm all for ongoing learning and development and learn best by doing and getting my hands dirty. This was a great way to explore more of Power BI's capabilities for client projects!
 
 Files included for view in this project:
-- Penguins Power BI ML.pdf
+- **Penguins Power BI ML.pdf**
 
 ## By the Numbers
 
