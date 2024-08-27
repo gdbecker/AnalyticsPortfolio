@@ -4,7 +4,7 @@
 
 I wanted to get more hands-on Fabric analytics engineering project work, and thought it would be fun to create solutions for topics I'm passionate about. Nature is one of the best gifts we have, and I'm grateful for all the amazing ways we can get out there and explore, discover new trails and enjoy the world around us. Hiking mountains is one of my favorite things! In 2023 I actually used Recreation.gov to book a ticket for Multnomah Falls in Oregon, not knowing that they actually had a public API I could use with the account I made. For this project I dug into their documentation and explored their data, and built an concept analytics solution that focuses on how someone at the organization could funnel data into a stable and scalable data model, and then build reports they could share either with the public or use internally. 
 
-### [Live Demo]()
+### [Live Demo](https://app.fabric.microsoft.com/view?r=eyJrIjoiYTY0YWU4MDItNjkyOS00MTIyLThjMTItZWFlMjllYzE0NWJlIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
 !["Report"](./Recreation.gov%20Report_Page_1.jpg)
 
@@ -91,6 +91,7 @@ Files included for view in this project:
 - **Facility_Dataflow.m**: Dataflow for Facility data
 - **Activity_Dataflow.m**: Dataflow for Activity data
 - **Campsite_Dataflow.m**: Dataflow for Campsite data
+- **Add a measure table to the semantic model.ipynb**: Notebook for adding a measure table to the semantic model
 
 ## By the Numbers
 

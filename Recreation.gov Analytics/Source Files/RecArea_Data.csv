@@ -1,0 +1,31 @@
+Enabled	TYPE	LastUpdatedDate	OrgRecAreaID	ParentOrgID	RecAreaAccessibilityText	RecAreaEmail	RecAreaID	RecAreaLatitude	RecAreaLongitude	RecAreaMapURL	RecAreaName	RecAreaPhone	RecAreaReservationURL	Reservable
+True	"Point"	2020-12-09 00:00:00.0000000	""	"129"	""	""	"63"	37.392209999999999	-107.57023	""	"Vallecito Reservoir"	"970-385-6577"	""	False
+True	"Point"	2023-05-31 00:00:00.0000000	""	"126"	""	"utmtmail@blm.gov"	"16424"	37.539917000000003	-109.965881	""	"Salvation Knoll"	"435-587-1500"	""	False
+True	"Point"	2024-08-26 00:00:00.0000000	"PINE"	"128"	""	"ner_external_affairs@nps.gov"	"2892"	39.938400000000001	-74.625	""	"New Jersey Pinelands National Reserve"	"(609) 894-7300"	""	False
+True	"Point"	2024-08-21 00:00:00.0000000	""	"126"	""	"BLM_CA_Web_BK@blm.gov"	"14787"	36.436241670000001	-118.84799719999999	""	"Case Mountain Extensive Recreation Management Area"	"661-391-6000"	""	False
+True	"Point"	2022-08-19 00:00:00.0000000	""	"126"	""	"blm_ut_sl_mail@blm.gov"	"16250"	40.795277779999999	-113.82777780000001	""	"Bonneville Salt Flats Special Recreation Management Area (SRMA)"	"801-320-8300"	""	False
+True	"Point"	2024-08-24 00:00:00.0000000	""	"127"	""	"capemay@fws.gov"	"1332"	39.099767900000003	-74.879588999999996	""	"Cape May National Wildlife Refuge"	"609-463-0994"	""	False
+True	"Point"	2024-06-03 00:00:00.0000000	"FOPU"	"128"	""	"fopu_information@nps.gov"	"2699"	32.030827000000002	-80.933616999999998	""	"Fort Pulaski National Monument"	"(912) 219-4233"	""	False
+True	"Point"	2022-06-16 00:00:00.0000000	""	"126"	""	"BLM_CA_Web_CC@blm.gov"	"14831"	36.000768000000001	-120.571618	""	"Stockdale Mountain"	"831-582-2200"	""	False
+True	"Point"	2022-01-18 00:00:00.0000000	"JELA"	"128"	""	"jela_interpretation@nps.gov"	"13950"	29.817399000000002	-90.140224000000003	""	"Jean Lafitte National Historical Park and Preserve"	"(504) 589-3882"	""	False
+True	"Point"	2024-08-23 00:00:00.0000000	""	"126"	""	"BLM_ID_ChallisOffice@blm.gov"	"10310650"	44.489896000000002	-114.233757	""	"Challis Foothills Trail System"	"208-879-6200"	""	False
+True	"Point"	2022-01-09 00:00:00.0000000	""	"126"	""	"BLM_CA_Web_BK@blm.gov"	"15168"	37.085900000000002	-119.5518	""	"San Joaquin River Gorge Visitor Center"	"661-391-6000"	""	False
+True	"Point"	2023-02-03 00:00:00.0000000	""	"126"	""	"BLM_OR_PR_Mail@blm.gov"	"16830"	45.110039999999998	-120.46108	"https://flic.kr/p/Ej154Y"	"John Day Wild and Scenic River"	"541-416-6700"	"https://www.blm.gov/or/permit/"	False
+True	"Point"	2022-06-02 00:00:00.0000000	"CAVO"	"128"	""	"cavo_interpretation@nps.gov"	"2623"	36.781711000000001	-103.97104299999999	""	"Capulin Volcano National Monument"	"(575) 278-2201"	""	False
+True	"Point"	2024-08-19 00:00:00.0000000	"CURE"	"128"	""	"cure_info@nps.gov"	"2651"	38.465845999999999	-107.330337	""	"Curecanti National Recreation Area"	"(970) 641-2337"	""	False
+True	"Point"	2023-03-04 00:00:00.0000000	"NATC"	"128"	""	"natc_superintendent@nps.gov"	"2871"	31.546976000000001	-91.390406999999996	""	"Natchez National Historical Park"	"(601) 446-5790"	""	False
+True	"Point"	2024-08-26 00:00:00.0000000	"LIBI"	"128"	""	"melinda_mcfarland@nps.gov"	"2805"	45.556330000000003	-107.418361	""	"Little Bighorn Battlefield National Monument"	"(406) 638-3236"	""	False
+True	"Point"	2023-05-30 00:00:00.0000000	""	"126"	""	"utmbmail@blm.gov"	"14497"	38.556472999999997	-109.590255	""	"Portal Trail"	"(435)259-2100"	""	False
+True	"Point"	2024-08-26 00:00:00.0000000	"YUCH"	"128"	""	"fair_information@nps.gov"	"2992"	65.093560999999994	-142.79600199999999	""	"Yukon - Charley Rivers National Preserve"	"(907) 459-3730"	""	False
+True	"Point"	2021-09-27 00:00:00.0000000	""	"126"	""	""	"708"	40.006709999999998	-108.78077999999999	"https://i.pinimg.com/originals/22/42/ed/2242ed3f1633c4ebf4dbf86fd69a7f08.jpg"	"Canyon Pintado National Historic District"	"(970) 878-3800"	""	False
+True	"Point"	2022-01-03 00:00:00.0000000	"PINN"	"128"	""	"pinn_visitor_information@nps.gov"	"2893"	36.490292080000003	-121.1813607	""	"Pinnacles National Park"	"(831) 389-4486"	""	False
+True	"Point"	2023-09-04 00:00:00.0000000	"ANDE"	"128"	""	"ande_information@nps.gov"	"2566"	32.198318	-84.129889000000006	""	"Andersonville National Historic Site"	"(229) 924-0343"	""	False
+True	"Point"	2024-08-13 00:00:00.0000000	""	"126"	""	"BLM_OR_BU_Mail@blm.gov"	"1830"	43.092959999999998	-118.77731	"https://www.blm.gov/sites/default/files/documents/files/OR_SteensMountain_CMPA.pdf"	"Steens Mountain Cooperative Management & Protection Area"	"541-573-4400"	""	False
+True	"Point"	2023-10-23 00:00:00.0000000	"LIRI"	"128"	""	"liri_information@nps.gov"	"2809"	34.414619000000002	-85.617343000000005	""	"Little River Canyon National Preserve"	"(256) 845-9605"	""	False
+True	"Point"	2022-01-03 00:00:00.0000000	"CHCH"	"128"	""	"chch_information@nps.gov"	"2627"	34.943176229999999	-85.287495370000002	""	"Chickamauga & Chattanooga National Military Park"	"(706) 866-9241"	""	False
+True	"Point"	2024-07-10 00:00:00.0000000	""	"126"	""	""	"1803"	33.682261670000003	-105.9224303	""	"Valley of Fires"	"575-627-0272"	""	False
+True	"Point"	2022-06-15 00:00:00.0000000	""	"126"	""	"BLM_CA_Web_CC@blm.gov"	"14826"	36.146346000000001	-120.555588	"https://www.blm.gov/sites/blm.gov/files/docs/2021-02/Coalinga-Mineral-Springs-Map_508.pdf"	"Coalinga Mineral Springs"	"831-582-2200"	""	False
+True	"Point"	2024-08-13 00:00:00.0000000	""	"126"	""	"BLM_OR_NO_Mail@blm.gov"	"1766"	44.05003	-123.17798000000001	"https://www.blm.gov/sites/default/files/documents/files/EUG_WestEugeneWetlands_map.pdf"	"West Eugene Wetlands"	"541-683-6600"	""	False
+True	"Point"	2022-11-30 00:00:00.0000000	"NAMA"	"128"	""	"national_mall@nps.gov"	"2870"	38.889899999999997	-77.025999999999996	""	"National Mall and Memorial Parks"	"(202) 426-6841"	""	False
+True	"Point"	2024-08-06 00:00:00.0000000	""	"127"	""	"Yvette_Donovan@fws.gov"	"2165"	45.606979789633002	-122.07950275507	""	"Franz Lake National Wildlife Refuge"	"360-887-4106"	""	False
+True	"Point"	2022-04-13 00:00:00.0000000	""	"126"	""	""	"13399"	38.670735000000001	-107.83272599999999	"https://www.blm.gov/programs/national-conservation-lands/colorado/gunnison-gorge-nca"	"Gunnison Gorge Wilderness"	"970-240-5300"	""	False
