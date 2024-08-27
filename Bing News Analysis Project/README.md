@@ -4,7 +4,7 @@
 
 As part of preparing and learning for Microsoft's DP-600 certification, Fabric Analytics Engineer Associate, I knew I wanted to get practical project experience. I am really happy to have found this complete end-to-end project course on Udemy. Mr. K walks you through a complete data and analytics engineering project from start to finish, constructing a sustainable pipeline from data source to report, and even adds in alerts at the end with overall testing procedures. I wanted to highlight this starter project and other personal Fabric work to showcase what I'm learning and exciting capabilities of analytics engineering.
 
-### [Live Demo](https://app.fabric.microsoft.com/view?r=eyJrIjoiOTg2ZWViN2QtNjhmMi00ZDI5LTg2MTItYjZiNmVmMTg1ZjQxIiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
+### [Live Demo](https://app.fabric.microsoft.com/view?r=eyJrIjoiOGRmMGFiNDYtOThmNS00YmZkLTk3OTYtMWJiMzAzYjdhOWQ5IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
 !["Report"](./news-dashboard_Page_1.jpg)
 

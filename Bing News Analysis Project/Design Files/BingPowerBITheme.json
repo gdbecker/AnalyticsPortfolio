@@ -22,22 +22,22 @@
 	"textClasses": {
 		"label": {
 			"color": "#000000",
-			"fontFace": "Calibri",
+			"fontFace": "Trebuchet MS",
 			"fontSize": 9
 		},
 		"callout": {
 			"color": "#003594",
-			"fontFace": "Calibri",
+			"fontFace": "Trebuchet MS",
 			"fontSize": 16
 		},
 		"title": {
 			"color": "#003594",
-			"fontFace": "Calibri",
+			"fontFace": "Trebuchet MS",
 			"fontSize": 10
 		},
 		"header": {
 			"color": "#003594",
-			"fontFace": "Calibri",
+			"fontFace": "Trebuchet MS",
 			"fontSize": 10
 		}
 	},
