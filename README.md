@@ -28,6 +28,7 @@ This is a collection of selected projects I've worked on during my professional 
     - [Healthcare Proposal Dashboard](#healthcare-proposal-dashboard)
     - [Internal Use Work Tracker](#internal-use-work-tracker)
     - [Joshua Project Analytics](#joshua-project-analytics)
+    - [LEGO Rebrickable Analytics](#lego-rebrickable-analytics)
     - [Manufacturing Client Demo](#manufacturing-client-demo)
     - [Manufacturing QuickBooks Analysis](#manufacturing-quickbooks-analysis)
     - [Manufacturing Supervisor Dashboards](#manufacturing-supervisor-dashboards)
@@ -118,7 +119,11 @@ This was a great challenge because instead of creating dashboards for clients, n
 
 ### [Joshua Project Analytics](./Joshua%20Project%20Analytics/)
 
-Coming Soon
+As part of continuing to hone in my data and analytics engineering skills, as well as become more familiar and skilled in Fabric, I thought of other topics I'm passionate about and came across Joshua Project's public API. They are an organization keeping track and reporting on where Christians are around the world, specifically focusing on countries that have not heard the gospel or have Bible translations. Their data source is rich with tons of valuable of information, and it was difficult narrowing in on what to show for the resulting reports! Working on a plausible analytics engineering solution for Joshua Project was a lot of fun and super valuable to continue learning and growing, as well as share a topic I'm passionate about. 
+
+### [LEGO Rebrickable Analytics](./LEGO%20Rebrickable%20Analytics/)
+
+Coming soon
 
 ### [Manufacturing Client Demo](./Manufacturing%20Client%20Demo/)
 

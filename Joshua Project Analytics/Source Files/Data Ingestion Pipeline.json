@@ -1,0 +1,430 @@
+{
+	"name": "Data Ingestion Pipeline",
+	"objectId": "3af0cd8a-b943-4699-b36a-5ad816a8492a",
+	"properties": {
+		"activities": [
+			{
+				"name": "GET Countries data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "RestResource",
+							"typeProperties": {
+								"relativeUrl": "countries.json?api_key=9db4339d959a"
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "35ba57fe-ed1c-4ae3-af00-24c075ba977c"
+							}
+						}
+					},
+					"sink": {
+						"type": "LakehouseTableSink",
+						"tableActionOption": "OverwriteSchema",
+						"partitionOption": "None",
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "JoshuaProject_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "32e881df-4779-4e6d-8ba9-47793099a25f",
+										"artifactId": "254da0da-9bc9-4c49-ac8d-c9660afe2568",
+										"rootFolder": "Tables"
+									}
+								}
+							},
+							"type": "LakehouseTable",
+							"schema": [],
+							"typeProperties": {
+								"table": "countries"
+							}
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						},
+						"columnFlattenSettings": {
+							"treatArrayAsString": false,
+							"treatStructAsString": false,
+							"flattenColumnDelimiter": "."
+						}
+					}
+				}
+			},
+			{
+				"name": "GET People Groups data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "GET Countries data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:04:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "RestResource",
+							"typeProperties": {
+								"relativeUrl": "people_groups.json?api_key=9db4339d959a"
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "35ba57fe-ed1c-4ae3-af00-24c075ba977c"
+							}
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"filePattern": "arrayOfObjects"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "JoshuaProject_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "32e881df-4779-4e6d-8ba9-47793099a25f",
+										"artifactId": "254da0da-9bc9-4c49-ac8d-c9660afe2568",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "Json",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "people_groups.json"
+								}
+							},
+							"schema": {}
+						}
+					},
+					"enableStaging": false
+				}
+			},
+			{
+				"name": "Load and save People Groups data",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "GET People Groups data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "0780f015-c12b-41be-82a9-54c388f4be5f",
+					"workspaceId": "32e881df-4779-4e6d-8ba9-47793099a25f",
+					"notifyOption": "NoNotification"
+				}
+			},
+			{
+				"name": "GET People Groups Daily Unreached data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "GET Countries data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "RestResource",
+							"typeProperties": {
+								"relativeUrl": "people_groups/daily_unreached.json?api_key=9db4339d959a"
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "35ba57fe-ed1c-4ae3-af00-24c075ba977c"
+							}
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "JoshuaProject_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "32e881df-4779-4e6d-8ba9-47793099a25f",
+										"artifactId": "254da0da-9bc9-4c49-ac8d-c9660afe2568",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "Json",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "people_groups_daily_unreached.json"
+								}
+							},
+							"schema": {}
+						}
+					},
+					"enableStaging": false
+				}
+			},
+			{
+				"name": "Load and Save People Groups Daily Unreached data",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "GET People Groups Daily Unreached data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "b9ae6445-fa34-4dc3-842c-ac90787da2c3",
+					"workspaceId": "32e881df-4779-4e6d-8ba9-47793099a25f",
+					"notifyOption": "NoNotification"
+				}
+			},
+			{
+				"name": "Query all language codes",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Load and save People Groups data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT DISTINCT ROL3\nFROM dbo.people_groups;",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"firstRowOnly": false,
+					"datasetSettings": {
+						"annotations": [],
+						"type": "AzureSqlTable",
+						"schema": [],
+						"typeProperties": {
+							"database": "JoshuaProject_Lakehouse"
+						},
+						"externalReferences": {
+							"connection": "959cb45b-435d-4e56-af01-2e106743ed64"
+						}
+					}
+				}
+			},
+			{
+				"name": "Set Query Results to LanguageCodesBefore",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Query all language codes",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"variableName": "LanguageCodesBefore",
+					"value": {
+						"value": "@activity('Query all language codes').output.value",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "GET Languages data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Set Query Results to LanguageCodesBefore",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "RestResource",
+							"typeProperties": {
+								"relativeUrl": {
+									"value": "languages.json?api_key=9db4339d959a&ids=@{replace(replace(join(variables('LanguageCodesBefore'), '|'), '{\"ROL3\":', ''), '}', '')}",
+									"type": "Expression"
+								}
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "35ba57fe-ed1c-4ae3-af00-24c075ba977c"
+							}
+						}
+					},
+					"sink": {
+						"type": "LakehouseTableSink",
+						"tableActionOption": "OverwriteSchema",
+						"partitionOption": "None",
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "JoshuaProject_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "32e881df-4779-4e6d-8ba9-47793099a25f",
+										"artifactId": "254da0da-9bc9-4c49-ac8d-c9660afe2568",
+										"rootFolder": "Tables"
+									}
+								}
+							},
+							"type": "LakehouseTable",
+							"schema": [],
+							"typeProperties": {
+								"table": "languages"
+							}
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						},
+						"columnFlattenSettings": {
+							"treatArrayAsString": false,
+							"treatStructAsString": false,
+							"flattenColumnDelimiter": "."
+						}
+					}
+				}
+			}
+		],
+		"variables": {
+			"LanguageCodesBefore": {
+				"type": "Array"
+			}
+		},
+		"lastModifiedByObjectId": "d66f10cd-daab-40af-841c-0f1b49df5934",
+		"lastPublishTime": "2024-08-28T18:14:00Z"
+	}
+}

@@ -2,11 +2,11 @@
 
 !["Joshua Project"](./Design%20Files/Joshua_Project_Transparent_Logo_Full.png)
 
-Coming Soon
+As part of continuing to hone in my data and analytics engineering skills, as well as become more familiar and skilled in Fabric, I thought of other topics I'm passionate about and came across Joshua Project's public API. They are an organization keeping track and reporting on where Christians are around the world, specifically focusing on countries that have not heard the gospel or have Bible translations. Their data source is rich with tons of valuable of information, and it was difficult narrowing in on what to show for the resulting reports! Working on a plausible analytics engineering solution for Joshua Project was a lot of fun and super valuable to continue learning and growing, as well as share a topic I'm passionate about. 
 
-### [Live Demo]()
+### [Live Demo](https://app.fabric.microsoft.com/view?r=eyJrIjoiMmFkNzFmNDUtYzI4Yi00NmM5LWJiMzMtNjhhMDM1ODNkNDM5IiwidCI6ImY3N2E4MGM5LTY5MTAtNGJkYy1iNjFiLTgxNzA2NmQ1NmI0NiIsImMiOjJ9)
 
-!["Report"](./news-dashboard_Page_1.jpg)
+!["Report"](./Joshua%20Project%20Report_Page_1.jpg)
 
 ## Project Details
 - [Joshua Project Analytics](#joshua-project-analytics)
@@ -21,67 +21,77 @@ Coming Soon
 
 ## Details
 
-This was a great project to complete as someone starting out with Fabric and figuring out how to build a sustainable analytics solution; for this case that was constructing a workflow for Bing News Search analytics.
+This was a great project to complete as someone starting out with Fabric and figuring out how to build a sustainable analytics solution; for this case that was constructing a workflow for Joshua Project.
 
-Starting out, I created a new Bing News Search resource in Azure after signing up for a free account. The resource provided authorization keys which were needed to insert into the headers of the API request. In Fabric, I created a new workspace called "Bing News Analytics Project" to contain all the items that I'd need to manage throughout, and started with a new Data Factory Pipeline called "news-ingestion-pipeline". Adding a "copy data" activity allows to establish which data source you'd like to connect and any configuration options, so for this case that was the "REST" source option. Here, I could add the endpoint for the Bing News Search API, add in authorization key headers from Azure, any query parameters to narrow down the results (like US-based articles and limiting to 100) and be able to test the connection to make sure the data was being pulled correctly. All the results were contained in a single .json file which was saved to a new Lakehouse called "bing_lake_db".
+Before diving in and making Fabric resources, I scoped out Joshua Project's API to learn more. They have a great developer team over there and have laid out in detail everything you need to know to get started - from sample code snippets in different languages to examples of responses to column by column descriptions for each major entity. There are just a few key components available to pull from, and I decided to use the main ones available to build the model later: countries, languages, and people groups. There was also an additional call for a "daily unreached" people group which randomly selects an unreached group everyday, and I decided to pull this in as well to have available on the overview dashboard page. This page was my source of truth for navigating all the mysterious column names and how the entities best fit together.
 
-!["1_DataFactory"](./Process/1_DataFactory.JPG)
-*Initial data pipeline with the copy activity*
+!["1_APIDocumentation"](./Process/01_APIDocumentation.JPG)
+*Joshua Project's API Documentation Page*
 
-!["2_Lakehouse"](./Process/2_Lakehouse.JPG)
-*Lakehouse .json data preview*
+Once I had my plan of which entities to pull in and their corresponding API calls, I went back to Fabric and started out with a lakehouse called "JoshuaProject_Lakehouse". Getting this central repository for files and tables situation has become my go-to starting point, and I'm really enjoying using this resource as my project's central hub. It's so nice having the SQL endpoint you can flip to with a button. Below is the final view of tables at the culmination of the workflow, and there are a couple of JSON files in the Files folder that were fed in through the dataflows later.
 
-A new notebook was created called "process-bing-news" which was the central point for data transformation. PySpark was used to pull in the .json file, run multiple commands to extract the data including the "explode" method, and compile all the crucial article information into a single dataframe. An if-statement was used to make sure only articles were selected if there were categories and thumbnail images present for the article. Incremental loading was established at the end of the notebook to add only new articles to the delta table back in bing_lake_db only if the table already exists. A try/catch block was used for the main logic here.
+!["2_Lakehouse"](./Process/02_Lakehouse.JPG)
+*JoshuaProject_Lakehouse*
 
-!["3_ProcessBingNews"](./Process/3_ProcessBingNews.JPG)
-*Process Bing News notebook*
+Figuring out how the pipeline would work definitely took the longest as expected, and even as I was working on reports I had to come back here and tweak it a little bit. The reason for this was that initially, I had the step for calling the Languages API right after calling the Countries data at the beginning, but I moved this step until after pulling in the main People Groups data. This is why it's important to read API documentation carefully, because I missed that Joshua Project's API results are limited to 250 records at a time, especially for how many languages there are. I was only pulling in languages that started with A! So what I did was modify the pipeline to do a quick query of just the unique language codes from the People Groups data I pulled in, assign those to a pipeline variable, and then clean up/concatenate those language codes to be added to the request URL for Languages, in the "ids" parameter. It's quite nice having the dynamic variables box available to use to make things flexible. This way I was able to call the Languages API just once instead of looping through code by code.
 
-Another new notebook was made called "news-sentiment-analysis", and here is where Synapse ML was used. A pre-trained model was imported for sentiment analysis, and using PySpark, the delta table from the lakehouse was loaded in and assigned sentiment labels based on this model. Incremental loading was also established here with the same logic as in the previous notebook for new articles, and to load back into a lakehouse table.
+During this phase I also established two dataflows based on M code: one for the main People Groups data and another for the smaller People Groups Daily Unreached data. The pipeline was pulling these in as JSON files so the flows pulled these from Files and transformed them into delta tables for the lakehouse. Reason for this was to add a custom column for Bible Status because the original data from their API only had numbers but I wanted a text label for more meaning when visualizing. I actually had to delete part of the original semantic model I made to accommodate this change; it was strange that new columns didn't get refreshed into the model, but as this was a small change it wasn't bad to implement.
 
-!["4_NewsSentimentAnalysis"](./Process/4_NewsSentimentAnalysis.JPG)
-*News Sentiment Analysis notebook*
+!["3_Pipeline"](./Process/03_Pipeline.JPG)
+*Completed Data Factory Pipeline*
 
-!["5_Lakehouse"](./Process/5_Lakehouse.JPG)
-*New Lakehouse view with both delta tables*
+!["4_PeopleGroups_Dataflow"](./Process/04_PeopleGroups_Dataflow.JPG)
+*Dataflow for the main People Groups dataset*
 
-!["6_DataModel"](./Process/6_DataModel.JPG)
-*Semantic model after loading into the Lakehouse*
+!["5_PeopleGroupsDailyUnreached_Dataflow"](./Process/05_PeopleGroupsDailyUnreached_Dataflow.JPG)
+*Dataflow for the smaller People Groups Daily Unreached dataset*
 
-Next up was creating a Power BI report with the cleaned and analyzed Bing data. I started out by aut-generating a report from the core semantic model called "news-dashboard" that included the cleaned delta table with sentiment labels from the notebook machine learning model. Another report page was developed that included measures added to the semantic model (percentages for how many articles are positive, neutral, or negative sentiments) and a table with key data fields. The auto-generated report page was redesigned as well as the custom page with a Bing .json theme I made to match the feel for the product.
+Next up was creating the semantic model. As mentioned previously I had an original version without my new "BibleStatusText" column which was not getting updated with the column after I modified the dataflows. This could be a kink in the early version of Fabric that Microsoft's working out. Joshua Project's API documentation helped me use the best columns for establishing relationships, and I chose bi-directional filtering where I wanted to allow flexibility in reports later on. I also used a PySpark notebook to add a measure table to the model in case I added any custom calculations.
 
-!["7_Dashboard1"](./Process/7_Dashboard1.jpg)
-*Custom report page*
+!["6_DataModel"](./Process/06_DataModel.JPG)
+*Semantic model overview*
 
-!["8_Dashboard2"](./Process/8_Dashboard2.jpg)
-*Auto-generated report page*
+!["7_Notebook"](./Process/07_Notebook.JPG)
+*PySpark notebook for adding a measure table to the model*
 
-Once the report pages were designed and built, one of the final steps for the project was to complete the Data Factory pipeline. Going back to "news-ingestion-pipeline", two more activities were added upon completion of the previous steps: both of them notebook steps. One was for the first notebook called "process-bing-news" and the second for "news-sentiment-analysis". A parameter was created for the first "Copy data" activity to allow flexibility for which search term to use when using the GET request for the Bing API.
+With the model set, now I could get into the fun part and play around with the data. This was very hard narrowing down on what to show here because there was so much good stuff! But I also know from experience that it's way better to have self-control and not try to do too much because you want to help tell a good story and assist others to discover new information and unlock insights they don't expect. I settled on an overview page with a couple of visuals for the spotlight on an unreached people group, a few cards to give high level stats, and quick charts to give a lay of the land. The next few pages go into detail on each of the main data entities (with connections between them as needed when filtering) starting with People Groups, then Countries and finally Languages. I thought it would be great to give more information about how things are going with specific people groups and developing Bible translations, as well as dig more into countries and languages as a whole. I imagined what kind of views might be most valuable not just at Joshua Project but any church or organization interested in analyzing this information.
 
-!["9_DataFactory"](./Process/9_DataFactory.JPG)
-*Completed Data Factory pipeline*
+!["08_Report_Page_1"](./Process/08_Report_Page_1.jpg)
+*"Overview" report page*
 
-The final step was to add a trigger with Data Activator from the custom Power BI report page. I established an alert for the measure calculating the percentage of positive articles by clicking on the card visual, and then selecting "Set alert". A Reflex item was created in another pane that allows you to configure the trigger settings for the visual and where to send the alert notification, whether that's through email or a Teams message. For this one, I chose Teams message and then selected the Reflex item back in the workspace to view the details. A time series trend up top shows when triggers happened, and many other configuration and monitoring tools are here, including who to send notifications to.
+!["09_Report_Page_2"](./Process/09_Report_Page_2.jpg)
+*"People Groups Detail" report page*
 
-!["10_DataActivator"](./Process/10_DataActivator.JPG)
-*Data Activator trigger for when the percentage of positive articles is greater than 0*
+!["10_Report_Page_3"](./Process/10_Report_Page_3.jpg)
+*"Countries" report page*
 
-An end-to-end test was conducted to make sure the entire analytics solution performed as expected, from running the pipeline with a new search term in the parameter (such as "sports" or "movies") and checking out Reflex Data Activator and sending a test alert. This was an awesome project to become more comfortable with Fabric and build an analytics project from scratch!
+!["11_Report_Page_4"](./Process/11_Report_Page_4.jpg)
+*"Languages Analysis" report page*
 
-!["11_WorkspaceItems"](./Process/11_WorkspaceItems.JPG)
+The last stop was to add an alert to make use of Data Activator. For this workflow I thought it would be fun to add one based on the "Countries Analysis" page when the average of the Bible Status value is greater than 4; which means that most of the people groups within that country have at least a New Testament translation (see key at the report page top) and that's cause for celebration! The alert sends a Teams message currently but the method can be changed to an Outlook email.
+
+!["12_DataActivator"](./Process/12_DataActivator.JPG)
+*Data Activator view for trigger: Bible Status average is greater than 4*
+
+I have scheduled the pipeline to run once a week in the morning, and it's working perfectly so far. Below are all the items in the workspace I used for this project. I greatly enjoyed working on this project and thought it was an awesome way to celebrate what God is doing all around the world and to track Bible translations!
+
+!["13_Workspace"](./Process/13_Workspace.JPG)
 *Workspace items for this project*
 
 Files included for view in this project:
-- **Bing News Analysis Project.pdf**: Result analysis dashboard, showcasing latest articles and sentiment labels
-- **process-bing-news.ipynb**: PySpark notebook for processing the .json news data from the API
-- **news-sentiment-analysis.ipynb**: PySpark notebook for using an Azure Synapse sentiment machine learning model
+- **Joshua Project Report.pdf**: Result analysis dashboard
+- **Add a measure table to the semantic model.ipynb**: PySpark notebook for adding a measure table to the semantic model
+- **Data Ingestion Pipeline.json**: Underlying source code for the developed Data Factory pipeline
+- **Ingestion Dataflow - People Groups.json**: Code behind the Dataflow for processing People Groups data
+- **Ingestion Dataflow - People Groups Daily Unreached.json**: Code behind the Dataflow for processing People Groups Daily Unreached data
 
 ## By the Numbers
 
 - < 1 month of development time
-- 1 colleagues collaborated with
-- 1 report page
+- 0 colleagues collaborated with
+- 4 report pages
 - 1 data source
-- 1 query connected to data source
+- 4 queries connected to data source
 
 ## Tools Used
 
@@ -96,11 +106,11 @@ Files included for view in this project:
 
 ## Data Engineering Pipeline
 
-!["Pipeline"](./Bing%20News%20Analysis%20Project%20Pipeline.JPG)
+!["Pipeline"](./Joshua%20Project%20Analytics%20Pipeline.png)
 
 ## Data Model
 
-!["Data Model"](./Bing%20News%20Analysis%20Project%20Data%20Model.JPG)
+!["Data Model"](./Joshua%20Project%20Analytics%20Data%20Model.JPG)
 
 ## Useful Resources
 
