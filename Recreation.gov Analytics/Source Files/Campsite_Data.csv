@@ -1,4 +1,4 @@
-AttributeName,AttributeValue,CampsiteAccessible,CampsiteID,CampsiteLatitude,CampsiteLongitude,CampsiteName,CampsiteReservable,CampsiteType,CreatedDate,FacilityID,LastUpdatedDate,Loop,EquipmentName,MaxLength,TypeOfUse
+﻿AttributeName,AttributeValue,CampsiteAccessible,CampsiteID,CampsiteLatitude,CampsiteLongitude,CampsiteName,CampsiteReservable,CampsiteType,CreatedDate,FacilityID,LastUpdatedDate,Loop,EquipmentName,MaxLength,TypeOfUse
 "Base Number of People","0","false","92353","36.491160702000101","-121.14853306800001","115","True","STANDARD NONELECTRIC","2014-05-02","234015","2024-03-19","D","Tent","34","Overnight"
 "Placed on Map","1","false","92353","36.491160702000101","-121.14853306800001","115","True","STANDARD NONELECTRIC","2014-05-02","234015","2024-03-19","D","Tent","34","Overnight"
 "Checkout Time","11:00 AM","false","92353","36.491160702000101","-121.14853306800001","115","True","STANDARD NONELECTRIC","2014-05-02","234015","2024-03-19","D","Tent","34","Overnight"

@@ -123,7 +123,7 @@ As part of continuing to hone in my data and analytics engineering skills, as we
 
 ### [LEGO Rebrickable Analytics](./LEGO%20Rebrickable%20Analytics/)
 
-Coming soon
+I was really excited to dig into this project and fine-tune my analytics engineering skills because Rebrickable has public LEGO data available, and LEGO has always been one of my favorite hobbies ever. They inspire creativity and imagination, remain high quality with the system they developed throughout the years, and I always loved the different themes and storyline to get lost in as a child. It's encouraging for me that many more people are discovering LEGO for themselves and building models from sets or on their own with the parts they have. I've used Rebrickable quite a bit to discover other creators' custom MOCs (my own creations) and love that they have these publicly available datasets across many different entities, such as colors, themes, sets, and categories. I wanted to have fun with this one and practice my analytics skills with a scalable end-to-end solution for LEGO Rebrickable data.
 
 ### [Manufacturing Client Demo](./Manufacturing%20Client%20Demo/)
 

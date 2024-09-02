@@ -24,7 +24,7 @@ This was a tricky one at first simply because we didn't have Google Looker exper
 The other tricky part was figuring out how these dashbaords would connect to their data, and we worked all this out beforehand. Appfolio Property Manager does have an API reporting systems can connect to for easy updates, but it required a higher paying tier to access. We settled on exporting certain Appfolio reports into csv files, which our client would maintain by copying/pasting the data into our Google Sheets, and then a manual refresh button in Looker would show the changes.
 
 Files included for view in this project:
-- **Real Estate Client Dashboards.pdf**: Masked file version that was developed
+- [`Real Estate Client Dashboards.pdf`](./Real%20Estate%20Client%20Dashboards.pdf): Masked file version that was developed
 
 ## By the Numbers
 

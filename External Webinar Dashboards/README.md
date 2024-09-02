@@ -23,7 +23,7 @@ On April 27, 2023 I was a panelist for an external webinar Elliott Davis hosted 
 The first dashboard displayed is a masked version of a current e-commerce client, who needed a solution to help them track orders as they migrated from one processing system to another. During the webinar we discussed their business problem in more detail, as well as show how the report visuals interact with each other to answer performance questions. Part 2 is actually another redacted version of 03 Automated Medical Financial Reporting, and the pages here are the few we displayed during the call. The key idea was to demonstrate how Power BI can do more than traditional analytics dashboards; you can also create full-fledged automated reports that look like PDFs. The last two parts went hand-in-hand to give out audience a quick demo into how Power BI works but building out a map visual as well as a standard P&L table. 
 
 Files included for view in this project:
-- **External Webinar Dashboards.pdf**: Covered a masked version of a client project my colleagues and I worked on - this covered most of the presentation
+- [`External Webinar Dashboards.pdf`](./External%20Webinar%20Dashboards.pdf): Covered a masked version of a client project my colleagues and I worked on - this covered most of the presentation
 
 ## By the Numbers
 

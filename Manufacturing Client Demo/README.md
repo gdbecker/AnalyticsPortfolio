@@ -23,7 +23,7 @@ It's always interesting to discover what new challenge you might come across whe
 We began this project by first exploring the client's data sources and existing Power BI development - everything from what we could securely access to the existing data model, measures, and visuals. I established a color pallette and overall look and feel for their existing dashboard pages and redesigned those, and the eight reports I included within this project are the new ones I developed for them. It started as an exploration of what else Power BI was capable of and could offer, and after time and feedback narrowed down into the reports shown here for the client to utilize. This engagement also taught me to ask questions and seek understanding, and not to forget the overall business goals of our work in the midst of technical challenges. I love figuring new things out and this was great practice for not losing sight of what we were doing as I solved problems.
 
 Files included for view in this project:
-- **Manufacturing Client Demo.pdf**: Masked file version that was developed
+- [`Manufacturing Client Demo.pdf`](./Manufacturing%20Client%20Demo.pdf): Masked file version that was developed
 
 ## By the Numbers
 

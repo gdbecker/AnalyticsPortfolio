@@ -25,7 +25,7 @@ In the same vein as other client projects, we first approached our engagement by
 We ultimately landed on three data sources to build out our data model: QuickBooks Online for current financial data, Salesforce for prospecting, and an Excel file in Sharepoint to contain static information. My colleague and I had great practice building out a model between all three to effectively connect the sources together, as well as powering through the numerous DAX challenges that came up due to the nature of our client's calculation complexity. Between the math verification and developing new reports, this project gave me a lot of practice and comfort in collaborating with clients remotely, remain flexible in fine-tuning our model and report structure, as well as overcoming DAX challenges as creatively as possible. I'm still amazed we were able to accomplish everything we did with this one! We had a great time with this client and delivered a reporting solution they were happy with to accurately and ethically display their data for better analysis and understanding.
 
 Files included for view in this project:
-- **Medical Billing Service Provider Dashboards.pdf**: Masked file version that was developed
+- [`Medical Billing Service Provider Dashboards.pdf`](./Medical%20Billing%20Service%20Provider%20Dashboards.pdf): Masked file version that was developed
 
 ## By the Numbers
 

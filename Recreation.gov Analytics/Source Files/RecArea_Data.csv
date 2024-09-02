@@ -1,4 +1,4 @@
-Enabled	TYPE	LastUpdatedDate	OrgRecAreaID	ParentOrgID	RecAreaAccessibilityText	RecAreaEmail	RecAreaID	RecAreaLatitude	RecAreaLongitude	RecAreaMapURL	RecAreaName	RecAreaPhone	RecAreaReservationURL	Reservable
+﻿Enabled	TYPE	LastUpdatedDate	OrgRecAreaID	ParentOrgID	RecAreaAccessibilityText	RecAreaEmail	RecAreaID	RecAreaLatitude	RecAreaLongitude	RecAreaMapURL	RecAreaName	RecAreaPhone	RecAreaReservationURL	Reservable
 True	"Point"	2020-12-09 00:00:00.0000000	""	"129"	""	""	"63"	37.392209999999999	-107.57023	""	"Vallecito Reservoir"	"970-385-6577"	""	False
 True	"Point"	2023-05-31 00:00:00.0000000	""	"126"	""	"utmtmail@blm.gov"	"16424"	37.539917000000003	-109.965881	""	"Salvation Knoll"	"435-587-1500"	""	False
 True	"Point"	2024-08-26 00:00:00.0000000	"PINE"	"128"	""	"ner_external_affairs@nps.gov"	"2892"	39.938400000000001	-74.625	""	"New Jersey Pinelands National Reserve"	"(609) 894-7300"	""	False

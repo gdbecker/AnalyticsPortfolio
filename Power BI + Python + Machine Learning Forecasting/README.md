@@ -30,9 +30,9 @@ Economic datasets gathered with Python:
 - [Population from US Census Bureau](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
 
 Files included for view in this project:
-- **Power BI + Python + Machine Learning Forecasting.pdf**
-- **01 - Revenue - Linear Regression.ipynb**: Jupyter notebook containing linear regression ML code
-- **02 - Revenue - KNN Regression.ipynb**: Jupyter notebook containing KNN regression ML code
+- [`Power BI + Python + Machine Learning Forecasting.pdf`](./Power%20BI%20+%20Python%20+%20Machine%20Learning%20Forecasting.pdf)
+- [`01 - Revenue - Linear Regression.ipynb`](./01%20-%20Revenue%20-%20Linear%20Regression.ipynb): Jupyter notebook containing linear regression ML code
+- [`02 - Revenue - KNN Regression.ipynb`](./02%20-%20Revenue%20-%20KNN%20Regression.ipynb): Jupyter notebook containing KNN regression ML code
 
 ## By the Numbers
 

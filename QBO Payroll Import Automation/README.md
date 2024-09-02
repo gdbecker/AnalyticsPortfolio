@@ -27,7 +27,7 @@ There were two standard reports the team was able to download from another sourc
 Using this tool allowed our internal team to cut down time working on their client's payroll data from one week to a single hour. It felt super satisfying making a tool for them they could easily use and help ease their workload!
 
 Files included for view in this project:
-- **QBO Payroll Import Automation.pdf**
+- [`QBO Payroll Import Automation.pdf`](./QBO%20Payroll%20Import%20Automation.pdf)
 
 ## By the Numbers
 

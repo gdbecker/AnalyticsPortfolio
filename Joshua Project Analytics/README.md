@@ -79,11 +79,11 @@ I have scheduled the pipeline to run once a week in the morning, and it's workin
 *Workspace items for this project*
 
 Files included for view in this project:
-- **Joshua Project Report.pdf**: Result analysis dashboard
-- **Add a measure table to the semantic model.ipynb**: PySpark notebook for adding a measure table to the semantic model
-- **Data Ingestion Pipeline.json**: Underlying source code for the developed Data Factory pipeline
-- **Ingestion Dataflow - People Groups.json**: Code behind the Dataflow for processing People Groups data
-- **Ingestion Dataflow - People Groups Daily Unreached.json**: Code behind the Dataflow for processing People Groups Daily Unreached data
+- [`Joshua Project Report.pdf`](./Joshua%20Project%20Report.pdf): Result analysis dashboard
+- [`Add a measure table to the semantic model.ipynb`](./Source%20Files/Add%20a%20measure%20table%20to%20the%20semantic%20model.ipynb): PySpark notebook for adding a measure table to the semantic model
+- [`Data Ingestion Pipeline.json`](./Source%20Files/Data%20Ingestion%20Pipeline.json): Underlying source code for the developed Data Factory pipeline
+- [`Ingestion Dataflow - People Groups.json`](./Source%20Files/Ingestion%20Dataflow%20-%20People%20Groups.json): Code behind the Dataflow for processing People Groups data
+- [`Ingestion Dataflow - People Groups Daily Unreached.json`](./Source%20Files/Ingestion%20Dataflow%20-%20People%20Groups%20Daily%20Unreached.json): Code behind the Dataflow for processing People Groups Daily Unreached data
 
 ## By the Numbers
 
@@ -100,6 +100,7 @@ Files included for view in this project:
   - Data Factory pipeline
   - Dataflow Gen2
   - Data Activator
+  - Semantic model
 - Power BI
   - DAX
   - Power Query

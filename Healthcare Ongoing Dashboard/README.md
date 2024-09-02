@@ -23,7 +23,7 @@ I was super encouraged when one of the first projects I worked on became a month
 One of the healthcare client teams approached my Data & Analytics group about potentially adding on a dashboard to help them understand and draw deeper insights from their data. As one of the first major projects I worked on at Elliott Davis, it was a delight to find out that this client wanted to subscribe for monthly updates upon completion! They were specifically curious about how their different providers were performing across clinic locations, and also wanted to see each one's service records broken down by patient severity, new/existing patients, and CPT codes. I am proud of the final result and am thankful this has aided them in caring for their patients well.
 
 Files included for view in this project:
-- **Healthcare Ongoing Dashboard.pdf**: Masked file version that is currently being used monthly by the client
+- [`Healthcare Ongoing Dashboard.pdf`](./Healthcare%20Ongoing%20Dashboard.pdf): Masked file version that is currently being used monthly by the client
 
 ## By the Numbers
 

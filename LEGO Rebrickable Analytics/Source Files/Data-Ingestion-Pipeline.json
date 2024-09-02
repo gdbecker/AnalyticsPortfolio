@@ -1,0 +1,1031 @@
+{
+	"name": "Data Ingestion Pipeline",
+	"objectId": "fe3aef47-d33f-4b67-8618-4c4d9ba71cc5",
+	"properties": {
+		"activities": [
+			{
+				"name": "Download LEGO themes data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "URLs Web Scraper",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[8]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "themes.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO sets data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Download LEGO themes data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[7]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"rowDelimiter": "\n",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": null
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "sets.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO colors data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "URLs Web Scraper",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[0]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "colors.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO parts categories data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Download LEGO colors data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[6]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "parts_categories.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO parts data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Download LEGO parts categories data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[5]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "parts.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO elements data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Download LEGO sets data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[1]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "elements.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO inventories data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "URLs Web Scraper",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[2]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "inventories.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO inventory_sets data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Download LEGO inventories data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[4]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "inventory_sets.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Download LEGO inventory_parts data",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Download LEGO inventory_sets data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "HttpServerLocation",
+									"relativeUrl": {
+										"value": "@split(activity('URLs Web Scraper').output.result.exitValue,'|')[3]",
+										"type": "Expression"
+									}
+								},
+								"columnDelimiter": ",",
+								"compressionCodec": "gzip",
+								"escapeChar": "\"",
+								"firstRowAsHeader": false,
+								"quoteChar": "\""
+							},
+							"schema": [],
+							"externalReferences": {
+								"connection": "3cb7769f-6cd6-4c23-882b-9c0bc8fbebe2"
+							}
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "LakehouseWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"datasetSettings": {
+							"annotations": [],
+							"linkedService": {
+								"name": "LEGO_Lakehouse",
+								"properties": {
+									"annotations": [],
+									"type": "Lakehouse",
+									"typeProperties": {
+										"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+										"artifactId": "f72b975e-ad75-43ae-a4d6-ad54f3e33ee1",
+										"rootFolder": "Files"
+									}
+								}
+							},
+							"type": "DelimitedText",
+							"typeProperties": {
+								"location": {
+									"type": "LakehouseLocation",
+									"fileName": "inventory_parts.csv",
+									"folderPath": "Raw Single Files"
+								},
+								"columnDelimiter": ",",
+								"escapeChar": "\"",
+								"firstRowAsHeader": true,
+								"quoteChar": "\""
+							},
+							"schema": []
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				}
+			},
+			{
+				"name": "Staging dataflow",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "Download LEGO elements data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Download LEGO parts data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Download LEGO inventory_parts data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "adefa776-54fe-47c5-98df-eab5a68c4adf",
+					"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+					"notifyOption": "NoNotification"
+				}
+			},
+			{
+				"name": "Modeling Dataflow",
+				"type": "RefreshDataflow",
+				"dependsOn": [
+					{
+						"activity": "Staging dataflow",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"dataflowId": "5835f450-b0db-4d64-a64c-a49c59b554c9",
+					"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b",
+					"notifyOption": "NoNotification"
+				}
+			},
+			{
+				"name": "URLs Web Scraper",
+				"type": "TridentNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"notebookId": "2d7bdfb3-dd90-426b-9d4b-f65d8673649b",
+					"workspaceId": "eb49f716-7822-48aa-997c-075e178bac6b"
+				}
+			},
+			{
+				"name": "Refresh LEGO_Data_Model",
+				"type": "PBISemanticModelRefresh",
+				"dependsOn": [
+					{
+						"activity": "Modeling Dataflow",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"method": "post",
+					"groupId": "eb49f716-7822-48aa-997c-075e178bac6b",
+					"datasetId": "394ee5e8-c6d1-4d99-b4a8-bc14af446ca4",
+					"waitOnCompletion": true,
+					"commitMode": "Transactional",
+					"operationType": "SemanticModelRefresh"
+				},
+				"externalReferences": {
+					"connection": "3cb7b1b2-4397-40c0-8516-4328d5342432"
+				}
+			}
+		],
+		"variables": {
+			"urls_string": {
+				"type": "String"
+			}
+		},
+		"lastModifiedByObjectId": "d66f10cd-daab-40af-841c-0f1b49df5934",
+		"lastPublishTime": "2024-09-02T16:10:04Z"
+	}
+}

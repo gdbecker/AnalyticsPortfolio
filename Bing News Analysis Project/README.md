@@ -79,9 +79,10 @@ An end-to-end test was conducted to make sure the entire analytics solution perf
 *Workspace items for this project*
 
 Files included for view in this project:
-- **Bing News Analysis Project.pdf**: Result analysis dashboard, showcasing latest articles and sentiment labels
-- **process-bing-news.ipynb**: PySpark notebook for processing the .json news data from the API
-- **news-sentiment-analysis.ipynb**: PySpark notebook for using an Azure Synapse sentiment machine learning model
+- [`Bing News Analysis Project.pdf`](./news-dashboard.pdf): Result analysis dashboard, showcasing latest articles and sentiment labels
+- [`process-bing-news.ipynb`](./Source%20Files/process-bing-news.ipynb): PySpark notebook for processing the .json news data from the API
+- [`news-sentiment-analysis.ipynb`](./Source%20Files/news-sentiment-analysis.ipynb): PySpark notebook for using an Azure Synapse sentiment machine learning model
+- [`news-ingestion-pipeline.json`](./Source%20Files/news-ingestion-pipeline.json): Source code for the main pipeline
 
 ## By the Numbers
 

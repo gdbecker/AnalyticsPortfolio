@@ -85,13 +85,13 @@ I have scheduled the pipeline to run a few times per week early in the morning, 
 *Workspace items for this project*
 
 Files included for view in this project:
-- **Recreation.gov Report.pdf**: Result mock-up reports
-- **Data Ingestion Pipeline.json**: Code behind the Data Factory pipeline in Fabric
-- **RecArea_Dataflow.m**: Dataflow for RecArea data
-- **Facility_Dataflow.m**: Dataflow for Facility data
-- **Activity_Dataflow.m**: Dataflow for Activity data
-- **Campsite_Dataflow.m**: Dataflow for Campsite data
-- **Add a measure table to the semantic model.ipynb**: Notebook for adding a measure table to the semantic model
+- [`Recreation.gov Report.pdf`](./Recreation.gov%20Report.pdf): Result mock-up reports
+- [`Data Ingestion Pipeline.json`](./Source%20Files/Data%20Ingestion%20Pipeline.json): Code behind the Data Factory pipeline in Fabric
+- [`RecArea_Dataflow.m`](./Source%20Files/RecArea_Dataflow.m): Dataflow for RecArea data
+- [`Facility_Dataflow.m`](./Source%20Files/Facility_Dataflow.m): Dataflow for Facility data
+- [`Activity_Dataflow.m`](./Source%20Files/Activity_Dataflow.m): Dataflow for Activity data
+- [`Campsite_Dataflow.m`](./Source%20Files/Campsite_Dataflow.m): Dataflow for Campsite data
+- [`Add a measure table to the semantic model.ipynb`](./Source%20Files//Add%20a%20measure%20table%20to%20the%20semantic%20model.ipynb): Notebook for adding a measure table to the semantic model
 
 ## By the Numbers
 
@@ -108,6 +108,7 @@ Files included for view in this project:
   - Data Factory pipeline
   - Dataflow Gen2
   - Data Activator
+  - Semantic model
 - Power BI
   - DAX
   - Power Query

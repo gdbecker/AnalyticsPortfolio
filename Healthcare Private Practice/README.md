@@ -23,7 +23,7 @@ These are a set of Power BI demos intended to go to market for existing Elliott 
 Current Elliott Davis teams engaged with healthcare clients wanted to see what Power BI was capable of and what data analytics could offer to them to add greater value, so my team stepped in to help. We focused first on a couple of clients and using their financial and production data to discover what insights could be drawn from what they have. My director at the time was more familiar with Tableau and the native functionalities it has. As he requested specific items I realized I needed to test myself in finding clever solutions, since Power BI is a bit more manual than other BI tools out there. The intent was to move these demo dashboards to market and provide clients an additional offering of great value.
 
 Files included for view in this project:
-- **Healthcare Private Practice.pdf**: Masked file version that was developed
+- [`Healthcare Private Practice.pdf`](./Healthcare%20Private%20Practice.pdf): Masked file version that was developed
 
 ## By the Numbers
 

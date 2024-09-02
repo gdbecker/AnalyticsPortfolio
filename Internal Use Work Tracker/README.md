@@ -23,7 +23,7 @@ This was a great challenge because instead of creating dashboards for clients, n
 While on my portion the development time was about a month, this project was happening in iterative stages between the two colleagues who were on this before me. On each phase the solution was getting better and better, and most of my role was to combine different aspects of both previous dashboards and combine them into one, establishing a common look and feel across all pages. I worked with my director a few other upper level business leaders to discuss their feedback, what they wanted to see or have removed, and communicate what would be best to see across the firm. Many people would be using this new tool to track their work and engagements, and so the dashboards needed to be flexible enough for data views they are used to, but also specific to focus on only the data they need. Overall this was a great challenge to develop dashboards just for the firm's internal use which not only ultimately showed others the data views they needed to make decisions, but also the power behind data analytics and what could be offered to their clients.
 
 Files included for view in this project:
-- **Internal Use Work Tracker.pdf**: Masked file version that was developed
+- [`Internal Use Work Tracker.pdf`](./Internal%20Use%20Work%20Tracker.pdf): Masked file version that was developed
 
 ## By the Numbers
 

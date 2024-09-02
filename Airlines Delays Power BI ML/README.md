@@ -27,7 +27,7 @@ After applying the ML model, I imported the "enriched" datasets into Power BI de
 I'm all for ongoing learning and development and learn best by doing and getting my hands dirty. This was a great way to explore more of Power BI's capabilities for client projects!
 
 Files included for view in this project:
-- Airlines Delays Power BI ML.pdf
+- [`Airlines Delays Power BI ML.pdf`](./Airlines%20Delays%20Power%20BI%20ML.pdf)
 
 ## By the Numbers
 

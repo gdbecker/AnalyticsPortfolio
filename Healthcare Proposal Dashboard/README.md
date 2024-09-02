@@ -23,7 +23,7 @@ Instead of a generic demo dashboard, my manager needed a set of dashboard report
 As one of the first client-related projects I worked on, this was a good test for me to base my dashboard work on what the client already had, but then push myself to think about what else could be helpful to show in order to draw more insights. My manager communictaed that although this client wanted to see how an existing reporting package could be made more efficiently, they were also curious about what else is within their data they may need to pay attention to. I worked to compile visuals into a topic per page, and thoughts about business questions that they could ask when they view a report and how the visuals help provide findings.
 
 Files included for view in this project:
-- **Healthcare Proposal Dashboard.pdf**: Masked file version that was developed
+- [`Healthcare Proposal Dashboard.pdf`](./Healthcare%20Proposal%20Dashboard.pdf): Masked file version that was developed
 
 ## By the Numbers
 

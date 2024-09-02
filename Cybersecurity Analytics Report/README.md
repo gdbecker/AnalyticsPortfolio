@@ -23,7 +23,7 @@ Another division of the Digital Consulting Practice Group, Cyber & Penetration T
 The challenge for this project was less the visuals/format itself, but more with collaborating with another team to develop the series of reports. We got to learn from each other what we specialize in which made it for a great learning experience. The Cyber team had a set of data sources they usually drew from to give their clients a pre-engagement security screening, and my task was to communicate with them on the best ways to present that information. It was also an interesting case where you want to showcase data well, but it's better of course not to have data to show because the less that's imported, the more secure they are! This report we made aimed to highlight areas within their organization that have security risks and vulnerabilities present to set the stage for their engagement with Elliott Davis.
 
 Files included for view in this project:
-- **Cybersecurity Analytics Report.pdf**: Masked file version that was developed
+- [`Cybersecurity Analytics Report.pdf`](./Cybersecurity%20Analytics%20Report.pdf): Masked file version that was developed
 
 ## By the Numbers
 

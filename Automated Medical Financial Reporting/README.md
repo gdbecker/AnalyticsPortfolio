@@ -25,7 +25,7 @@ Before jumping into this one, Elliott Davis was asked, "Can you help us automate
 We were able to include automated narrative text boxes in addition to the standard line trends and pie charts displayed in this report. I thought it was neat how we could set up an Excel 'manual imports' sheet that captured the necessary values to fill in those automated narrative portions seamlessly. All in all, we helped this client cut down on their reporting time by 85%, shortening report building from 1.5 weeks to about a day.
 
 Files included for view in this project:
-- **Automated Medical Financial Reporting.pdf**: Masked file version that is currently being used by the client
+- [`Automated Medical Financial Reporting.pdf`](./Automated%20Medical%20Financial%20Reporting.pdf): Masked file version that is currently being used by the client
 
 ## By the Numbers
 

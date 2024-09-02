@@ -25,7 +25,7 @@ The first big challenge was figuring out how to bring in the right tables from Q
 I also liked getting to figure out new DAX manipulation to achieve certain views, including switching between MTD and YTD on the main financials page, and building a dynamic summary view on the last page. Both situations required multiple layered measures, calculations that build and stack on top of each other which most of the time needed a "switch" function to make it happen. The effort here allowed our dashboards to be consolidated all on one page, and fewer places for the client to bookmark/save which makes for a better user experience.
 
 Files included for view in this project:
-- **Manufacturing QuickBooks Analysis.pdf**: Masked file version that was developed
+- [`Manufacturing QuickBooks Analysis.pdf`](./Manufacturing%20Quickbooks%20Analysis.pdf): Masked file version that was developed
 
 ## By the Numbers
 
