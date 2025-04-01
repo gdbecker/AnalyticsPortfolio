@@ -179,11 +179,17 @@ Python data science project from Anglea Yu's course [100 Days of Code: Python on
 
 Also check out a case study and a series of blog posts I contributed to Elliott Davis's Data & Analytics service line
 - [Case Study: Power BI Automated Reporting](https://www.elliottdavis.com/helping-a-global-healthcare-provider-automate-reporting-with-microsoft-power-bi/)
+  - [Article PDF](./Case%20Study%20and%20Blog%20Posts/Helping%20a%20global%20healthcare%20provider%20automate%20reporting%20with%20Microsoft%20Power%20BI.pdf)
 - [Blog Series: Power BI Best Practices - Data Modeling and Sources](https://www.elliottdavis.com/microsoft-power-bi-best-practices-data-modeling-and-sources/)
+  - [Article PDF](./Case%20Study%20and%20Blog%20Posts/Microsoft®%20Power%20BI™%20best%20practices%20Part%201.pdf)
 - [Blog Series: Power BI Best Practices - Data Engineering and Data Analysis Expressions](https://www.elliottdavis.com/microsoft-power-bi-best-practices-part-2/)
+  - [Article PDF](./Case%20Study%20and%20Blog%20Posts/Microsoft®%20Power%20BI™%20best%20practices%20Part%202.pdf)
 - [Blog Series: Power BI Best Practices - Reports and Deployment](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-reports-and-deployment/)
+  - [Article PDF](./Case%20Study%20and%20Blog%20Posts/Microsoft®%20Power%20BI™%20best%20practices%20Part%203.pdf)
 - [Blog Series: Power BI Best Practices - Security and Administration](https://www.elliottdavis.com/microsoft-power-bi-best-practices-lessons-learned-security-and-administration/)
+  - [Article PDF](./Case%20Study%20and%20Blog%20Posts/Microsoft®%20Power%20BI™%20best%20practices%20Part%204.pdf)
 - [Blog Series: Power BI Best Practices - Business Guidelines for Power BI Adoption](https://www.elliottdavis.com/insights/microsoft-power-bi-best-practices-lessons-learned-business-guidelines-for-power-bi-adoption)
+  - [Article PDF](./Case%20Study%20and%20Blog%20Posts/Microsoft®%20Power%20BI™%20best%20practices%20Part%205.pdf)
 
 ## Author
 
